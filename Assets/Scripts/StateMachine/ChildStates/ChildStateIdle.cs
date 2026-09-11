@@ -1,5 +1,8 @@
 using UnityEngine;
 
+/// <summary>
+/// Player state when not movemening
+/// </summary>
 public class ChildStateIdle : ParentStateGround
 {
     public ChildStateIdle(PlayerGeneral player, StateMachine stateMachine) : base(player, stateMachine)
@@ -10,7 +13,7 @@ public class ChildStateIdle : ParentStateGround
     public override void Enter()
     {
         base.Enter();
-        player.PlayerMovement.VelocityIdle();
+        player.Movement.VelocityIdle();
     }
 
     public override void Update()

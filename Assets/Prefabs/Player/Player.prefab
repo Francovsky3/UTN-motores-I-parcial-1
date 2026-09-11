@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 267114695991140698}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.81, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -237,7 +237,7 @@ Transform:
   m_GameObject: {fileID: 1646182170531478846}
   serializedVersion: 2
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0.258, y: 0.965, z: 0.415}
+  m_LocalPosition: {x: 0.218, y: 0.182, z: 0.415}
   m_LocalScale: {x: 0.2351, y: 0.1419, z: 0.265}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -332,6 +332,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4229253098703526678}
+  - component: {fileID: 4864823878517233645}
   m_Layer: 0
   m_Name: Collision
   m_TagString: Untagged
@@ -351,9 +352,28 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 968119857904666700}
   m_Father: {fileID: 233686663406798985}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4864823878517233645
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3270431290032904942}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5cd6a8e7220b5be4ea6e8f3a34963527, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerCollision
+  groundCheck: {fileID: 968119857904666700}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 8
+  groundDistance: -0.6
+  groundGizmos: 1
 --- !u!1 &3550147296186105104
 GameObject:
   m_ObjectHideFlags: 0
@@ -450,6 +470,37 @@ MonoBehaviour:
   m_DefaultActionMap: GeneralInput
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!1 &4276875215515324496
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 968119857904666700}
+  m_Layer: 0
+  m_Name: Ground
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &968119857904666700
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4276875215515324496}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4229253098703526678}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4638373402354936891
 GameObject:
   m_ObjectHideFlags: 0
@@ -495,6 +546,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerConfiguration
   moveSpeed: 150
+  turnSpeed: 10
+  jumpForce: 10
+  jumpGravity: -80
+  gravity: -9.81
 --- !u!1 &4745338581285867140
 GameObject:
   m_ObjectHideFlags: 0
@@ -574,6 +629,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerGeneral
   Rigidbody: {fileID: 535978061793081071}
   playerConfig: {fileID: 2167874648336624844}
+  collision: {fileID: 4864823878517233645}
   CurrentState: {fileID: 0}
 --- !u!1 &6342900570858046504
 GameObject:
@@ -635,7 +691,7 @@ Transform:
   m_GameObject: {fileID: 8534512250012313715}
   serializedVersion: 2
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -0.281, y: 0.965, z: 0.415}
+  m_LocalPosition: {x: -0.255, y: 0.18, z: 0.415}
   m_LocalScale: {x: 0.2351, y: 0.1419, z: 0.265}
   m_ConstrainProportionsScale: 0
   m_Children: []

@@ -1,6 +1,9 @@
 using Unity.Mathematics;
 using UnityEngine;
 
+/// <summary>
+/// Player movement logic
+/// </summary>
 public class PlayerMovement
 {
     Rigidbody rigidbody;
@@ -14,7 +17,14 @@ public class PlayerMovement
 
     public void VelocityMovement(Vector2 inputVec)
     {
-        Vector3 movement = new Vector3(inputVec.x, 0f, inputVec.y) * playerConfig.MOVESPEED * Time.deltaTime;
+        Vector3 movement = new Vector3(inputVec.x, 0f, inputVec.y) * playerConfig.MOVESPEED;
+        rigidbody.linearVelocity = movement;
+        PlayerRotation();
+    }
+
+    public void VelocityMovementInAir(Vector2 inputVec)
+    {
+        Vector3 movement = new Vector3(inputVec.x* playerConfig.MOVESPEED, rigidbody.linearVelocity.y , inputVec.y * playerConfig.MOVESPEED);
         rigidbody.linearVelocity = movement;
         PlayerRotation();
     }
@@ -34,4 +44,11 @@ public class PlayerMovement
             rigidbody.MoveRotation(newRotation);
         }
     }
+
+    public void VelocityJump()
+    {
+        rigidbody.linearVelocity = Vector3.up * playerConfig.JUMPFORCE;
+    }
+
+    public float VelocityY => rigidbody.linearVelocity.y;
 }

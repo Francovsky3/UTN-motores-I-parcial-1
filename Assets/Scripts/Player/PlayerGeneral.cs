@@ -2,6 +2,9 @@ using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 
+/// <summary>
+/// Calls the state machine methods
+/// </summary>
 public class PlayerGeneral : MonoBehaviour
 {
     public StateMachine StateMachine {get; private set;}
@@ -10,11 +13,16 @@ public class PlayerGeneral : MonoBehaviour
 
     public InputProcessor InputProcessor {get; private set;}
 
-    public PlayerMovement PlayerMovement {get; private set;}
+    public PlayerMovement Movement {get; private set;}
+
+    public PlayerCollision Collision => collision;
+
+    public PlayerConfiguration Config => playerConfig;
 
     [Header("Components")]
     [SerializeField] Rigidbody Rigidbody;
     [SerializeField] PlayerConfiguration playerConfig;
+    [SerializeField] PlayerCollision collision;
 
     [Header("UI")]
     [SerializeField] TextMeshProUGUI CurrentState;
@@ -24,7 +32,7 @@ public class PlayerGeneral : MonoBehaviour
         StateMachine = new StateMachine();
         states = new StateCollection(this, StateMachine);
         InputProcessor = new InputProcessor();
-        PlayerMovement = new PlayerMovement(Rigidbody, playerConfig);
+        Movement = new PlayerMovement(Rigidbody, playerConfig);
     }
 
     void Start()

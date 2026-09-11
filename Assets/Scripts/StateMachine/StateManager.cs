@@ -1,5 +1,8 @@
 using UnityEngine;
 
+/// <summary>
+/// Base class of all states
+/// </summary>
 public class StateManager
 {
     protected StateMachine stateMachine;

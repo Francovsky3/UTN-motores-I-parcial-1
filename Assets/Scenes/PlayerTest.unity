@@ -256,8 +256,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -800, y: 450}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: -697.9194, y: 450}
+  m_SizeDelta: {x: 404.1613, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &510463013
 MonoBehaviour:
@@ -587,7 +587,7 @@ GameObject:
   - component: {fileID: 1750955511}
   - component: {fileID: 1750955510}
   - component: {fileID: 1750955509}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -688,6 +688,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2118785002 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3448826362245340507, guid: 20d0f1b6e22df6ca1b669e841a40df56, type: 3}
+  m_PrefabInstance: {fileID: 6876779692342354455}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09c09b3f259ab41cfabfe4353a3c94d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InputManager
 --- !u!1 &2137538129
 GameObject:
   m_ObjectHideFlags: 0
@@ -828,16 +839,60 @@ PrefabInstance:
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 729032083112845529, guid: 20d0f1b6e22df6ca1b669e841a40df56, type: 3}
+      propertyPath: collision
+      value: 
+      objectReference: {fileID: 6876779692342354456}
+    - target: {fileID: 729032083112845529, guid: 20d0f1b6e22df6ca1b669e841a40df56, type: 3}
       propertyPath: CurrentState
       value: 
       objectReference: {fileID: 510463013}
     - target: {fileID: 2167874648336624844, guid: 20d0f1b6e22df6ca1b669e841a40df56, type: 3}
+      propertyPath: jumpForce
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 2167874648336624844, guid: 20d0f1b6e22df6ca1b669e841a40df56, type: 3}
       propertyPath: moveSpeed
-      value: 150
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 2167874648336624844, guid: 20d0f1b6e22df6ca1b669e841a40df56, type: 3}
       propertyPath: turnSpeed
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4853031387279269809, guid: 20d0f1b6e22df6ca1b669e841a40df56, type: 3}
+      propertyPath: m_ActionEvents.Array.data[1].m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4853031387279269809, guid: 20d0f1b6e22df6ca1b669e841a40df56, type: 3}
+      propertyPath: m_ActionEvents.Array.data[1].m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4853031387279269809, guid: 20d0f1b6e22df6ca1b669e841a40df56, type: 3}
+      propertyPath: m_ActionEvents.Array.data[1].m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2118785002}
+    - target: {fileID: 4853031387279269809, guid: 20d0f1b6e22df6ca1b669e841a40df56, type: 3}
+      propertyPath: m_ActionEvents.Array.data[1].m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4853031387279269809, guid: 20d0f1b6e22df6ca1b669e841a40df56, type: 3}
+      propertyPath: m_ActionEvents.Array.data[1].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: InputJump
+      objectReference: {fileID: 0}
+    - target: {fileID: 4853031387279269809, guid: 20d0f1b6e22df6ca1b669e841a40df56, type: 3}
+      propertyPath: m_ActionEvents.Array.data[1].m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: InputManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4853031387279269809, guid: 20d0f1b6e22df6ca1b669e841a40df56, type: 3}
+      propertyPath: m_ActionEvents.Array.data[1].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4864823878517233645, guid: 20d0f1b6e22df6ca1b669e841a40df56, type: 3}
+      propertyPath: groundGizmos
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4864823878517233645, guid: 20d0f1b6e22df6ca1b669e841a40df56, type: 3}
+      propertyPath: groundDistance
+      value: -0.6
       objectReference: {fileID: 0}
     - target: {fileID: 6251394596497773974, guid: 20d0f1b6e22df6ca1b669e841a40df56, type: 3}
       propertyPath: m_LocalPosition.x
@@ -845,7 +900,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6251394596497773974, guid: 20d0f1b6e22df6ca1b669e841a40df56, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.831
       objectReference: {fileID: 0}
     - target: {fileID: 6251394596497773974, guid: 20d0f1b6e22df6ca1b669e841a40df56, type: 3}
       propertyPath: m_LocalPosition.z
@@ -884,6 +939,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 20d0f1b6e22df6ca1b669e841a40df56, type: 3}
+--- !u!114 &6876779692342354456 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4864823878517233645, guid: 20d0f1b6e22df6ca1b669e841a40df56, type: 3}
+  m_PrefabInstance: {fileID: 6876779692342354455}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5cd6a8e7220b5be4ea6e8f3a34963527, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerCollision
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

@@ -1,5 +1,8 @@
 using UnityEngine;
 
+/// <summary>
+/// Player state for grounded movement
+/// </summary>
 public class ChildStateMovement : ParentStateGround
 {
     public ChildStateMovement(PlayerGeneral player, StateMachine stateMachine) : base(player, stateMachine) {}
@@ -16,6 +19,6 @@ public class ChildStateMovement : ParentStateGround
     public override void FixedUpdate()
     {
         base.FixedUpdate();
-        player.PlayerMovement.VelocityMovement(player.InputProcessor.InputVectorNormal);
+        player.Movement.VelocityMovement(player.InputProcessor.InputVectorNormal);
     }
 }
