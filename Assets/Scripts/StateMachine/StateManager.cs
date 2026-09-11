@@ -2,13 +2,13 @@ using UnityEngine;
 
 public class StateManager
 {
-    protected StateMachine STATEMACHINE;
-    protected PlayerGeneral PLAYER;
+    protected StateMachine stateMachine;
+    protected PlayerGeneral player;
 
-    public StateManager(PlayerGeneral playerGeneral, StateMachine stateMachine)
+    public StateManager(PlayerGeneral playerGeneral, StateMachine _stateMachine)
     {
-        STATEMACHINE = stateMachine;
-        PLAYER = playerGeneral;
+        stateMachine = _stateMachine;
+        player = playerGeneral;
     }
 
     public virtual void Enter()
