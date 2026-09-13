@@ -4,15 +4,12 @@ using UnityEngine.InputSystem;
 
 public class CameraInputs : MonoBehaviour
 {
-    [Header("Cinemachine Reference")]
     [SerializeField] private CinemachineCamera cmCamera;
 
-    [Header("Input Action")]
     [SerializeField] private InputActionReference rightClickAction;
 
-    [Header("Zoom Settings")]
     [SerializeField] private float zoomedInValue = 0.5f;   // Closest multiplier
-    [SerializeField] private float zoomedOutValue = 1.0f;  // Default distance multiplier
+    [SerializeField] private float zoomedOutValue = 2.0f;  // Default distance multiplier
     [SerializeField] private float zoomSpeed = 5f;
 
     private CinemachineOrbitalFollow orbitalFollow;
