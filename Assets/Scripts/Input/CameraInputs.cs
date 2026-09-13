@@ -11,45 +11,76 @@ public class CameraInputs : MonoBehaviour
     [SerializeField] private InputActionReference rightClickAction;
 
     [Header("Zoom Settings")]
-    [SerializeField] private float zoomedInValue = 0.5f;   // Closest multiplier
-    [SerializeField] private float zoomedOutValue = 1.0f;  // Default distance multiplier
+    [SerializeField] private float zoomedInValue = 0.5f;
+    [SerializeField] private float zoomedOutValue = 1.0f;
     [SerializeField] private float zoomSpeed = 5f;
 
     private CinemachineOrbitalFollow orbitalFollow;
     private float targetScale;
-    void Start()
-    {
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
-        if (cmCamera == null) cmCamera = GetComponent<CinemachineCamera>();
 
-        // Grab the Orbital Follow component dynamically
-        orbitalFollow = cmCamera.GetComponent<CinemachineOrbitalFollow>();
+    private void Awake()
+    {
+        if (cmCamera == null)
+            cmCamera = GetComponent<CinemachineCamera>();
+
+        if (cmCamera != null)
+            orbitalFollow = cmCamera.GetComponent<CinemachineOrbitalFollow>();
+
         targetScale = zoomedOutValue;
     }
-    void OnEnable()
+
+    private void OnEnable()
     {
-        rightClickAction.action.Enable();
-        // Listen for when right-click is pressed or released
+        if (rightClickAction == null)
+            return;
+
         rightClickAction.action.performed += OnZoomPressed;
         rightClickAction.action.canceled += OnZoomReleased;
     }
 
-    void OnDisable()
+    private void OnDisable()
     {
+        if (rightClickAction == null)
+            return;
+
         rightClickAction.action.performed -= OnZoomPressed;
         rightClickAction.action.canceled -= OnZoomReleased;
     }
 
-    private void OnZoomPressed(InputAction.CallbackContext context) => targetScale = zoomedInValue;
-    private void OnZoomReleased(InputAction.CallbackContext context) => targetScale = zoomedOutValue;
-
-    void Update()
+    private void Start()
     {
-        if (orbitalFollow == null) return;
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
 
-        // Smoothly lerp the underlying Radial Axis value
+        if (orbitalFollow != null)
+        {
+            orbitalFollow.RadialAxis.Value = zoomedOutValue;
+            targetScale = zoomedOutValue;
+        }
+    }
+
+    private void Update()
+    {
+        if (orbitalFollow == null)
+            return;
+
         float currentScale = orbitalFollow.RadialAxis.Value;
-        orbitalFollow.RadialAxis.Value = Mathf.Lerp(currentScale, targetScale, Time.deltaTime * zoomSpeed);
+
+        orbitalFollow.RadialAxis.Value = Mathf.Lerp(
+            currentScale,
+            targetScale,
+            Time.deltaTime * zoomSpeed
+        );
+    }
+
+    private void OnZoomPressed(InputAction.CallbackContext context)
+    {
+        targetScale = zoomedInValue;
+    }
+
+    private void OnZoomReleased(InputAction.CallbackContext context)
+    {
+        targetScale = zoomedOutValue;
     }
 }
+
