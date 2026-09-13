@@ -4,12 +4,11 @@ using UnityEngine.InputSystem;
 
 public class CameraInputs : MonoBehaviour
 {
-    [Header("Cinemachine Reference")]
     [SerializeField] private CinemachineCamera cmCamera;
 
-    [Header("Input Action")]
     [SerializeField] private InputActionReference rightClickAction;
 
+//HEAD
     [Header("Zoom Settings")]
     [SerializeField] private float zoomedInValue = 0.5f;
     [SerializeField] private float zoomedOutValue = 1.0f;
