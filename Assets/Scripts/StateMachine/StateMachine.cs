@@ -1,6 +1,6 @@
-using Unity.VisualScripting;
-using UnityEngine;
-
+/// <summary>
+/// Player state machine
+/// </summary>
 public class StateMachine
 {
     public StateManager State {get; private set;}

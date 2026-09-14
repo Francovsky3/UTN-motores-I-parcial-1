@@ -1,7 +1,7 @@
 using UnityEngine;
 
 /// <summary>
-/// PArent class of all player air states
+/// Parent class of all player air states
 /// </summary>
 public class ParentStateAir : StateManager
 {
