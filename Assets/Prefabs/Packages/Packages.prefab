@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 9065346470253387658}
   - component: {fileID: 2297328039531809676}
   - component: {fileID: 2223752143618740728}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Packages
   m_TagString: Packages
   m_Icon: {fileID: 0}
@@ -379,8 +379,8 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 0
-  m_IsKinematic: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
