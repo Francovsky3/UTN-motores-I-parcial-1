@@ -46,7 +46,7 @@ public class ThirdPersonCam : MonoBehaviour
     {
         Keyboard keyboard = Keyboard.current;
 
-        // Cambio de cámaras con teclas 1, 2 y 3
+        // Cambio de cámaras con teclas 1 y 2
         if (keyboard != null)
         {
             if (keyboard.digit1Key.wasPressedThisFrame) SwitchCameraStyle(CameraStyle.Basic);
@@ -58,7 +58,7 @@ public class ThirdPersonCam : MonoBehaviour
         Vector3 viewDir = player.position - new Vector3(transform.position.x, player.position.y, transform.position.z);
         orientation.forward = viewDir.normalized;
 
-        // Rotar al jugador en los modos Basic y Topdown
+        // Rotar al jugador en el modos Basic
         if (currentStyle == CameraStyle.Basic)
         {
             float horizontalInput = 0f;

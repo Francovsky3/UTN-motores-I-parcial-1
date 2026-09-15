@@ -69,7 +69,6 @@ public class PlayerMovementGrappling : MonoBehaviour
         else
             rb.linearDamping = 0;
 
-        TextStuff();
     }
 
     private void FixedUpdate()
@@ -172,7 +171,7 @@ public class PlayerMovementGrappling : MonoBehaviour
         readyToJump = true;
     }
 
-    #region Grappling Mechanics
+   
 
     public void JumpToPosition(Vector3 targetPosition, float trajectoryHeight)
     {
@@ -222,35 +221,4 @@ public class PlayerMovementGrappling : MonoBehaviour
 
         return velocityXZ + velocityY;
     }
-
-    #endregion
-
-    private void OnDrawGizmosSelected()
-    {
-        Gizmos.color = grounded ? Color.green : Color.red;
-        Vector3 checkPos = groundCheck != null ? groundCheck.position : transform.position - new Vector3(0, 1f, 0);
-        Gizmos.DrawWireSphere(checkPos, groundDistance);
-    }
-
-    #region Text & Debugging
-
-    public TextMeshProUGUI text_speed;
-    public TextMeshProUGUI text_mode;
-
-    private void TextStuff()
-    {
-        if (text_speed == null || text_mode == null) return;
-
-        Vector3 flatVel = new Vector3(rb.linearVelocity.x, 0f, rb.linearVelocity.z);
-        text_speed.SetText("Speed: " + Round(flatVel.magnitude, 1) + " / " + Round(moveSpeed, 1));
-        text_mode.SetText(state.ToString());
-    }
-
-    public static float Round(float value, int digits)
-    {
-        float mult = Mathf.Pow(10.0f, (float)digits);
-        return Mathf.Round(value * mult) / mult;
-    }
-
-    #endregion
 }

@@ -198,7 +198,6 @@ public class Grappling : MonoBehaviour
         // -------------------------------------------------------------
         else
         {
-            // En lugar de orientation.forward (que puede desalinearse al no moverse), 
             // usamos la dirección a la que apunta la vista de la cámara en el espacio 3D.
             throwDirection = cam.forward.normalized;
         }
@@ -206,7 +205,8 @@ public class Grappling : MonoBehaviour
         // Ignorar temporalmente colisiones entre el jugador y el paquete para evitar trabas
         Collider playerCol = GetComponent<Collider>();
         Collider packageCol = currentPackage.GetComponent<Collider>();
-        if (playerCol != null && packageCol != null)
+         if (playerCol != null && packageCol != null)
+        
         {
             Physics.IgnoreCollision(playerCol, packageCol, true);
         }
