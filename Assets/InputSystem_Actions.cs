@@ -579,7 +579,7 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
                     ""name"": ""Submit"",
                     ""type"": ""Button"",
                     ""id"": ""7607c7b6-cd76-4816-beef-bd0341cfe950"",
-                    ""expectedControlType"": ""Button"",
+                    ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
@@ -588,7 +588,7 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
                     ""name"": ""Cancel"",
                     ""type"": ""Button"",
                     ""id"": ""15cef263-9014-4fd5-94d9-4e4a6234a6ef"",
-                    ""expectedControlType"": ""Button"",
+                    ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
@@ -652,6 +652,42 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
                     ""type"": ""PassThrough"",
                     ""id"": ""9caa3d8a-6b2f-4e8e-8bad-6ede561bd9be"",
                     ""expectedControlType"": ""Quaternion"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""MoveSceneOne"",
+                    ""type"": ""Button"",
+                    ""id"": ""922fff8a-792c-44f1-825d-84a549a2d30c"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""MoveSceneTwo"",
+                    ""type"": ""Button"",
+                    ""id"": ""51d17703-9bba-420c-bfa6-c962296216f2"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""MoveSceneThree"",
+                    ""type"": ""Button"",
+                    ""id"": ""32c11b36-0422-4986-bb64-68dd69aa6514"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""MoveSceneFour"",
+                    ""type"": ""Button"",
+                    ""id"": ""ddd2a277-b475-43bc-85fc-3e31d4d05de6"",
+                    ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
@@ -1075,6 +1111,50 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
                     ""action"": ""TrackedDeviceOrientation"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""417bef9a-78d0-4c11-8e3a-c9a9822d855d"",
+                    ""path"": ""<Keyboard>/3"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Keyboard&Mouse"",
+                    ""action"": ""MoveSceneOne"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""d5ed88de-b75c-4ae6-9d51-4237d290f80d"",
+                    ""path"": ""<Keyboard>/4"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Keyboard&Mouse"",
+                    ""action"": ""MoveSceneTwo"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""0acf9af3-d66e-4694-b315-8bf33d74afbe"",
+                    ""path"": ""<Keyboard>/5"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Keyboard&Mouse"",
+                    ""action"": ""MoveSceneThree"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""b654b96e-4a84-4184-b76f-b23c9be9e274"",
+                    ""path"": ""<Keyboard>/6"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Keyboard&Mouse"",
+                    ""action"": ""MoveSceneFour"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         },
@@ -1226,6 +1306,10 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
         m_UI_ScrollWheel = m_UI.FindAction("ScrollWheel", throwIfNotFound: true);
         m_UI_TrackedDevicePosition = m_UI.FindAction("TrackedDevicePosition", throwIfNotFound: true);
         m_UI_TrackedDeviceOrientation = m_UI.FindAction("TrackedDeviceOrientation", throwIfNotFound: true);
+        m_UI_MoveSceneOne = m_UI.FindAction("MoveSceneOne", throwIfNotFound: true);
+        m_UI_MoveSceneTwo = m_UI.FindAction("MoveSceneTwo", throwIfNotFound: true);
+        m_UI_MoveSceneThree = m_UI.FindAction("MoveSceneThree", throwIfNotFound: true);
+        m_UI_MoveSceneFour = m_UI.FindAction("MoveSceneFour", throwIfNotFound: true);
         // CameraControls
         m_CameraControls = asset.FindActionMap("CameraControls", throwIfNotFound: true);
         m_CameraControls_CameraZoom = m_CameraControls.FindAction("CameraZoom", throwIfNotFound: true);
@@ -1505,6 +1589,10 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
     private readonly InputAction m_UI_ScrollWheel;
     private readonly InputAction m_UI_TrackedDevicePosition;
     private readonly InputAction m_UI_TrackedDeviceOrientation;
+    private readonly InputAction m_UI_MoveSceneOne;
+    private readonly InputAction m_UI_MoveSceneTwo;
+    private readonly InputAction m_UI_MoveSceneThree;
+    private readonly InputAction m_UI_MoveSceneFour;
     /// <summary>
     /// Provides access to input actions defined in input action map "UI".
     /// </summary>
@@ -1556,6 +1644,22 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
         /// Provides access to the underlying input action "UI/TrackedDeviceOrientation".
         /// </summary>
         public InputAction @TrackedDeviceOrientation => m_Wrapper.m_UI_TrackedDeviceOrientation;
+        /// <summary>
+        /// Provides access to the underlying input action "UI/MoveSceneOne".
+        /// </summary>
+        public InputAction @MoveSceneOne => m_Wrapper.m_UI_MoveSceneOne;
+        /// <summary>
+        /// Provides access to the underlying input action "UI/MoveSceneTwo".
+        /// </summary>
+        public InputAction @MoveSceneTwo => m_Wrapper.m_UI_MoveSceneTwo;
+        /// <summary>
+        /// Provides access to the underlying input action "UI/MoveSceneThree".
+        /// </summary>
+        public InputAction @MoveSceneThree => m_Wrapper.m_UI_MoveSceneThree;
+        /// <summary>
+        /// Provides access to the underlying input action "UI/MoveSceneFour".
+        /// </summary>
+        public InputAction @MoveSceneFour => m_Wrapper.m_UI_MoveSceneFour;
         /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
@@ -1612,6 +1716,18 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
             @TrackedDeviceOrientation.started += instance.OnTrackedDeviceOrientation;
             @TrackedDeviceOrientation.performed += instance.OnTrackedDeviceOrientation;
             @TrackedDeviceOrientation.canceled += instance.OnTrackedDeviceOrientation;
+            @MoveSceneOne.started += instance.OnMoveSceneOne;
+            @MoveSceneOne.performed += instance.OnMoveSceneOne;
+            @MoveSceneOne.canceled += instance.OnMoveSceneOne;
+            @MoveSceneTwo.started += instance.OnMoveSceneTwo;
+            @MoveSceneTwo.performed += instance.OnMoveSceneTwo;
+            @MoveSceneTwo.canceled += instance.OnMoveSceneTwo;
+            @MoveSceneThree.started += instance.OnMoveSceneThree;
+            @MoveSceneThree.performed += instance.OnMoveSceneThree;
+            @MoveSceneThree.canceled += instance.OnMoveSceneThree;
+            @MoveSceneFour.started += instance.OnMoveSceneFour;
+            @MoveSceneFour.performed += instance.OnMoveSceneFour;
+            @MoveSceneFour.canceled += instance.OnMoveSceneFour;
         }
 
         /// <summary>
@@ -1653,6 +1769,18 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
             @TrackedDeviceOrientation.started -= instance.OnTrackedDeviceOrientation;
             @TrackedDeviceOrientation.performed -= instance.OnTrackedDeviceOrientation;
             @TrackedDeviceOrientation.canceled -= instance.OnTrackedDeviceOrientation;
+            @MoveSceneOne.started -= instance.OnMoveSceneOne;
+            @MoveSceneOne.performed -= instance.OnMoveSceneOne;
+            @MoveSceneOne.canceled -= instance.OnMoveSceneOne;
+            @MoveSceneTwo.started -= instance.OnMoveSceneTwo;
+            @MoveSceneTwo.performed -= instance.OnMoveSceneTwo;
+            @MoveSceneTwo.canceled -= instance.OnMoveSceneTwo;
+            @MoveSceneThree.started -= instance.OnMoveSceneThree;
+            @MoveSceneThree.performed -= instance.OnMoveSceneThree;
+            @MoveSceneThree.canceled -= instance.OnMoveSceneThree;
+            @MoveSceneFour.started -= instance.OnMoveSceneFour;
+            @MoveSceneFour.performed -= instance.OnMoveSceneFour;
+            @MoveSceneFour.canceled -= instance.OnMoveSceneFour;
         }
 
         /// <summary>
@@ -1995,6 +2123,34 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnTrackedDeviceOrientation(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "MoveSceneOne" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnMoveSceneOne(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "MoveSceneTwo" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnMoveSceneTwo(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "MoveSceneThree" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnMoveSceneThree(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "MoveSceneFour" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnMoveSceneFour(InputAction.CallbackContext context);
     }
     /// <summary>
     /// Interface to implement callback methods for all input action callbacks associated with input actions defined by "CameraControls" which allows adding and removing callbacks.
