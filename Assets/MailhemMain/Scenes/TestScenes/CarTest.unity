@@ -1608,6 +1608,30 @@ Mesh:
       - serializedVersion: 1
         m_IndexStart: 0
         m_IndexCount: 0
+--- !u!1 &2103946787 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4182790823722843152, guid: 6fbea4cab7a395b4c8a2b73115028bc8, type: 3}
+  m_PrefabInstance: {fileID: 6417143856496290100}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2103946788
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2103946787}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d7869e9986f97a44a8d596f6f3ae3a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CarBehaviour
+  waypoints:
+  - {fileID: 248953102}
+  - {fileID: 1542525862}
+  - {fileID: 1296851449}
+  - {fileID: 783935117}
+  speed: 7
+  rotationSpeed: 5
 --- !u!1 &2137538129
 GameObject:
   m_ObjectHideFlags: 0
@@ -1744,6 +1768,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1951660615007446737, guid: 6fbea4cab7a395b4c8a2b73115028bc8, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1951660615007446737, guid: 6fbea4cab7a395b4c8a2b73115028bc8, type: 3}
       propertyPath: 'waypoints.Array.data[0]'
       value: 
       objectReference: {fileID: 248953102}
@@ -1803,10 +1831,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1951660615007446737, guid: 6fbea4cab7a395b4c8a2b73115028bc8, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4182790823722843152, guid: 6fbea4cab7a395b4c8a2b73115028bc8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2103946788}
   m_SourcePrefab: {fileID: 100100000, guid: 6fbea4cab7a395b4c8a2b73115028bc8, type: 3}
 --- !u!1001 &6876779692342354455
 PrefabInstance:
