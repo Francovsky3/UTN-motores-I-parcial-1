@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/MailhemMain/Scenes/Menu/MainMenu.unity
+    guid: fa2125a2c53124e43969e1c6b1782c1e
+  - enabled: 1
     path: Assets/MailhemMain/Scenes/Levels/Level 1.unity
     guid: 99c9720ab356a0642a771bea13969a05
   - enabled: 1

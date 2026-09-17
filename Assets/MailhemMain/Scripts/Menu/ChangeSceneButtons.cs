@@ -10,11 +10,11 @@ public class MenuButtons : MonoBehaviour
     void FixedUpdate()
     {
         Keyboard keyboard = Keyboard.current;
-        if (Keyboard.current != null && Keyboard.current.digit3Key.isPressed)
+        if (Keyboard.current != null && Keyboard.current.escapeKey.isPressed)
         {
-            MoveToHookTest();
+            MoveToMainMenu();
         }
-        if (Keyboard.current != null && Keyboard.current.digit4Key.isPressed)
+        /*if (Keyboard.current != null && Keyboard.current.digit4Key.isPressed)
         {
             MoveToCarTest();
         }
@@ -25,9 +25,12 @@ public class MenuButtons : MonoBehaviour
         if (Keyboard.current != null && Keyboard.current.digit6Key.isPressed)
         {
             MoveToLevelTest();
-        }
+        }*/
     }
-
+    public void MoveToMainMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
     public void MoveToHookTest()
     {
         SceneManager.LoadScene("HookTest");
@@ -46,6 +49,6 @@ public class MenuButtons : MonoBehaviour
 
     public void MoveToLevelTest()
     {
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene("Level 1");
     }
 }
