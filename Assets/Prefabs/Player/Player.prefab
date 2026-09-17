@@ -529,7 +529,7 @@ MonoBehaviour:
     m_ActionId: b937b994-dc9e-4e80-9151-6bccd135e39c
     m_ActionName: 'Movement/Jump[/Keyboard/space]'
   m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: 
+  m_DefaultControlScheme: Keyboard
   m_DefaultActionMap: Movement
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
