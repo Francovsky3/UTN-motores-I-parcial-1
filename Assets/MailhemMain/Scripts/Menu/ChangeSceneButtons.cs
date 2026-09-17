@@ -14,18 +14,6 @@ public class MenuButtons : MonoBehaviour
         {
             MoveToMainMenu();
         }
-        /*if (Keyboard.current != null && Keyboard.current.digit4Key.isPressed)
-        {
-            MoveToCarTest();
-        }
-        if (Keyboard.current != null && Keyboard.current.digit5Key.isPressed)
-        {
-            MoveToPlayerTest();
-        }
-        if (Keyboard.current != null && Keyboard.current.digit6Key.isPressed)
-        {
-            MoveToLevelTest();
-        }*/
     }
     public void MoveToMainMenu()
     {
