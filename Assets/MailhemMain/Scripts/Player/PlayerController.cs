@@ -13,7 +13,7 @@ public class PlayerController : MonoBehaviour
 
     [Header("Movement vars")]
     [SerializeField] float gravityMultiplier;
-    [SerializeField] float speed;
+    [SerializeField] float speed = 5;
     [SerializeField] float jumpSpeed;
 
     [Header("Rotation vars")]
