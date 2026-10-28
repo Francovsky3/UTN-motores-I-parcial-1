@@ -21,5 +21,5 @@ EditorBuildSettings:
     path: Assets/MailhemMain/Scenes/TestScenes/CarTest.unity
     guid: 4a34b528bda978940a2353c443be7d06
   m_configObjects:
-    com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
+    com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 29f2c356e54f9354fad3220ac831aa2f, type: 3}
   m_UseUCBPForAssetBundles: 0
