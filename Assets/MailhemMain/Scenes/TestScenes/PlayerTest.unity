@@ -381,6 +381,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 537770681}
+  - component: {fileID: 537770682}
   m_Layer: 0
   m_Name: Collision
   m_TagString: Untagged
@@ -400,9 +401,28 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1734447907}
   m_Father: {fileID: 1788210965}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &537770682
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 537770680}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de383ae89a603b427b95df0fbd42e962, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerCollision
+  groundCheck: {fileID: 1734447907}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 8
+  groundDistance: -0.05
+  groundGizmos: 1
 --- !u!1 &732647225
 GameObject:
   m_ObjectHideFlags: 0
@@ -447,8 +467,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 691d4eee4b982a0d589632514b148915, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerConfiguration
-  moveSpeed: 5
+  moveSpeed: 100
   smoothTime: 0.05
+  gravity: -9.81
+  gravityMultiplier: 0.5
+  jumpForce: 10
 --- !u!1 &746887337
 GameObject:
   m_ObjectHideFlags: 0
@@ -581,7 +604,7 @@ Transform:
   m_GameObject: {fileID: 746887337}
   serializedVersion: 2
   m_LocalRotation: {x: 0.13870122, y: 3.085513e-17, z: -4.321414e-18, w: 0.9903343}
-  m_LocalPosition: {x: 0, y: 3, z: -7}
+  m_LocalPosition: {x: 1, y: 7.81, z: -7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -883,7 +906,7 @@ CharacterController:
   m_Radius: 0.5
   m_SlopeLimit: 45
   m_StepOffset: 0.3
-  m_SkinWidth: 0.08
+  m_SkinWidth: 0.0001
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!4 &1206623365
@@ -895,7 +918,7 @@ Transform:
   m_GameObject: {fileID: 1206623363}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: 0}
+  m_LocalPosition: {x: 1, y: 5.81, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1177,7 +1200,39 @@ MonoBehaviour:
   playerConfig: {fileID: 732647227}
   playerCamera: {fileID: 746887340}
   playerTrans: {fileID: 1206623365}
+  collision: {fileID: 537770682}
   currentState: {fileID: 510463013}
+--- !u!1 &1734447906
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1734447907}
+  m_Layer: 0
+  m_Name: Ground
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1734447907
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1734447906}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -1, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 537770681}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1750955508
 GameObject:
   m_ObjectHideFlags: 0
@@ -1850,7 +1905,7 @@ Transform:
   m_GameObject: {fileID: 2075010874}
   serializedVersion: 2
   m_LocalRotation: {x: 0.13870122, y: 2.779389e-17, z: 1.7536032e-17, w: 0.9903343}
-  m_LocalPosition: {x: 0, y: 3, z: -7}
+  m_LocalPosition: {x: 1, y: 7.81, z: -7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1961,7 +2016,19 @@ MonoBehaviour:
     m_ActionId: 11a70de5-4cfa-4e73-b5b8-acecbecc200f
     m_ActionName: 'Movement/Move[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d]'
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2099934609}
+        m_TargetAssemblyTypeName: InputManager, Assembly-CSharp
+        m_MethodName: InputJump
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: b937b994-dc9e-4e80-9151-6bccd135e39c
     m_ActionName: 'Movement/Jump[/Keyboard/space]'
   m_NeverAutoSwitchControlSchemes: 0

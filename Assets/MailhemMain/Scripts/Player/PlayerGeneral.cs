@@ -10,12 +10,14 @@ public class PlayerGeneral : MonoBehaviour
     public StateCollection States {get; private set;}
     public InputProcessor InputProcessor {get; private set;}
     public PlayerMovement Movement {get; private set;}
+    public PlayerCollision Collision => collision;
 
     [Header("Components")]
     [SerializeField] CharacterController characterController;
     [SerializeField] PlayerConfiguration playerConfig;
     [SerializeField] Camera playerCamera;
     [SerializeField] Transform playerTrans;
+    [SerializeField] PlayerCollision collision;
 
     [Header("UI")]
     [SerializeField] TextMeshProUGUI currentState;

@@ -11,4 +11,11 @@ public class PlayerConfiguration : MonoBehaviour
 
     [SerializeField] float smoothTime;
     public float SmoothTime => smoothTime;
+
+    [SerializeField] float gravity;
+    public float Gravity => gravity;
+    [SerializeField] float gravityMultiplier;
+    public float GravityMultiplier => gravityMultiplier;
+    [SerializeField] float jumpForce;
+    public float JumpForce => jumpForce;
 }

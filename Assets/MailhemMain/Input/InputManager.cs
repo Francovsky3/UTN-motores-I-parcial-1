@@ -11,4 +11,13 @@ public class InputManager : MonoBehaviour
     {
         player.InputProcessor.ProcessInputVector(context.ReadValue<Vector2>());
     }
+
+    public void InputJump(InputAction.CallbackContext context)
+    {
+        if(context.started)
+        {
+            float time = (float)context.time;
+            player.InputProcessor.ProcessesInputJump(time);
+        }
+    }
 }

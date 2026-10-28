@@ -10,7 +10,9 @@ public class PlayerMovement
     CharacterController controller;
     Camera camera;
     Transform transform;
+
     float currentVelocity;
+    public float VelocityY => controller.velocity.y;
 
     public PlayerMovement(CharacterController playerController, PlayerConfiguration configuration, Camera cam, Transform trans)
     {
@@ -23,7 +25,7 @@ public class PlayerMovement
     //Base grounded movement
     public void VelocityMovement(Vector2 inputVec)
     {
-        Vector3 movement = new Vector3(inputVec.x, 0f, inputVec.y) * config.MoveSpeed * Time.deltaTime;
+        Vector3 movement = config.MoveSpeed * Time.deltaTime * new Vector3(inputVec.x, 0f, inputVec.y);
         Vector3 dir = ApplyRotation(movement);
         controller.Move(dir);
     }
@@ -43,5 +45,23 @@ public class PlayerMovement
 
         Vector3 moveDir = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
         return moveDir;
+    }
+
+    public void VelocityJump()
+    {
+        controller.Move(config.JumpForce * Time.deltaTime * Vector3.up);
+    }
+
+    public void ApplyGravity()
+    {
+        controller.Move(new Vector3(0, config.Gravity * Time.deltaTime, 0));
+    }
+
+    //Apply gravity to the current y velocity
+    public void ApplyJumpGravity()
+    {
+        float velocity = Mathf.Clamp(VelocityY - (config.Gravity * config.GravityMultiplier * Time.deltaTime), config.Gravity * config.GravityMultiplier, VelocityY);
+
+        controller.Move(new Vector3(0, velocity, 0));
     }
 }
