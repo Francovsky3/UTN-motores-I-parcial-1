@@ -14,6 +14,8 @@ public class PlayerGeneral : MonoBehaviour
     [Header("Components")]
     [SerializeField] CharacterController characterController;
     [SerializeField] PlayerConfiguration playerConfig;
+    [SerializeField] Camera playerCamera;
+    [SerializeField] Transform playerTrans;
 
     [Header("UI")]
     [SerializeField] TextMeshProUGUI currentState;
@@ -23,7 +25,7 @@ public class PlayerGeneral : MonoBehaviour
         StateMachine = new StateMachine();
         States = new StateCollection(this, StateMachine);
         InputProcessor = new InputProcessor();
-        Movement = new PlayerMovement(characterController, playerConfig);
+        Movement = new PlayerMovement(characterController, playerConfig, playerCamera, playerTrans);
     }
 
     //Initialize the state machine

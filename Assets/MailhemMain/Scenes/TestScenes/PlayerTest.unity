@@ -447,7 +447,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 691d4eee4b982a0d589632514b148915, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerConfiguration
-  moveSpeed: 10
+  moveSpeed: 5
+  smoothTime: 0.05
 --- !u!1 &746887337
 GameObject:
   m_ObjectHideFlags: 0
@@ -1174,6 +1175,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerGeneral
   characterController: {fileID: 1206623364}
   playerConfig: {fileID: 732647227}
+  playerCamera: {fileID: 746887340}
+  playerTrans: {fileID: 1206623365}
   currentState: {fileID: 510463013}
 --- !u!1 &1750955508
 GameObject:
