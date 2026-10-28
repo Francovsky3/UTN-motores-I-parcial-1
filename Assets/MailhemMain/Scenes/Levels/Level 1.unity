@@ -5641,7 +5641,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.13870122, y: 0.00000002171289, z: -0.000000003040998, w: 0.9903343}
+  m_LocalRotation: {x: 0.13870122, y: -0.000000014757132, z: 0.0000000020668094, w: 0.9903343}
   m_LocalPosition: {x: 2.34878, y: 3.1269999, z: -10.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -25990,7 +25990,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: def4ca188fa09d349a4719d87c8f3791, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CarSpawner
-  carPrefab: {fileID: 4182790823722843152, guid: 6fbea4cab7a395b4c8a2b73115028bc8, type: 3}
+  carPrefab: {fileID: 2024412393715106932, guid: d87f3388dd9d461408671a3028635c77, type: 3}
   spawnPoint: {fileID: 205084005}
   waypoints:
   - {fileID: 653056725}
@@ -27315,7 +27315,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2065581340}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.13870122, y: 0.000000021712891, z: -0.0000000030409972, w: 0.99033433}
+  m_LocalRotation: {x: 0.13870122, y: -0.000000014757132, z: 0.0000000020668094, w: 0.99033433}
   m_LocalPosition: {x: 2.34878, y: 3.1269999, z: -10.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
