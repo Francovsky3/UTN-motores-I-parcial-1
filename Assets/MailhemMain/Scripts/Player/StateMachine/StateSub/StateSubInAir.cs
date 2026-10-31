@@ -6,6 +6,10 @@ public class StateSubInAir : StateSuperAir
     public StateSubInAir(PlayerGeneral playerGeneral, StateMachine stateMachine) : base(playerGeneral, stateMachine)
     {
     }
+    public override void Enter()
+    {
+        base.Enter();
+    }
 
     public override void Update()
     {

@@ -1,8 +1,6 @@
+using UnityEngine;
 /// <summary>
 /// State for when the player is doing nothing
-/// 
-/// 
-/// Lazy ass
 /// </summary>
 public class StateSubIdle : StateSuperGround
 {
@@ -23,6 +21,11 @@ public class StateSubIdle : StateSuperGround
         if(Player.InputProcessor.InputVector.magnitude > 0)
         {
             StateMachine.Change(Player.States.MoveState);
+        }
+        if(Player.Collision.Ground && Player.InputProcessor.InputJump > Time.time)
+        {
+            Player.InputProcessor.ProcessesInputJump(0);
+            StateMachine.Change(Player.States.JumpState);
         }
     }
 }

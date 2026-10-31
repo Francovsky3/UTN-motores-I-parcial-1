@@ -421,7 +421,7 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 8
-  groundDistance: -0.05
+  groundDistance: -0.1
   groundGizmos: 1
 --- !u!1 &732647225
 GameObject:
@@ -467,11 +467,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 691d4eee4b982a0d589632514b148915, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerConfiguration
-  moveSpeed: 100
+  moveSpeed: 10
   smoothTime: 0.05
   gravity: -9.81
   gravityMultiplier: 0.5
-  jumpForce: 10
+  jumpForce: 30
 --- !u!1 &746887337
 GameObject:
   m_ObjectHideFlags: 0

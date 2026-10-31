@@ -25,9 +25,8 @@ public class PlayerMovement
     //Base grounded movement
     public void VelocityMovement(Vector2 inputVec)
     {
-        Vector3 movement = config.MoveSpeed * Time.deltaTime * new Vector3(inputVec.x, 0f, inputVec.y);
-        Vector3 dir = ApplyRotation(movement);
-        controller.Move(dir);
+        Vector3 dir = ApplyRotation(inputVec);
+        controller.Move(config.MoveSpeed * Time.deltaTime * dir);
     }
 
     //Idle
@@ -37,9 +36,9 @@ public class PlayerMovement
     }
 
     //Rotation
-    Vector3 ApplyRotation(Vector3 inputVec)
+    Vector3 ApplyRotation(Vector2 inputVec)
     {
-        var targetAngle = Mathf.Atan2(inputVec.x, inputVec.z) * Mathf.Rad2Deg + camera.transform.eulerAngles.y;
+        var targetAngle = Mathf.Atan2(inputVec.x, inputVec.y) * Mathf.Rad2Deg + camera.transform.eulerAngles.y;
         var angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref currentVelocity, config.SmoothTime);
         transform.rotation = Quaternion.Euler(0f, angle, 0f);
 
@@ -57,11 +56,12 @@ public class PlayerMovement
         controller.Move(new Vector3(0, config.Gravity * Time.deltaTime, 0));
     }
 
-    //Apply gravity to the current y velocity
-    public void ApplyJumpGravity()
+    //Apply gravity to the current y velocity and allow movement
+    public void JumpMovement(Vector2 inputVec)
     {
-        float velocity = Mathf.Clamp(VelocityY - (config.Gravity * config.GravityMultiplier * Time.deltaTime), config.Gravity * config.GravityMultiplier, VelocityY);
+        float velocity = VelocityY + (config.Gravity * config.GravityMultiplier);
 
-        controller.Move(new Vector3(0, velocity, 0));
+        Vector3 movement = Time.deltaTime * new Vector3(inputVec.x * config.MoveSpeed, velocity, inputVec.y* config.MoveSpeed);
+        controller.Move(velocity * Time.deltaTime * Vector3.up);
     }
 }

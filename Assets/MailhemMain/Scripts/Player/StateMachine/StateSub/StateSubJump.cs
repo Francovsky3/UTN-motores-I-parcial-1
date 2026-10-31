@@ -16,8 +16,8 @@ public class StateSubJump : StateSuperAir
     public override void Update()
     {
         base.Update();
-        Player.Movement.ApplyJumpGravity();
-        if(Player.Movement.VelocityY < 0)
+        Player.Movement.JumpMovement(Player.InputProcessor.InputVectorNormal);
+        if(Player.Movement.VelocityY <= 0)
         {
             StateMachine.Change(Player.States.InAirState);
         }

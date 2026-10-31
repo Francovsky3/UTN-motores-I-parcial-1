@@ -16,10 +16,6 @@ public class StateSuperGround : StateManager
         {
             StateMachine.Change(Player.States.InAirState);
         }
-        if(Player.Collision.Ground && Player.InputProcessor.InputJump > Time.time)
-        {
-            Player.InputProcessor.ProcessesInputJump(0);
-            StateMachine.Change(Player.States.JumpState);
-        }
+        
     }
 }
