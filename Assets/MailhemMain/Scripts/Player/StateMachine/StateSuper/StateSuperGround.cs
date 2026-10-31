@@ -4,7 +4,7 @@ using UnityEngine;
 /// </summary>
 public class StateSuperGround : StateManager
 {
-    public StateSuperGround(PlayerGeneral playerGeneral, StateMachine stateMachine) : base(playerGeneral, stateMachine)
+    public StateSuperGround(PlayerGeneral playerGeneral, StateMachine stateMachine, Animator anim) : base(playerGeneral, stateMachine, anim)
     {
         
     }
@@ -16,6 +16,5 @@ public class StateSuperGround : StateManager
         {
             StateMachine.Change(Player.States.InAirState);
         }
-        
     }
 }

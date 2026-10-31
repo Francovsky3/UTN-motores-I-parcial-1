@@ -4,7 +4,9 @@ using UnityEngine;
 /// </summary>
 public class StateSubMovement : StateSuperGround
 {
-    public StateSubMovement(PlayerGeneral playerGeneral, StateMachine stateMachine) : base(playerGeneral, stateMachine)
+    private static readonly int isWalkingHash = Animator.StringToHash("isWalking");
+
+    public StateSubMovement(PlayerGeneral playerGeneral, StateMachine stateMachine, Animator anim) : base(playerGeneral, stateMachine, anim)
     {
         
     }
@@ -12,6 +14,7 @@ public class StateSubMovement : StateSuperGround
     public override void Enter()
     {
         base.Enter();
+        animator.SetBool(isWalkingHash, true);
     }
 
     public override void Update()
@@ -19,11 +22,13 @@ public class StateSubMovement : StateSuperGround
         base.Update();
         if(Player.InputProcessor.InputVector.magnitude == 0)
         {
+            animator.SetBool("isWalking", false);
             StateMachine.Change(Player.States.IdleState);
         }
         Player.Movement.VelocityMovement(Player.InputProcessor.InputVectorNormal);
         if(Player.Collision.Ground && Player.InputProcessor.InputJump > Time.time)
         {
+            animator.SetBool("isWalking", false);
             Player.InputProcessor.ProcessesInputJump(0);
             StateMachine.Change(Player.States.JumpState);
         }

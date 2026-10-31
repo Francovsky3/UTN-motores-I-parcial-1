@@ -1,9 +1,10 @@
+using UnityEngine;
 /// <summary>
 /// When player is falling
 /// </summary>
 public class StateSubInAir : StateSuperAir
 {
-    public StateSubInAir(PlayerGeneral playerGeneral, StateMachine stateMachine) : base(playerGeneral, stateMachine)
+    public StateSubInAir(PlayerGeneral playerGeneral, StateMachine stateMachine, Animator anim) : base(playerGeneral, stateMachine, anim)
     {
     }
     public override void Enter()

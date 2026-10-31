@@ -1,3 +1,4 @@
+using UnityEngine;
 /// <summary>
 /// Instances and contains all of the state machine's states for easy reference
 /// </summary>
@@ -8,11 +9,11 @@ public class StateCollection
     public StateSubInAir InAirState {get; private set;}
     public StateSubJump JumpState {get; private set;}
 
-    public StateCollection(PlayerGeneral player, StateMachine stateMachine)
+    public StateCollection(PlayerGeneral player, StateMachine stateMachine, Animator animator)
     {
-        IdleState = new StateSubIdle(player, stateMachine);
-        MoveState = new StateSubMovement(player, stateMachine);
-        InAirState = new StateSubInAir(player, stateMachine);
-        JumpState = new StateSubJump(player, stateMachine);
+        IdleState = new StateSubIdle(player, stateMachine, animator);
+        MoveState = new StateSubMovement(player, stateMachine, animator);
+        InAirState = new StateSubInAir(player, stateMachine, animator);
+        JumpState = new StateSubJump(player, stateMachine, animator);
     }
 }
