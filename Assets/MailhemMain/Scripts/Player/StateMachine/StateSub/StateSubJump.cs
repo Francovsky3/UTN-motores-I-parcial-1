@@ -8,6 +8,9 @@ public class StateSubJump : StateSuperAir
 {
     private static readonly int isJumpingHash = Animator.StringToHash("isJumping");
 
+    private float jumpTimer;
+    private float minJumpDuration = 0.5f;
+
     public StateSubJump(PlayerGeneral playerGeneral, StateMachine stateMachine, Animator anim) : base(playerGeneral, stateMachine, anim)
     {
     }
@@ -15,17 +18,19 @@ public class StateSubJump : StateSuperAir
     public override void Enter()
     {
         base.Enter();
-        animator.SetBool(isJumpingHash, true);
+        animator.SetTrigger(isJumpingHash);
         Player.Movement.VelocityJump();
+        jumpTimer = 1.5f;
+        Debug.Log("entrando a a saltar");
     }
 
     public override void Update()
     {
         base.Update();
         Player.Movement.JumpMovement(Player.InputProcessor.InputVectorNormal);
-        if(Player.Movement.VelocityY <= 0)
+        jumpTimer += Time.deltaTime;
+        if(jumpTimer >= minJumpDuration && Player.Movement.VelocityY <= 0)
         {
-            animator.SetBool("isJumping", false);
             StateMachine.Change(Player.States.InAirState);
         }
     }
