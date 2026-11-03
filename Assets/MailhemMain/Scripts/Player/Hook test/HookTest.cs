@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class HookController : MonoBehaviour
+public class HookTest : MonoBehaviour
 {
     [Header("Hook")]
     [SerializeField] private Transform hookPoint;

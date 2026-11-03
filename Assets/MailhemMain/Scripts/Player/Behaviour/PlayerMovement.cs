@@ -64,4 +64,9 @@ public class PlayerMovement
         Vector3 movement = Time.deltaTime * new Vector3(inputVec.x * config.MoveSpeed, velocity, inputVec.y* config.MoveSpeed);
         controller.Move(velocity * Time.deltaTime * Vector3.up);
     }
+
+    public void HookedMovement(Vector3 targetPos)
+    {
+        
+    }
 }

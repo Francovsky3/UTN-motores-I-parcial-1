@@ -10,17 +10,25 @@ public class PlayerGeneral : MonoBehaviour
     public StateCollection States {get; private set;}
     public InputProcessor InputProcessor {get; private set;}
     public PlayerMovement Movement {get; private set;}
+    public PackageManager Packages {get; private set;}
     public PlayerCollision Collision => collision;
-    public Transform MeshTrans => meshTrans;
+    public HookController Hook => hook;
+    public Camera Camera => playerCamera;
 
-    [Header("Components")]
+    [Header("Movement Components")]
     [SerializeField] CharacterController characterController;
     [SerializeField] PlayerConfiguration playerConfig;
     [SerializeField] Camera playerCamera;
     [SerializeField] Transform playerTrans;
-    [SerializeField] PlayerCollision collision;
     [SerializeField] Animator meshAnimator;
-    [SerializeField] Transform meshTrans;
+
+    [Header("Collision Components")]
+    [SerializeField] PlayerCollision collision;
+
+    [Header("Gameplay Components")]
+    [SerializeField] HookController hook;
+    [SerializeField] Transform packageStorage;
+    [SerializeField] Transform handPosition;
 
     [Header("UI")]
     [SerializeField] TextMeshProUGUI currentState;
@@ -31,6 +39,7 @@ public class PlayerGeneral : MonoBehaviour
         States = new StateCollection(this, StateMachine, meshAnimator);
         InputProcessor = new InputProcessor();
         Movement = new PlayerMovement(characterController, playerConfig, playerCamera, playerTrans);
+        Packages = new PackageManager(playerConfig, packageStorage, handPosition);
     }
 
     //Initialize the state machine

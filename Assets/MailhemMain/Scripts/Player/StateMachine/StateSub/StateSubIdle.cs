@@ -29,7 +29,7 @@ public class StateSubIdle : StateSuperGround
         if(Player.Collision.Ground && Player.InputProcessor.InputJump > Time.time)
         {
             animator.SetBool("isIdle", false);
-            Player.InputProcessor.ProcessesInputJump(0);
+            Player.InputProcessor.ProcessInputJump(0);
             StateMachine.Change(Player.States.JumpState);
         }
     }

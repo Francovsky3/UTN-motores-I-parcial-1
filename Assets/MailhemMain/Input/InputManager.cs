@@ -17,7 +17,25 @@ public class InputManager : MonoBehaviour
         if(context.started)
         {
             float time = (float)context.time;
-            player.InputProcessor.ProcessesInputJump(time);
+            player.InputProcessor.ProcessInputJump(time);
+        }
+    }
+
+    public void InputFireHook(InputAction.CallbackContext context)
+    {
+        if(context.started)
+        {
+            float time = (float)context.time;
+            player.InputProcessor.ProcessInputFireHook(time);
+        }
+    }
+
+    public void InputThrow(InputAction.CallbackContext context)
+    {
+        if(context.started)
+        {
+            float time = (float)context.time;
+            player.InputProcessor.ProcessInputThrow(time);
         }
     }
 }

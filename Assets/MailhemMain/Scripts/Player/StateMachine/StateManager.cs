@@ -2,7 +2,7 @@ using UnityEngine;
 
 
 /// <summary>
-/// Executes the current state logic
+/// Base class for all states
 /// </summary>
 public class StateManager
 {
@@ -29,7 +29,15 @@ public class StateManager
 
     public virtual void Update()
     {
-        
+        if(Player.Collision.Package.Length > 0 && Player.Packages.HasPackage == false)
+        {
+            Player.Packages.StorePack(Player.Collision.Package[0].GetComponent<Package>());
+        }
+        if(Player.InputProcessor.InputThrow > Time.time && Player.Packages.HasPackage == true)
+        {
+            Player.InputProcessor.ProcessInputThrow(0);
+            Player.Packages.ThrowPack();
+        }
     }
 
     public virtual void FixedUpdate()

@@ -7,4 +7,13 @@ public class StateSuperAir : StateManager
     public StateSuperAir(PlayerGeneral playerGeneral, StateMachine stateMachine, Animator anim) : base(playerGeneral, stateMachine, anim)
     {
     }
+
+    public override void Update()
+    {
+        base.Update();
+        if(Player.InputProcessor.InputFireHook > Time.time)
+        {
+            
+        }
+    }
 }
