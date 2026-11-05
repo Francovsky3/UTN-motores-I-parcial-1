@@ -22,11 +22,11 @@ public class Package : MonoBehaviour
     
         if (player != null && pickupClips != null && pickupClips.Length > 0)
         {
-            player.PlayerSFX.PlaySFX(pickupClips);
+            player.SFXManager.PlaySFX(pickupClips);
         }
         else if (player == null)
         {
-            Debug.LogError("Package: No se encontró ningún objeto con el script PlayerGeneral en la escena.");
+            Debug.LogError("Package: No se encontrï¿½ ningï¿½n objeto con el script PlayerGeneral en la escena.");
         }
 
         meshCollider.enabled = false;
@@ -43,7 +43,7 @@ public class Package : MonoBehaviour
 
         if (player != null && throwClips != null && throwClips.Length > 0)
         {
-            player.PlayerSFX.PlaySFX(throwClips);
+            player.SFXManager.PlaySFX(throwClips);
         }
         // ---------------------------------------
 
