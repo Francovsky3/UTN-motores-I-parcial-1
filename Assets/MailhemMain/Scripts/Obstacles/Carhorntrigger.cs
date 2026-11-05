@@ -11,7 +11,7 @@ public class CarHornTrigger : MonoBehaviour
         if (other.CompareTag("Player") && !yaSono)
         {
          
-            PlayerSFX playerSFX = other.GetComponentInChildren<PlayerSFX>();
+            SFXManager playerSFX = other.GetComponentInChildren<SFXManager>();
 
             if (playerSFX != null && hornClips != null && hornClips.Length > 0)
             {

@@ -28,7 +28,7 @@ public class CarCollisionSFX : MonoBehaviour
  
         if (distancia <= hornDistance)
         {
-            PlayerSFX playerSFX = playerTransform.GetComponentInChildren<PlayerSFX>();
+            SFXManager playerSFX = playerTransform.GetComponentInChildren<SFXManager>();
             if (playerSFX != null && hornClips != null && hornClips.Length > 0)
             {
                 yaSonoBocina = true;
@@ -42,12 +42,12 @@ public class CarCollisionSFX : MonoBehaviour
     {
         if (other.CompareTag("Player") && !yaChocoGolpe)
         {
-            PlayerSFX playerSFX = other.GetComponentInChildren<PlayerSFX>();
+            SFXManager playerSFX = other.GetComponentInChildren<SFXManager>();
             if (playerSFX != null && hitClips != null && hitClips.Length > 0)
             {
                 yaChocoGolpe = true;
                 playerSFX.PlaySFX(hitClips);
-                Debug.Log("CarCollisionSFX: ¡Impacto! El personaje reprodujo el golpe.");
+                Debug.Log("CarCollisionSFX: ï¿½Impacto! El personaje reprodujo el golpe.");
             }
         }
     }
