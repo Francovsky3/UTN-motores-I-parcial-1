@@ -6,6 +6,8 @@ public class StateSubMovement : StateSuperGround
 {
     private static readonly int isWalkingHash = Animator.StringToHash("isWalking");
 
+    AudioClip[] walkingClips = {Resources.Load<AudioClip>("Assets/MailhemMain/Audio/SFX/Walk.wav")};
+
     public StateSubMovement(PlayerGeneral playerGeneral, StateMachine stateMachine, Animator anim) : base(playerGeneral, stateMachine, anim)
     {
         
@@ -26,6 +28,7 @@ public class StateSubMovement : StateSuperGround
             StateMachine.Change(Player.States.IdleState);
         }
         Player.Movement.VelocityMovement(Player.InputProcessor.InputVectorNormal);
+        Player.PlayerSFX.PlaySFX(walkingClips);
         if(Player.Collision.Ground && Player.InputProcessor.InputJump > Time.time)
         {
             animator.SetBool("isWalking", false);
