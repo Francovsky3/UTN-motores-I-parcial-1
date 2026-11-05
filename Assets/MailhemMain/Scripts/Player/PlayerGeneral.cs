@@ -14,6 +14,8 @@ public class PlayerGeneral : MonoBehaviour
     public PlayerCollision Collision => collision;
     public HookController Hook => hook;
     public Camera Camera => playerCamera;
+    public PlayerSFX  PlayerSFX => playerSFX;
+    public AudioClip[] WalkingClips => walkingClips;
 
     [Header("Movement Components")]
     [SerializeField] CharacterController characterController;
@@ -30,8 +32,9 @@ public class PlayerGeneral : MonoBehaviour
     [SerializeField] Transform packageStorage;
     [SerializeField] Transform handPosition;
 
-    [Header("UI")]
-    [SerializeField] TextMeshProUGUI currentState;
+    [Header("Audio")]
+    [SerializeField] PlayerSFX playerSFX;
+    [SerializeField] private AudioClip[] walkingClips;
 
     private void Awake()
     {
@@ -58,7 +61,6 @@ public class PlayerGeneral : MonoBehaviour
     void Update()
     {
         StateMachine.state.Update();
-        currentState.text = StateMachine.state.ToString();
     }
 
     //Execute current state's Late Update
