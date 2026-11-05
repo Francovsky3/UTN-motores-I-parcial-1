@@ -1,43 +1,35 @@
-using System;
 using UnityEngine;
-using System.Collections;
-[RequireComponent(typeof(BoxCollider))]
-public class BossConversation : MonoBehaviour
+
+public class ConversacionTrigger : MonoBehaviour
 {
     public AudioSource bossDialogue;
     public AudioSource playerDialogue;
-    private bool dentro;
 
-    private void OnTriggerEnter(Collider otro)
+    private bool activado = false;
+    private bool esperandoRespuesta = false;
+
+    private void OnTriggerEnter(Collider other)
     {
-        if (CompareTag("Player") && dentro != true)
+        if (other.CompareTag("Player") && !activado)
         {
-            dentro = true;
-        }
-        if (!otro.CompareTag("Player") || dentro) return;
-        dentro = true;
-        if (dentro == true)
-        {
+            activado = true;
+
+            // Reproduce el primer diálogo
             bossDialogue.Play();
-            if (bossDialogue.isPlaying == false)
-            {
-                playerDialogue.Play();
-            }
-            //new WaitForSeconds(bossDialogue.clip.length);
+
+            esperandoRespuesta = true;
         }
     }
 
-    /*IEnumerator IniciarConversacion()
+    private void Update()
     {
-        // Habla el personaje 1
-        bossDialogue.Play();
+        if (esperandoRespuesta && !bossDialogue.isPlaying)
+        {
+            // Reproduce el diálogo del segundo personaje
+            playerDialogue.Play();
 
-        yield return new WaitForSeconds(
-            bossDialogue.clip.length
-        );
-
-        // Responde el personaje 2
-        playerDialogue.Play();
-    }*/
+            esperandoRespuesta = false;
+        }
+    }
 }
 
