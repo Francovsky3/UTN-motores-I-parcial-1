@@ -16,6 +16,8 @@ public class PlayerGeneral : MonoBehaviour
     public Camera Camera => playerCamera;
     public PlayerSFX  PlayerSFX => playerSFX;
     public AudioClip[] WalkingClips => walkingClips;
+    public AudioClip[] JumpingClips => jumpingClips;
+
 
     [Header("Movement Components")]
     [SerializeField] CharacterController characterController;
@@ -35,6 +37,7 @@ public class PlayerGeneral : MonoBehaviour
     [Header("Audio")]
     [SerializeField] PlayerSFX playerSFX;
     [SerializeField] private AudioClip[] walkingClips;
+    [SerializeField] private AudioClip[] jumpingClips;
 
     private void Awake()
     {
