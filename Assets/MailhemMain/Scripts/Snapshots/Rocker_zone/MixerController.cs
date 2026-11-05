@@ -11,15 +11,4 @@ public class MixerController : MonoBehaviour
     public void RockerZone() { if (rockerZone != null) rockerZone.TransitionTo(transicion); }
 
     private void Start() { Normal(); }
-
-    /*private void OnGUI()
-    {
-        GUILayout.BeginArea(new Rect(20, 195, 230, 145), GUI.skin.box);
-        GUILayout.Label("Clase 11: estados de mezcla");
-        if (GUILayout.Button("Normal")) Normal();
-        if (GUILayout.Button("Interior")) Interior();
-        GUILayout.Label("Transición: " + transicion.ToString("0.0") + " s");
-        transicion = GUILayout.HorizontalSlider(transicion, 0f, 3f);
-        GUILayout.EndArea();
-    }*/
 }

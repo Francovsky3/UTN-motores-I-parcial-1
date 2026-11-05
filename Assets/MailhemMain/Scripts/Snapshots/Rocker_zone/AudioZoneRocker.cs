@@ -1,6 +1,6 @@
 using UnityEngine;
 
-// Ejemplo para UN jugador con UN collider y UNA zona.
+
 [RequireComponent(typeof(SphereCollider))]
 public class RockerAudioZone : MonoBehaviour
 {
