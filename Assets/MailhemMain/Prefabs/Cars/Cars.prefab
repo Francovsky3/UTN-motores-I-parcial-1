@@ -1,102 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &3605202686997317118
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2261198652337716083}
-  - component: {fileID: 4918037096884657215}
-  - component: {fileID: 6689264962598949766}
-  - component: {fileID: 8242559609573087202}
-  m_Layer: 0
-  m_Name: BocinaTrigger
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2261198652337716083
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3605202686997317118}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.00008, y: 0, z: 0.0031}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1680960813818044110}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &4918037096884657215
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3605202686997317118}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.01, y: 0.00820312, z: 0.02}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &6689264962598949766
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3605202686997317118}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6affe3b4b147a5c439b347575abf69a6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CarHornTrigger
-  hornClips:
-  - {fileID: 8300000, guid: 842c83ed599b009479b443cadd9bef20, type: 3}
-  - {fileID: 8300000, guid: ca78183b954258f46b71faed522f3215, type: 3}
---- !u!54 &8242559609573087202
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3605202686997317118}
-  serializedVersion: 5
-  m_Mass: 1
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 0
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!1001 &1214073632331184421
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -123,7 +26,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a253268f0428d3e449e67b99f39b3428, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 2.37
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a253268f0428d3e449e67b99f39b3428, type: 3}
       propertyPath: m_LocalPosition.z
@@ -171,10 +74,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: a253268f0428d3e449e67b99f39b3428, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2261198652337716083}
+    m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: a253268f0428d3e449e67b99f39b3428, type: 3}
       insertIndex: -1
@@ -192,11 +92,6 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 7550185970667304964}
   m_SourcePrefab: {fileID: 100100000, guid: a253268f0428d3e449e67b99f39b3428, type: 3}
---- !u!4 &1680960813818044110 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: a253268f0428d3e449e67b99f39b3428, type: 3}
-  m_PrefabInstance: {fileID: 1214073632331184421}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2024412393715106932 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: a253268f0428d3e449e67b99f39b3428, type: 3}
@@ -232,12 +127,12 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.01, y: 0.00820312, z: 0.019186642}
-  m_Center: {x: 0, y: -5.0449415e-19, z: 0.000101133286}
+  m_Size: {x: 0.01, y: 0.00820312, z: 0.01918664}
+  m_Center: {x: 0, y: -2.0882754e-19, z: 0.00010113299}
 --- !u!54 &-2612907963769599181
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -260,8 +155,8 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 0
+  m_UseGravity: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
@@ -371,8 +266,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 2024412393715106932}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1a1683142c482474dbe667e330250c12, type: 3}
+  m_Script: {fileID: 11500000, guid: 0925f733fbedd184db3d59f6c077c866, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CarHitTrigger
+  hornDistance: 9.5
+  hornClips:
+  - {fileID: 8300000, guid: 842c83ed599b009479b443cadd9bef20, type: 3}
+  - {fileID: 8300000, guid: ca78183b954258f46b71faed522f3215, type: 3}
   hitClips:
   - {fileID: 8300000, guid: df60c17650e0cbb499c11d5ff5900f3b, type: 3}
