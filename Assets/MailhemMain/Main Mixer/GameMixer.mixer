@@ -148,11 +148,12 @@ AudioMixerController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Audio
+  m_Name: GameMixer
   m_OutputGroup: {fileID: 0}
   m_MasterGroup: {fileID: 24300002}
   m_Snapshots:
   - {fileID: 24500006}
+  - {fileID: 7591390080582545612}
   m_StartSnapshot: {fileID: 24500006}
   m_SuspendThreshold: -80
   m_EnableSuspend: 1
@@ -211,7 +212,7 @@ AudioMixerSnapshotController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Snapshot
+  m_Name: Normal
   m_AudioMixer: {fileID: 24100000}
   m_SnapshotID: 4b6ad02eea8839349bd136cae7fbfb02
   m_FloatValues:
@@ -253,3 +254,18 @@ AudioMixerGroupController:
   m_Mute: 0
   m_Solo: 0
   m_BypassEffects: 0
+--- !u!245 &7591390080582545612
+AudioMixerSnapshotController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: RockerZone
+  m_AudioMixer: {fileID: 24100000}
+  m_SnapshotID: 40893d6c3b24b2f4cad6fbedd45b3c39
+  m_FloatValues:
+    5406a523ff0d3ed458a0a29932232ce4: -6
+    387d2b24a455b8046b61e3f8019a3ce1: -20
+    c984798795530174491d12adf659274b: -6
+    2548b68f294b30246b9f3ccb2e1910cb: -10.17919
+  m_TransitionOverrides: {}
