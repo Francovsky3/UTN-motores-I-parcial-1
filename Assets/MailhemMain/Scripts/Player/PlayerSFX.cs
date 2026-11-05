@@ -1,45 +1,14 @@
-using System.Collections;
 using UnityEngine;
 
 public class PlayerSFX : MonoBehaviour
 {
-    [SerializeField] AudioSource audioSource;
-    AudioClip lastClip;
+    [SerializeField] AudioClip[] walkingClips;
+    [SerializeField] AudioClip[] jumpingClips;
+    [SerializeField] AudioClip[] hookClips;
+    [SerializeField] AudioClip[] throwClips;
 
-    public void PlaySFX(AudioClip[] playClips)
-    {
-        if (playClips == null || playClips.Length == 0)
-        {
-            Debug.LogWarning("No se pasaron clips de audio a PlaySFX.");
-            return;
-        }
-
-        if (playClips.Length == 1)
-        {
-            audioSource.clip = playClips[0];
-            lastClip = playClips[0];
-            Debug.Log("Sonó sin random (Solo había un clip disponible)");
-        }
-        
-       else
-        {
-            AudioClip selectedClip;
-            int intentos = 0;
-
-            do
-            {
-                int selectedIndex = Random.Range(0, playClips.Length);
-                selectedClip = playClips[selectedIndex];
-                intentos++;
-            }
-   
-            while (selectedClip == lastClip && intentos < 10);
-
-            audioSource.clip = selectedClip;
-            lastClip = selectedClip;
-            Debug.Log("Sonó con random");
-        }
-
-        audioSource.Play();
-    }
+    public AudioClip[] WalkingClips => walkingClips;
+    public AudioClip[] JumpingClips => jumpingClips;
+    public AudioClip[] HookClips => hookClips;
+    public AudioClip[] ThrowClips => throwClips;
 }

@@ -1,4 +1,3 @@
-using TMPro;
 using UnityEngine;
 
 /// <summary>
@@ -14,10 +13,8 @@ public class PlayerGeneral : MonoBehaviour
     public PlayerCollision Collision => collision;
     public HookController Hook => hook;
     public Camera Camera => playerCamera;
-    public PlayerSFX  PlayerSFX => playerSFX;
-    public AudioClip[] WalkingClips => walkingClips;
-    public AudioClip[] JumpingClips => jumpingClips;
-
+    public SFXManager SFXManager => sfxManager;
+    public PlayerSFX PlayerSFX => playerSFX;
 
     [Header("Movement Components")]
     [SerializeField] CharacterController characterController;
@@ -35,9 +32,8 @@ public class PlayerGeneral : MonoBehaviour
     [SerializeField] Transform handPosition;
 
     [Header("Audio")]
+    [SerializeField] SFXManager sfxManager;
     [SerializeField] PlayerSFX playerSFX;
-    [SerializeField] private AudioClip[] walkingClips;
-    [SerializeField] private AudioClip[] jumpingClips;
 
     private void Awake()
     {
