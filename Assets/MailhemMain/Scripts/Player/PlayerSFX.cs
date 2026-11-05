@@ -4,37 +4,42 @@ using UnityEngine;
 public class PlayerSFX : MonoBehaviour
 {
     [SerializeField] AudioSource audioSource;
-    AudioClip[] clips;
     AudioClip lastClip;
 
-    //recieves the clips of the event that produces sound, if there are multiple, select at random except if the clip is the same as the last one played
     public void PlaySFX(AudioClip[] playClips)
     {
-        clips = playClips;
-        if (clips.Length == 0)
+        if (playClips == null || playClips.Length == 0)
         {
-            audioSource.clip = clips[0];
-            Debug.Log("Sono sin random");
+            Debug.LogWarning("No se pasaron clips de audio a PlaySFX.");
+            return;
         }
-        else
-        {
-            StartCoroutine(ChooseSFX());
-            Debug.Log("Sono con random");
-        }
-        audioSource.Play();
-    }
 
-    IEnumerator ChooseSFX()
-    {
-        int selectedIndex;
+        if (playClips.Length == 1)
+        {
+            audioSource.clip = playClips[0];
+            lastClip = playClips[0];
+            Debug.Log("Sonó sin random (Solo había un clip disponible)");
+        }
+        
+       else
+        {
+            AudioClip selectedClip;
+            int intentos = 0;
+
             do
             {
-                selectedIndex = Random.Range(0, clips.Length);
-                audioSource.clip = clips[selectedIndex];
+                int selectedIndex = Random.Range(0, playClips.Length);
+                selectedClip = playClips[selectedIndex];
+                intentos++;
             }
-            while(clips[selectedIndex] == lastClip);
-            lastClip = clips[selectedIndex];
+   
+            while (selectedClip == lastClip && intentos < 10);
 
-            yield return null;
+            audioSource.clip = selectedClip;
+            lastClip = selectedClip;
+            Debug.Log("Sonó con random");
+        }
+
+        audioSource.Play();
     }
 }

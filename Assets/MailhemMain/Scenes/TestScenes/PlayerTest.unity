@@ -1364,6 +1364,9 @@ MonoBehaviour:
   packageStorage: {fileID: 159962186}
   handPosition: {fileID: 1272955198}
   playerSFX: {fileID: 2034937650}
+  walkingClips:
+  - {fileID: 8300000, guid: e700a60b7ff188547b486bcde5bb5b92, type: 3}
+  - {fileID: 8300000, guid: 8367dd870bb7171479a1b7475d2c05f5, type: 3}
 --- !u!1 &1734447906
 GameObject:
   m_ObjectHideFlags: 0
@@ -1844,9 +1847,9 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: -5711686273978660892, guid: fd672077ef80dd045807fa125b3c3c78, type: 2}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
-  m_PlayOnAwake: 1
-  m_Volume: 1
-  m_Pitch: 1
+  m_PlayOnAwake: 0
+  m_Volume: 0.8
+  m_Pitch: 1.2
   Loop: 0
   Mute: 0
   Spatialize: 0
