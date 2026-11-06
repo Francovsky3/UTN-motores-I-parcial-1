@@ -3,7 +3,7 @@ using UnityEngine;
 public class MailboxScript : MonoBehaviour
 {
     [SerializeField] private AudioClip sonidoEntrega;
-    private AudioSource audioSource;
+    [SerializeField] private AudioSource audioSource;
 
     private void Start()
     {

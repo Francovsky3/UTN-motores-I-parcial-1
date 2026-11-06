@@ -32,6 +32,7 @@ public class AudioOfficeZone : MonoBehaviour
     {
         //if (fuente != null) fuente.Stop();
         if (dentro && mezcla != null && mezcla.isActiveAndEnabled) mezcla.Normal();
+        
         dentro = false;
     }
 }
