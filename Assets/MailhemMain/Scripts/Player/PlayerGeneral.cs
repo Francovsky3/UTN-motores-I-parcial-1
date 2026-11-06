@@ -15,6 +15,7 @@ public class PlayerGeneral : MonoBehaviour
     public Camera Camera => playerCamera;
     public SFXManager SFXManager => sfxManager;
     public PlayerSFX PlayerSFX => playerSFX;
+    public MusicManager MusicManager => musicManager;
 
     [Header("Movement Components")]
     [SerializeField] CharacterController characterController;
@@ -34,6 +35,7 @@ public class PlayerGeneral : MonoBehaviour
     [Header("Audio")]
     [SerializeField] SFXManager sfxManager;
     [SerializeField] PlayerSFX playerSFX;
+    [SerializeField] MusicManager musicManager;
 
     private void Awake()
     {
