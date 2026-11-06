@@ -593,7 +593,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fd2d196df8fc0a4a9bf3176526f3b85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AudioOfficeZone
-  fuente: {fileID: 1588375519}
   mezcla: {fileID: 1035231973}
 --- !u!65 &6324188
 BoxCollider:
@@ -4351,7 +4350,7 @@ AudioSource:
   Priority: 180
   DopplerLevel: 1
   MinDistance: 20
-  MaxDistance: 1000
+  MaxDistance: 350
   Pan2D: 0
   rolloffMode: 1
   BypassEffects: 0
@@ -6865,11 +6864,11 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 1074290045383052215, guid: fd672077ef80dd045807fa125b3c3c78, type: 2}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 0}
-  m_PlayOnAwake: 0
+  m_Resource: {fileID: 8300000, guid: edd86f5ee928eb763ae651156d991741, type: 3}
+  m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -8153,7 +8152,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 587fe9b73f1880e4cbc31ecbade1109d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RockerAudioZone
-  fuente: {fileID: 1839640266}
   mezcla: {fileID: 928767108}
 --- !u!1 &399167995
 GameObject:
@@ -31172,7 +31170,7 @@ AudioSource:
   Spatialize: 0
   SpatializePostEffects: 0
   Priority: 128
-  DopplerLevel: 1
+  DopplerLevel: 0
   MinDistance: 1
   MaxDistance: 50
   Pan2D: 0
