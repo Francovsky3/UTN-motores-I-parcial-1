@@ -11,16 +11,15 @@ public class MailboxScript : MonoBehaviour
 
         if (audioSource == null)
         {
-            Debug.LogWarning("Falta el componente AudioSource en el buzón.");
+            Debug.LogWarning("Falta el componente AudioSource en el buzï¿½n.");
         }
     }
 
     private void OnTriggerEnter(Collider other)
     {
- 
-        if (other.CompareTag("Packages"))
+        if (other.gameObject.CompareTag("Packages"))
         {
-            Debug.Log("¡Paquete entregado con éxito!");
+            Debug.Log("ï¿½Paquete entregado con ï¿½xito!");
 
             if (sonidoEntrega != null && audioSource != null)
             {
