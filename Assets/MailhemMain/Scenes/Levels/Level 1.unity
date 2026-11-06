@@ -4348,7 +4348,7 @@ AudioSource:
   Spatialize: 0
   SpatializePostEffects: 0
   Priority: 180
-  DopplerLevel: 1
+  DopplerLevel: 0
   MinDistance: 20
   MaxDistance: 350
   Pan2D: 0
@@ -7780,7 +7780,7 @@ AudioSource:
   Spatialize: 0
   SpatializePostEffects: 0
   Priority: 128
-  DopplerLevel: 1
+  DopplerLevel: 0
   MinDistance: 20
   MaxDistance: 500
   Pan2D: 0
@@ -28052,7 +28052,7 @@ AudioSource:
   Spatialize: 0
   SpatializePostEffects: 0
   Priority: 128
-  DopplerLevel: 1
+  DopplerLevel: 0
   MinDistance: 20
   MaxDistance: 500
   Pan2D: 0
