@@ -37792,6 +37792,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4429775729817532379, guid: d7839af0dcfc6a647a6bd94e19bcf1c0, type: 3}
+      propertyPath: musicManager
+      value: 
+      objectReference: {fileID: 47580227803461495}
+    - target: {fileID: 4429775729817532379, guid: d7839af0dcfc6a647a6bd94e19bcf1c0, type: 3}
       propertyPath: playerCamera
       value: 
       objectReference: {fileID: 330585545}
