@@ -4,6 +4,9 @@ public class Package : MonoBehaviour
 {
     Rigidbody rb;
     MeshCollider meshCollider;
+    float pickupTimer;
+    [SerializeField] float maxTimer = 2f;
+    bool pickupable = true;
 
     [Header("Audio del Paquete (Bloque C)")]
     [SerializeField] private AudioClip[] pickupClips;
@@ -15,8 +18,22 @@ public class Package : MonoBehaviour
         meshCollider = GetComponent<MeshCollider>();
     }
 
-    public void AttachToPlayer(Transform newPos)
+    void Update()
     {
+        if(pickupTimer > 0)
+        {
+            pickupTimer -= Time.deltaTime;
+        }
+        if(pickupTimer <= 0)
+        {
+            pickupTimer = 0;
+            pickupable = true;
+        }
+    }
+
+    public bool AttachToPlayer(Transform newPos)
+    {
+        if (!pickupable) return false;
         PlayerGeneral player = FindAnyObjectByType<PlayerGeneral>();
 
     
@@ -34,6 +51,7 @@ public class Package : MonoBehaviour
         transform.parent = newPos;
         transform.position = newPos.position;
         transform.Rotate(Vector3.forward * 90f);
+        return true;
     }
 
     public void GetThrown(Transform newPos, float force)
@@ -46,7 +64,7 @@ public class Package : MonoBehaviour
             player.SFXManager.PlaySFX(throwClips);
         }
         // ---------------------------------------
-
+        pickupable = false;
         meshCollider.enabled = true;
         rb.isKinematic = false;
         transform.parent = null;

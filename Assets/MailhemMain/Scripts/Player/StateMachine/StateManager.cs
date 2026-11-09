@@ -31,8 +31,12 @@ public class StateManager
     {
         if(Player.Collision.Package.Length > 0 && Player.Packages.HasPackage == false)
         {
-            Player.Packages.StorePack(Player.Collision.Package[0].GetComponent<Package>());
-            Player.MusicManager.SwitchMusicState(MusicManager.MusicState.pack);
+            if (Player.Packages.StorePack(Player.Collision.Package[0].GetComponent<Package>()))
+            {
+                Player.MusicManager.SwitchMusicState(MusicManager.MusicState.pack);
+                Debug.Log("Agarrado");
+            }
+            
         }
         if(Player.InputProcessor.InputThrow > Time.time && Player.Packages.HasPackage == true)
         {

@@ -16,11 +16,12 @@ public class PackageManager
         handPosition = handPos;
     }
 
-    public void StorePack(Package pack)
+    public bool StorePack(Package pack)
     {
         HasPackage = true;
-        pack.AttachToPlayer(packageStorage);
+        if (!pack.AttachToPlayer(packageStorage)) return false;
         storedPack = pack;
+        return true;
     }
 
     public void ThrowPack()
