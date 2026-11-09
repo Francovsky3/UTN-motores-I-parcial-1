@@ -94,6 +94,7 @@ GameObject:
   - component: {fileID: 439688347647987554}
   - component: {fileID: 4853350741037610839}
   - component: {fileID: 4544580093200452571}
+  - component: {fileID: 4987320756567121324}
   m_Layer: 0
   m_Name: Audio
   m_TagString: Untagged
@@ -250,6 +251,23 @@ MonoBehaviour:
   throwClips:
   - {fileID: 0}
   - {fileID: 0}
+--- !u!114 &4987320756567121324
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3265220281676085086}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0a8137bef96b072cbc44fce52d01534, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MusicManager
+  interiorMusic: {fileID: 0}
+  exteriorMusic: {fileID: 0}
+  packMusic: {fileID: 0}
+  musicSource: {fileID: 0}
+  musicState: 0
 --- !u!1 &3390029794480120985
 GameObject:
   m_ObjectHideFlags: 0
@@ -698,6 +716,7 @@ MonoBehaviour:
   handPosition: {fileID: 3982612144182285633}
   sfxManager: {fileID: 439688347647987554}
   playerSFX: {fileID: 4544580093200452571}
+  musicManager: {fileID: 4987320756567121324}
 --- !u!1 &8017135318858850576
 GameObject:
   m_ObjectHideFlags: 0
