@@ -7,6 +7,7 @@ public class Package : MonoBehaviour
     float pickupTimer;
     [SerializeField] float maxTimer = 2f;
     bool pickupable = true;
+    bool countdown = false;
 
     [Header("Audio del Paquete (Bloque C)")]
     [SerializeField] private AudioClip[] pickupClips;
@@ -24,8 +25,9 @@ public class Package : MonoBehaviour
         {
             pickupTimer -= Time.deltaTime;
         }
-        if(pickupTimer <= 0)
+        if(pickupTimer <= 0 && countdown)
         {
+            countdown = false;
             pickupTimer = 0;
             pickupable = true;
         }
@@ -65,6 +67,7 @@ public class Package : MonoBehaviour
         }
         // ---------------------------------------
         pickupable = false;
+        countdown = true;
         pickupTimer = maxTimer;
         meshCollider.enabled = true;
         rb.isKinematic = false;
