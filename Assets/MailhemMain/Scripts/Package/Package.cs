@@ -65,6 +65,7 @@ public class Package : MonoBehaviour
         }
         // ---------------------------------------
         pickupable = false;
+        pickupTimer = maxTimer;
         meshCollider.enabled = true;
         rb.isKinematic = false;
         transform.parent = null;
