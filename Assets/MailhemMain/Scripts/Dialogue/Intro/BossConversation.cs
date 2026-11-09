@@ -2,8 +2,9 @@ using UnityEngine;
 
 public class ConversacionTrigger : MonoBehaviour
 {
-    public AudioSource bossDialogue;
-    public AudioSource playerDialogue;
+    [SerializeField] AudioSource bossDialogue;
+    [SerializeField] PlayerGeneral player;
+    [SerializeField] AudioClip playerClip;
 
     private bool activado = false;
     private bool esperandoRespuesta = false;
@@ -26,7 +27,7 @@ public class ConversacionTrigger : MonoBehaviour
         if (esperandoRespuesta && !bossDialogue.isPlaying)
         {
             // Reproduce el diálogo del segundo personaje
-            playerDialogue.Play();
+            player.PlayerAudioManager.PlayVoice(playerClip);
 
             esperandoRespuesta = false;
         }

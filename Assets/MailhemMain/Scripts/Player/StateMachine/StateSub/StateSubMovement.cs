@@ -37,7 +37,7 @@ public class StateSubMovement : StateSuperGround
  
         if (footstepTimer >= timeBetweenSteps)
         {
-            Player.SFXManager.PlaySFX(Player.PlayerSFX.WalkingClips);
+            Player.PlayerAudioManager.PlaySFX(Player.PlayerSFX.WalkingClips);
 
             footstepTimer = 0f;
         }

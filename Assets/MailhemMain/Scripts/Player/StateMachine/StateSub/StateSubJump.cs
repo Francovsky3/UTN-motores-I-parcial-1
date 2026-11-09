@@ -21,7 +21,7 @@ public class StateSubJump : StateSuperAir
         animator.SetTrigger(isJumpingHash);
         Player.Movement.VelocityJump();
         jumpTimer = 1.5f;
-        Player.SFXManager.PlaySFX(Player.PlayerSFX.JumpingClips);
+        Player.PlayerAudioManager.PlaySFX(Player.PlayerSFX.JumpingClips);
     }
 
     public override void Update()

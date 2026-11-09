@@ -13,7 +13,7 @@ public class PlayerGeneral : MonoBehaviour
     public PlayerCollision Collision => collision;
     public HookController Hook => hook;
     public Camera Camera => playerCamera;
-    public SFXManager SFXManager => sfxManager;
+    public AudioManager PlayerAudioManager => audioManager;
     public PlayerSFX PlayerSFX => playerSFX;
     public MusicManager MusicManager => musicManager;
 
@@ -33,7 +33,7 @@ public class PlayerGeneral : MonoBehaviour
     [SerializeField] Transform handPosition;
 
     [Header("Audio")]
-    [SerializeField] SFXManager sfxManager;
+    [SerializeField] AudioManager audioManager;
     [SerializeField] PlayerSFX playerSFX;
     [SerializeField] MusicManager musicManager;
 

@@ -1,29 +1,39 @@
 using System.Collections;
 using UnityEngine;
 
-public class SFXManager : MonoBehaviour
+/// <summary>
+/// Manages all audio, can be used for any entity
+/// </summary>
+public class AudioManager : MonoBehaviour
 {
-    [SerializeField] AudioSource audioSource;
+    [SerializeField] AudioSource sfxSource;
+    [SerializeField] AudioSource voiceSource;
     AudioClip lastClip;
-    AudioClip[] givenClips;
+    AudioClip[] sfxClips;
 
     public void PlaySFX(AudioClip[] playClips)
     {
-        if (playClips == null || playClips.Length == 0 || audioSource.isPlaying) return;
+        if (playClips == null || playClips.Length == 0 || sfxSource.isPlaying) return;
 
         if (playClips.Length == 1)
         {
-            audioSource.clip = playClips[0];
+            sfxSource.clip = playClips[0];
             lastClip = playClips[0];
         }
         
        else
         {
-            givenClips = playClips;
+            sfxClips = playClips;
             StartCoroutine(ChooseClip());
         }
 
-        audioSource.Play();
+        sfxSource.Play();
+    }
+
+    public void PlayVoice(AudioClip voice)
+    {
+        voiceSource.clip = voice;
+        voiceSource.Play();
     }
 
     IEnumerator ChooseClip()
@@ -31,12 +41,12 @@ public class SFXManager : MonoBehaviour
         int selectedIndex;
         do
         {
-            selectedIndex = Random.Range(0, givenClips.Length);
+            selectedIndex = Random.Range(0, sfxClips.Length);
         }
-        while (givenClips[selectedIndex] == lastClip);
+        while (sfxClips[selectedIndex] == lastClip);
         
-        audioSource.clip = givenClips[selectedIndex];
-        lastClip = givenClips[selectedIndex];
+        sfxSource.clip = sfxClips[selectedIndex];
+        lastClip = sfxClips[selectedIndex];
         yield return null;
     }
 }

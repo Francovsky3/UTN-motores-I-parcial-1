@@ -41,7 +41,7 @@ public class Package : MonoBehaviour
     
         if (player != null && pickupClips != null && pickupClips.Length > 0)
         {
-            player.SFXManager.PlaySFX(pickupClips);
+            player.PlayerAudioManager.PlaySFX(pickupClips);
         }
         else if (player == null)
         {
@@ -63,7 +63,7 @@ public class Package : MonoBehaviour
 
         if (player != null && throwClips != null && throwClips.Length > 0)
         {
-            player.SFXManager.PlaySFX(throwClips);
+            player.PlayerAudioManager.PlaySFX(throwClips);
         }
         // ---------------------------------------
         pickupable = false;

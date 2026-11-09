@@ -28,7 +28,7 @@ public class CarCollisionSFX : MonoBehaviour
  
         if (distancia <= hornDistance)
         {
-            SFXManager playerSFX = playerTransform.GetComponentInChildren<SFXManager>();
+            AudioManager playerSFX = playerTransform.GetComponentInChildren<AudioManager>();
             if (playerSFX != null && hornClips != null && hornClips.Length > 0)
             {
                 yaSonoBocina = true;
@@ -42,7 +42,7 @@ public class CarCollisionSFX : MonoBehaviour
     {
         if (other.CompareTag("Player") && !yaChocoGolpe)
         {
-            SFXManager playerSFX = other.GetComponentInChildren<SFXManager>();
+            AudioManager playerSFX = other.GetComponentInChildren<AudioManager>();
             if (playerSFX != null && hitClips != null && hitClips.Length > 0)
             {
                 yaChocoGolpe = true;
