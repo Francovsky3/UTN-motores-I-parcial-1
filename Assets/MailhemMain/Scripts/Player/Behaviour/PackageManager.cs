@@ -18,8 +18,8 @@ public class PackageManager
 
     public bool StorePack(Package pack)
     {
-        HasPackage = true;
         if (!pack.AttachToPlayer(packageStorage)) return false;
+        HasPackage = true;
         storedPack = pack;
         return true;
     }
