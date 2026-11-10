@@ -4964,6 +4964,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1607770513}
     m_Modifications:
+    - target: {fileID: -3649404172299572762, guid: dc8918f9bfffcbb48aa00070fba84704, type: 3}
+      propertyPath: MinDistance
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -3649404172299572762, guid: dc8918f9bfffcbb48aa00070fba84704, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 806532756401299429, guid: dc8918f9bfffcbb48aa00070fba84704, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -8214,6 +8222,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1607770513}
     m_Modifications:
+    - target: {fileID: -3649404172299572762, guid: dc8918f9bfffcbb48aa00070fba84704, type: 3}
+      propertyPath: MinDistance
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -3649404172299572762, guid: dc8918f9bfffcbb48aa00070fba84704, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 806532756401299429, guid: dc8918f9bfffcbb48aa00070fba84704, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -9828,6 +9844,11 @@ Mesh:
       - serializedVersion: 1
         m_IndexStart: 0
         m_IndexCount: 0
+--- !u!82 &431341246 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 3001971815313782624, guid: d7839af0dcfc6a647a6bd94e19bcf1c0, type: 3}
+  m_PrefabInstance: {fileID: 47580227803461493}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &446391253
 GameObject:
   m_ObjectHideFlags: 0
@@ -18352,6 +18373,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1607770513}
     m_Modifications:
+    - target: {fileID: -3649404172299572762, guid: dc8918f9bfffcbb48aa00070fba84704, type: 3}
+      propertyPath: MinDistance
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -3649404172299572762, guid: dc8918f9bfffcbb48aa00070fba84704, type: 3}
+      propertyPath: rolloffMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -3649404172299572762, guid: dc8918f9bfffcbb48aa00070fba84704, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 806532756401299429, guid: dc8918f9bfffcbb48aa00070fba84704, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -21656,6 +21689,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1607770513}
     m_Modifications:
+    - target: {fileID: -3649404172299572762, guid: dc8918f9bfffcbb48aa00070fba84704, type: 3}
+      propertyPath: MinDistance
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -3649404172299572762, guid: dc8918f9bfffcbb48aa00070fba84704, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 806532756401299429, guid: dc8918f9bfffcbb48aa00070fba84704, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -33247,6 +33288,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 980352356}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1775637513 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 439688347647987554, guid: d7839af0dcfc6a647a6bd94e19bcf1c0, type: 3}
+  m_PrefabInstance: {fileID: 47580227803461493}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 350c61c18d964d94382d4a8d12a986dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerSFX
 --- !u!4 &1775764003 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8047374874115206194, guid: dc8918f9bfffcbb48aa00070fba84704, type: 3}
@@ -33533,8 +33585,12 @@ PrefabInstance:
     m_TransformParent: {fileID: 1607770513}
     m_Modifications:
     - target: {fileID: -3649404172299572762, guid: dc8918f9bfffcbb48aa00070fba84704, type: 3}
+      propertyPath: MinDistance
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -3649404172299572762, guid: dc8918f9bfffcbb48aa00070fba84704, type: 3}
       propertyPath: m_PlayOnAwake
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -3649404172299572762, guid: dc8918f9bfffcbb48aa00070fba84704, type: 3}
       propertyPath: reverbZoneMixCustomCurve.m_Curve.Array.data[0].value
@@ -34768,6 +34824,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1003525418}
     m_Modifications:
+    - target: {fileID: -2621838521233614173, guid: 0fefac457c4bd3a4f92d63afd127184b, type: 3}
+      propertyPath: MinDistance
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -2621838521233614173, guid: 0fefac457c4bd3a4f92d63afd127184b, type: 3}
+      propertyPath: rolloffMode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2297328039531809676, guid: 0fefac457c4bd3a4f92d63afd127184b, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -37567,6 +37631,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 439688347647987554, guid: d7839af0dcfc6a647a6bd94e19bcf1c0, type: 3}
+      propertyPath: sfxSource
+      value: 
+      objectReference: {fileID: 431341246}
+    - target: {fileID: 3001971815313782624, guid: d7839af0dcfc6a647a6bd94e19bcf1c0, type: 3}
+      propertyPath: MinDistance
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3001971815313782624, guid: d7839af0dcfc6a647a6bd94e19bcf1c0, type: 3}
+      propertyPath: DopplerLevel
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3001971815313782624, guid: d7839af0dcfc6a647a6bd94e19bcf1c0, type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4410354414022366122, guid: d7839af0dcfc6a647a6bd94e19bcf1c0, type: 3}
       propertyPath: m_Name
       value: Player
@@ -37623,6 +37703,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4429775729817532379, guid: d7839af0dcfc6a647a6bd94e19bcf1c0, type: 3}
+      propertyPath: audioManager
+      value: 
+      objectReference: {fileID: 1775637513}
     - target: {fileID: 4429775729817532379, guid: d7839af0dcfc6a647a6bd94e19bcf1c0, type: 3}
       propertyPath: musicManager
       value: 
