@@ -1,30 +1,42 @@
+using System.Collections;
 using UnityEngine;
 
+/// <summary>
+/// Manages the game's music, fading in and out different sources
+/// </summary>
 public class MusicManager : MonoBehaviour
 {
-    [SerializeField] AudioClip interiorMusic;
-    [SerializeField] AudioClip exteriorMusic;
-    [SerializeField] AudioClip packMusic;
+    [SerializeField] AudioClip baseMusic;
+    [SerializeField] AudioClip guitarClip;
     [SerializeField] AudioSource musicSource;
+    [SerializeField] AudioSource guitarSource;
 
-    public enum MusicState {interior, exterior, pack}
 
-    public MusicState musicState = MusicState.interior;
-
-    public void SwitchMusicState(MusicState state)
+    void Awake()
     {
-        musicState = state;
-        switch (musicState)
+        musicSource.clip = baseMusic;
+        guitarSource.clip = guitarClip;
+        musicSource.Play();
+        guitarSource.Play();
+    }
+
+    public void FadeGuitar(float volume, float duration)
+    {
+        StartCoroutine(Fade(guitarSource, volume, duration));
+    }
+
+    //Fades in or out the target source, can even let 
+    IEnumerator Fade(AudioSource source, float targetVolume, float duration)
+    {
+        float startVolume = source.volume;
+        float currentTime = 0f;
+        Debug.Log(startVolume);
+
+        while (currentTime < duration)
         {
-            case MusicState.interior:
-                musicSource.clip = interiorMusic;
-                return;
-            case MusicState.exterior:
-                musicSource.clip = exteriorMusic;
-                return;
-            case MusicState.pack:
-                musicSource.clip = packMusic;
-                return;
+            currentTime += Time.deltaTime;
+            source.volume = Mathf.Lerp(startVolume, targetVolume, currentTime/duration);
+            yield return null;
         }
     }
 }

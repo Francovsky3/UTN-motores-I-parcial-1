@@ -130,7 +130,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 350c61c18d964d94382d4a8d12a986dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerSFX
-  audioSource: {fileID: 3001971815313782624}
+  sfxSource: {fileID: 3001971815313782624}
+  voiceSource: {fileID: 1384036798768580327}
 --- !u!114 &4544580093200452571
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -167,11 +168,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0a8137bef96b072cbc44fce52d01534, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MusicManager
-  interiorMusic: {fileID: 0}
-  exteriorMusic: {fileID: 0}
-  packMusic: {fileID: 0}
+  baseMusic: {fileID: 8300000, guid: f3e0c1d55f61aed819af1db7d2163567, type: 3}
+  guitarClip: {fileID: 8300000, guid: bfeec15becb2edf5997b2819db7a12e2, type: 3}
   musicSource: {fileID: 0}
-  musicState: 0
+  guitarSource: {fileID: 0}
 --- !u!1 &3390029794480120985
 GameObject:
   m_ObjectHideFlags: 0
@@ -747,7 +747,7 @@ MonoBehaviour:
   hook: {fileID: 0}
   packageStorage: {fileID: 4363112916494165480}
   handPosition: {fileID: 3982612144182285633}
-  sfxManager: {fileID: 439688347647987554}
+  audioManager: {fileID: 439688347647987554}
   playerSFX: {fileID: 4544580093200452571}
   musicManager: {fileID: 4987320756567121324}
 --- !u!1 &8017135318858850576

@@ -33,7 +33,7 @@ public class StateManager
         {
             if (Player.Packages.StorePack(Player.Collision.Package[0].GetComponent<Package>()))
             {
-                Player.MusicManager.SwitchMusicState(MusicManager.MusicState.pack);
+                //Player.MusicManager.SwitchMusicState(MusicManager.MusicState.pack);
                 Debug.Log("Agarrado");
             }
             
@@ -42,7 +42,7 @@ public class StateManager
         {
             Player.InputProcessor.ProcessInputThrow(0);
             Player.Packages.ThrowPack();
-            Player.MusicManager.SwitchMusicState(MusicManager.MusicState.exterior);
+            //Player.MusicManager.SwitchMusicState(MusicManager.MusicState.exterior);
         }
     }
 
