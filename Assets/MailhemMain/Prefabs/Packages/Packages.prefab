@@ -405,6 +405,7 @@ MonoBehaviour:
   throwClips:
   - {fileID: 8300000, guid: 2d9a400bf16a6884cb1ae34f2a328100, type: 3}
   - {fileID: 8300000, guid: a1ea70284e284e045acb25f231d27793, type: 3}
+  pickupVoice: {fileID: 8300000, guid: 5f5674e3b31dae342a219b098bf309a3, type: 3}
 --- !u!82 &-2621838521233614173
 AudioSource:
   m_ObjectHideFlags: 0
