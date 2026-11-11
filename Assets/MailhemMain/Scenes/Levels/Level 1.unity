@@ -483,10 +483,30 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1003525418}
     m_Modifications:
+    - target: {fileID: -2621838521233614173, guid: 0fefac457c4bd3a4f92d63afd127184b, type: 3}
+      propertyPath: m_Volume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -2621838521233614173, guid: 0fefac457c4bd3a4f92d63afd127184b, type: 3}
+      propertyPath: MinDistance
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -2621838521233614173, guid: 0fefac457c4bd3a4f92d63afd127184b, type: 3}
+      propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -2621838521233614173, guid: 0fefac457c4bd3a4f92d63afd127184b, type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2297328039531809676, guid: 0fefac457c4bd3a4f92d63afd127184b, type: 3}
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1925875862}
+    - target: {fileID: 3666738470302912147, guid: 0fefac457c4bd3a4f92d63afd127184b, type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 1385362127}
     - target: {fileID: 4327232425581297267, guid: 0fefac457c4bd3a4f92d63afd127184b, type: 3}
       propertyPath: m_Name
       value: Packages (3)
@@ -497,7 +517,7 @@ PrefabInstance:
       objectReference: {fileID: 1925875862}
     - target: {fileID: 6389668154447406229, guid: 0fefac457c4bd3a4f92d63afd127184b, type: 3}
       propertyPath: m_VersionIndex
-      value: 77
+      value: 80
       objectReference: {fileID: 0}
     - target: {fileID: 8115228646062499981, guid: 0fefac457c4bd3a4f92d63afd127184b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8486,7 +8506,7 @@ MeshCollider:
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: 717116629}
+  m_Mesh: {fileID: 287547333}
 --- !u!33 &330745578
 MeshFilter:
   m_ObjectHideFlags: 10
@@ -8842,7 +8862,7 @@ MeshCollider:
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: 52891695}
+  m_Mesh: {fileID: 717116629}
 --- !u!33 &334599537
 MeshFilter:
   m_ObjectHideFlags: 10
@@ -16572,10 +16592,30 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1003525418}
     m_Modifications:
+    - target: {fileID: -2621838521233614173, guid: 0fefac457c4bd3a4f92d63afd127184b, type: 3}
+      propertyPath: m_Volume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -2621838521233614173, guid: 0fefac457c4bd3a4f92d63afd127184b, type: 3}
+      propertyPath: MinDistance
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -2621838521233614173, guid: 0fefac457c4bd3a4f92d63afd127184b, type: 3}
+      propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -2621838521233614173, guid: 0fefac457c4bd3a4f92d63afd127184b, type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2297328039531809676, guid: 0fefac457c4bd3a4f92d63afd127184b, type: 3}
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 898924163}
+    - target: {fileID: 3666738470302912147, guid: 0fefac457c4bd3a4f92d63afd127184b, type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 2071199602}
     - target: {fileID: 4327232425581297267, guid: 0fefac457c4bd3a4f92d63afd127184b, type: 3}
       propertyPath: m_Name
       value: Packages (4)
@@ -16586,7 +16626,7 @@ PrefabInstance:
       objectReference: {fileID: 898924163}
     - target: {fileID: 6389668154447406229, guid: 0fefac457c4bd3a4f92d63afd127184b, type: 3}
       propertyPath: m_VersionIndex
-      value: 77
+      value: 80
       objectReference: {fileID: 0}
     - target: {fileID: 8115228646062499981, guid: 0fefac457c4bd3a4f92d63afd127184b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -18553,10 +18593,30 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1003525418}
     m_Modifications:
+    - target: {fileID: -2621838521233614173, guid: 0fefac457c4bd3a4f92d63afd127184b, type: 3}
+      propertyPath: m_Volume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -2621838521233614173, guid: 0fefac457c4bd3a4f92d63afd127184b, type: 3}
+      propertyPath: MinDistance
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -2621838521233614173, guid: 0fefac457c4bd3a4f92d63afd127184b, type: 3}
+      propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -2621838521233614173, guid: 0fefac457c4bd3a4f92d63afd127184b, type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2297328039531809676, guid: 0fefac457c4bd3a4f92d63afd127184b, type: 3}
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 985227790}
+    - target: {fileID: 3666738470302912147, guid: 0fefac457c4bd3a4f92d63afd127184b, type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 1445524304}
     - target: {fileID: 4327232425581297267, guid: 0fefac457c4bd3a4f92d63afd127184b, type: 3}
       propertyPath: m_Name
       value: Packages (2)
@@ -18567,7 +18627,7 @@ PrefabInstance:
       objectReference: {fileID: 985227790}
     - target: {fileID: 6389668154447406229, guid: 0fefac457c4bd3a4f92d63afd127184b, type: 3}
       propertyPath: m_VersionIndex
-      value: 77
+      value: 80
       objectReference: {fileID: 0}
     - target: {fileID: 8115228646062499981, guid: 0fefac457c4bd3a4f92d63afd127184b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -18987,10 +19047,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1003525418}
     m_Modifications:
+    - target: {fileID: -2621838521233614173, guid: 0fefac457c4bd3a4f92d63afd127184b, type: 3}
+      propertyPath: MinDistance
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -2621838521233614173, guid: 0fefac457c4bd3a4f92d63afd127184b, type: 3}
+      propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -2621838521233614173, guid: 0fefac457c4bd3a4f92d63afd127184b, type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2297328039531809676, guid: 0fefac457c4bd3a4f92d63afd127184b, type: 3}
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 359033138}
+    - target: {fileID: 3666738470302912147, guid: 0fefac457c4bd3a4f92d63afd127184b, type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 2093263551}
     - target: {fileID: 4327232425581297267, guid: 0fefac457c4bd3a4f92d63afd127184b, type: 3}
       propertyPath: m_Name
       value: Packages (1)
@@ -19001,7 +19077,7 @@ PrefabInstance:
       objectReference: {fileID: 359033138}
     - target: {fileID: 6389668154447406229, guid: 0fefac457c4bd3a4f92d63afd127184b, type: 3}
       propertyPath: m_VersionIndex
-      value: 77
+      value: 80
       objectReference: {fileID: 0}
     - target: {fileID: 8115228646062499981, guid: 0fefac457c4bd3a4f92d63afd127184b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -19982,7 +20058,7 @@ MeshCollider:
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: 1855261418}
+  m_Mesh: {fileID: 52891695}
 --- !u!33 &911599628
 MeshFilter:
   m_ObjectHideFlags: 10
@@ -27513,6 +27589,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8115228646062499981, guid: 0fefac457c4bd3a4f92d63afd127184b, type: 3}
   m_PrefabInstance: {fileID: 3619912}
   m_PrefabAsset: {fileID: 0}
+--- !u!82 &1385362127 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: -2621838521233614173, guid: 0fefac457c4bd3a4f92d63afd127184b, type: 3}
+  m_PrefabInstance: {fileID: 3619912}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1395819216 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 713418444468812823, guid: 15de729999af4184fabafcd139f75589, type: 3}
@@ -28638,6 +28719,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 90af2b18bbdcb8449bc012d995d1d0e7, type: 3}
+--- !u!82 &1445524304 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: -2621838521233614173, guid: 0fefac457c4bd3a4f92d63afd127184b, type: 3}
+  m_PrefabInstance: {fileID: 774851440}
+  m_PrefabAsset: {fileID: 0}
 --- !u!43 &1446963035
 Mesh:
   m_ObjectHideFlags: 0
@@ -33400,7 +33486,7 @@ MeshCollider:
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: 1520887431}
+  m_Mesh: {fileID: 1855261418}
 --- !u!33 &1665498445
 MeshFilter:
   m_ObjectHideFlags: 10
@@ -36280,10 +36366,30 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1003525418}
     m_Modifications:
+    - target: {fileID: -2621838521233614173, guid: 0fefac457c4bd3a4f92d63afd127184b, type: 3}
+      propertyPath: m_Volume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -2621838521233614173, guid: 0fefac457c4bd3a4f92d63afd127184b, type: 3}
+      propertyPath: MinDistance
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -2621838521233614173, guid: 0fefac457c4bd3a4f92d63afd127184b, type: 3}
+      propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -2621838521233614173, guid: 0fefac457c4bd3a4f92d63afd127184b, type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2297328039531809676, guid: 0fefac457c4bd3a4f92d63afd127184b, type: 3}
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 511697816}
+    - target: {fileID: 3666738470302912147, guid: 0fefac457c4bd3a4f92d63afd127184b, type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 1990954405}
     - target: {fileID: 4327232425581297267, guid: 0fefac457c4bd3a4f92d63afd127184b, type: 3}
       propertyPath: m_Name
       value: Packages (5)
@@ -36294,7 +36400,7 @@ PrefabInstance:
       objectReference: {fileID: 511697816}
     - target: {fileID: 6389668154447406229, guid: 0fefac457c4bd3a4f92d63afd127184b, type: 3}
       propertyPath: m_VersionIndex
-      value: 148
+      value: 151
       objectReference: {fileID: 0}
     - target: {fileID: 8115228646062499981, guid: 0fefac457c4bd3a4f92d63afd127184b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -36402,7 +36508,7 @@ MeshCollider:
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: 52891695}
+  m_Mesh: {fileID: 298999895}
 --- !u!33 &1836751224
 MeshFilter:
   m_ObjectHideFlags: 10
@@ -37711,12 +37817,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 1003525418}
     m_Modifications:
     - target: {fileID: -2621838521233614173, guid: 0fefac457c4bd3a4f92d63afd127184b, type: 3}
+      propertyPath: m_Volume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -2621838521233614173, guid: 0fefac457c4bd3a4f92d63afd127184b, type: 3}
       propertyPath: MinDistance
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: -2621838521233614173, guid: 0fefac457c4bd3a4f92d63afd127184b, type: 3}
       propertyPath: rolloffMode
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -2621838521233614173, guid: 0fefac457c4bd3a4f92d63afd127184b, type: 3}
       propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
@@ -37726,6 +37836,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 51412347}
+    - target: {fileID: 3666738470302912147, guid: 0fefac457c4bd3a4f92d63afd127184b, type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 2133800075}
     - target: {fileID: 4327232425581297267, guid: 0fefac457c4bd3a4f92d63afd127184b, type: 3}
       propertyPath: m_Name
       value: Packages
@@ -37736,7 +37850,7 @@ PrefabInstance:
       objectReference: {fileID: 51412347}
     - target: {fileID: 6389668154447406229, guid: 0fefac457c4bd3a4f92d63afd127184b, type: 3}
       propertyPath: m_VersionIndex
-      value: 77
+      value: 80
       objectReference: {fileID: 0}
     - target: {fileID: 8115228646062499981, guid: 0fefac457c4bd3a4f92d63afd127184b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -38764,6 +38878,11 @@ Mesh:
       - serializedVersion: 1
         m_IndexStart: 0
         m_IndexCount: 0
+--- !u!82 &1990954405 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: -2621838521233614173, guid: 0fefac457c4bd3a4f92d63afd127184b, type: 3}
+  m_PrefabInstance: {fileID: 1830864080}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1995390106
 GameObject:
   m_ObjectHideFlags: 0
@@ -39802,6 +39921,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8115228646062499981, guid: 0fefac457c4bd3a4f92d63afd127184b, type: 3}
   m_PrefabInstance: {fileID: 691991828}
   m_PrefabAsset: {fileID: 0}
+--- !u!82 &2071199602 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: -2621838521233614173, guid: 0fefac457c4bd3a4f92d63afd127184b, type: 3}
+  m_PrefabInstance: {fileID: 691991828}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2079766243
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -39875,6 +39999,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 90af2b18bbdcb8449bc012d995d1d0e7, type: 3}
+--- !u!82 &2093263551 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: -2621838521233614173, guid: 0fefac457c4bd3a4f92d63afd127184b, type: 3}
+  m_PrefabInstance: {fileID: 803604498}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2104361131
 GameObject:
   m_ObjectHideFlags: 0
@@ -40155,6 +40284,11 @@ AudioSource:
 --- !u!4 &2133800073 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8115228646062499981, guid: 0fefac457c4bd3a4f92d63afd127184b, type: 3}
+  m_PrefabInstance: {fileID: 1907285679}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &2133800075 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: -2621838521233614173, guid: 0fefac457c4bd3a4f92d63afd127184b, type: 3}
   m_PrefabInstance: {fileID: 1907285679}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &2142881656
@@ -40530,8 +40664,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 47580227803461495}
     - target: {fileID: 3001971815313782624, guid: d7839af0dcfc6a647a6bd94e19bcf1c0, type: 3}
+      propertyPath: m_Volume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3001971815313782624, guid: d7839af0dcfc6a647a6bd94e19bcf1c0, type: 3}
       propertyPath: MinDistance
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3001971815313782624, guid: d7839af0dcfc6a647a6bd94e19bcf1c0, type: 3}
+      propertyPath: rolloffMode
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3001971815313782624, guid: d7839af0dcfc6a647a6bd94e19bcf1c0, type: 3}
       propertyPath: DopplerLevel
@@ -40610,6 +40752,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 330585545}
     - target: {fileID: 4544580093200452571, guid: d7839af0dcfc6a647a6bd94e19bcf1c0, type: 3}
+      propertyPath: pickupClips.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4544580093200452571, guid: d7839af0dcfc6a647a6bd94e19bcf1c0, type: 3}
       propertyPath: 'hookClips.Array.data[0]'
       value: 
       objectReference: {fileID: 8300000, guid: acdea58a8725ca6489021e6570b082bb, type: 3}
@@ -40621,6 +40767,10 @@ PrefabInstance:
       propertyPath: 'throwClips.Array.data[1]'
       value: 
       objectReference: {fileID: 8300000, guid: a1ea70284e284e045acb25f231d27793, type: 3}
+    - target: {fileID: 4544580093200452571, guid: d7839af0dcfc6a647a6bd94e19bcf1c0, type: 3}
+      propertyPath: 'pickupClips.Array.data[0]'
+      value: 
+      objectReference: {fileID: 8300000, guid: eefbec30cde6de54780eaf99c64d4c9b, type: 3}
     - target: {fileID: 4544580093200452571, guid: d7839af0dcfc6a647a6bd94e19bcf1c0, type: 3}
       propertyPath: 'jumpingClips.Array.data[0]'
       value: 

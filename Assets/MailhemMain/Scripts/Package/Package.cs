@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class Package : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class Package : MonoBehaviour
     bool countdown = false;
 
     [Header("Package SFX")]
+    [SerializeField] private AudioSource audioSource;
     [SerializeField] AudioClip[] pickupClips;
     [SerializeField] AudioClip[] throwClips; 
     [Header("Voice Clips")]
@@ -38,17 +40,24 @@ public class Package : MonoBehaviour
     public bool AttachToPlayer(Transform newPos)
     {
         if (!pickupable) return false;
-        PlayerGeneral player = FindAnyObjectByType<PlayerGeneral>();
 
-    
-        if (player != null && pickupClips != null && pickupClips.Length > 0)
+        // Comprobación y reproducción con depuración
+        if (audioSource != null && pickupClips != null && pickupClips.Length > 0)
         {
-            player.PlayerAudioManager.PlaySFX(pickupClips);
-            player.PlayerAudioManager.PlayVoice(pickupVoice);
+            AudioClip clipToPlay = pickupClips[Random.Range(0, pickupClips.Length)];
+            audioSource.PlayOneShot(clipToPlay);
+            Debug.Log("Éxito: Reproduciendo audio de la caja -> " + clipToPlay.name);
         }
-        else if (player == null)
+        else
         {
-            Debug.LogError("Package: No se encontr� ning�n objeto con el script PlayerGeneral en la escena.");
+            Debug.LogWarning("Fallo de audio: El AudioSource es nulo o 'pickupClips' está vacío en el Inspector.");
+        }
+
+        // Reproducir voz del jugador
+        PlayerGeneral player = FindAnyObjectByType<PlayerGeneral>();
+        if (player != null && pickupVoice != null)
+        {
+            player.PlayerAudioManager.PlayVoice(pickupVoice);
         }
 
         meshCollider.enabled = false;
