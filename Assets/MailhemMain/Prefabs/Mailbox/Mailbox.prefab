@@ -398,7 +398,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 166c69a143d13fb429a9d7c4f9e7c984, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  sonidoEntrega: {fileID: 0}
+  sonidoEntrega: {fileID: 8300000, guid: 4e474a0475a7d1b4383f0658ccc8c1e0, type: 3}
+  audioSource: {fileID: -3649404172299572762}
+  manager: {fileID: 0}
+  playerVoice: {fileID: 8300000, guid: bef24eb5e1f562c4b877898f73f8e7b8, type: 3}
 --- !u!82 &-3649404172299572762
 AudioSource:
   m_ObjectHideFlags: 0

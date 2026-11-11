@@ -80,7 +80,7 @@ MonoBehaviour:
   smoothTime: 0.05
   gravity: -9.81
   gravityMultiplier: 0.5
-  jumpForce: 60
+  jumpForce: 30
   throwForce: 15
 --- !u!1 &3265220281676085086
 GameObject:
