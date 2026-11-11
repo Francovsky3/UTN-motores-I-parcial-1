@@ -483,6 +483,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1003525418}
     m_Modifications:
+    - target: {fileID: -2621838521233614173, guid: 0fefac457c4bd3a4f92d63afd127184b, type: 3}
+      propertyPath: rolloffMode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2297328039531809676, guid: 0fefac457c4bd3a4f92d63afd127184b, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -9994,6 +9998,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8115228646062499981, guid: 0fefac457c4bd3a4f92d63afd127184b, type: 3}
   m_PrefabInstance: {fileID: 803604498}
   m_PrefabAsset: {fileID: 0}
+--- !u!82 &465766444 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: -2621838521233614173, guid: 0fefac457c4bd3a4f92d63afd127184b, type: 3}
+  m_PrefabInstance: {fileID: 803604498}
+  m_PrefabAsset: {fileID: 0}
 --- !u!43 &468786448
 Mesh:
   m_ObjectHideFlags: 0
@@ -13572,6 +13581,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MusicTrigger
   fadeDuration: 1
   manager: {fileID: 1864188218}
+  inside: 1
 --- !u!1001 &606223229
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15302,6 +15312,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1003525418}
     m_Modifications:
+    - target: {fileID: -2621838521233614173, guid: 0fefac457c4bd3a4f92d63afd127184b, type: 3}
+      propertyPath: rolloffMode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2297328039531809676, guid: 0fefac457c4bd3a4f92d63afd127184b, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -17105,6 +17119,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1003525418}
     m_Modifications:
+    - target: {fileID: -2621838521233614173, guid: 0fefac457c4bd3a4f92d63afd127184b, type: 3}
+      propertyPath: rolloffMode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2297328039531809676, guid: 0fefac457c4bd3a4f92d63afd127184b, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -17539,10 +17557,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1003525418}
     m_Modifications:
+    - target: {fileID: -2621838521233614173, guid: 0fefac457c4bd3a4f92d63afd127184b, type: 3}
+      propertyPath: m_Volume
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2297328039531809676, guid: 0fefac457c4bd3a4f92d63afd127184b, type: 3}
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 359033138}
+    - target: {fileID: 3666738470302912147, guid: 0fefac457c4bd3a4f92d63afd127184b, type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 465766444}
     - target: {fileID: 4327232425581297267, guid: 0fefac457c4bd3a4f92d63afd127184b, type: 3}
       propertyPath: m_Name
       value: Packages (1)
@@ -32158,6 +32184,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8115228646062499981, guid: 0fefac457c4bd3a4f92d63afd127184b, type: 3}
   m_PrefabInstance: {fileID: 1830864080}
   m_PrefabAsset: {fileID: 0}
+--- !u!82 &1700951307 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: -2621838521233614173, guid: 0fefac457c4bd3a4f92d63afd127184b, type: 3}
+  m_PrefabInstance: {fileID: 1830864080}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1703575874
 GameObject:
   m_ObjectHideFlags: 0
@@ -34103,10 +34134,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1003525418}
     m_Modifications:
+    - target: {fileID: -2621838521233614173, guid: 0fefac457c4bd3a4f92d63afd127184b, type: 3}
+      propertyPath: m_Volume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -2621838521233614173, guid: 0fefac457c4bd3a4f92d63afd127184b, type: 3}
+      propertyPath: rolloffMode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2297328039531809676, guid: 0fefac457c4bd3a4f92d63afd127184b, type: 3}
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 511697816}
+    - target: {fileID: 3666738470302912147, guid: 0fefac457c4bd3a4f92d63afd127184b, type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 1700951307}
     - target: {fileID: 4327232425581297267, guid: 0fefac457c4bd3a4f92d63afd127184b, type: 3}
       propertyPath: m_Name
       value: Packages (5)
@@ -35000,8 +35043,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 1003525418}
     m_Modifications:
     - target: {fileID: -2621838521233614173, guid: 0fefac457c4bd3a4f92d63afd127184b, type: 3}
+      propertyPath: m_Volume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -2621838521233614173, guid: 0fefac457c4bd3a4f92d63afd127184b, type: 3}
+      propertyPath: m_Resource
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: -2621838521233614173, guid: 0fefac457c4bd3a4f92d63afd127184b, type: 3}
       propertyPath: MinDistance
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -2621838521233614173, guid: 0fefac457c4bd3a4f92d63afd127184b, type: 3}
       propertyPath: rolloffMode
@@ -35015,6 +35066,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 51412347}
+    - target: {fileID: 3666738470302912147, guid: 0fefac457c4bd3a4f92d63afd127184b, type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 2133800074}
     - target: {fileID: 4327232425581297267, guid: 0fefac457c4bd3a4f92d63afd127184b, type: 3}
       propertyPath: m_Name
       value: Packages
@@ -37444,6 +37499,11 @@ AudioSource:
 --- !u!4 &2133800073 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8115228646062499981, guid: 0fefac457c4bd3a4f92d63afd127184b, type: 3}
+  m_PrefabInstance: {fileID: 1907285679}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &2133800074 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: -2621838521233614173, guid: 0fefac457c4bd3a4f92d63afd127184b, type: 3}
   m_PrefabInstance: {fileID: 1907285679}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &2142881656

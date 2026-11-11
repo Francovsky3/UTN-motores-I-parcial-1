@@ -43,7 +43,7 @@ public class CarCollisionsSFX : MonoBehaviour
             {
                 yaSonoBocina = true;
                 AudioClip clipBocina = hornClips[Random.Range(0, hornClips.Length)];
-                myAudioSource.PlayOneShot(clipBocina, 2.5f);
+                myAudioSource.PlayOneShot(clipBocina, 3.5f);
                 Debug.Log("Bocina activada por proximidad.");
             }
         }
@@ -58,7 +58,7 @@ public class CarCollisionsSFX : MonoBehaviour
             {
                 yaChocoGolpe = true;
                 AudioClip clipGolpe = hitClips[Random.Range(0, hitClips.Length)];
-                myAudioSource.PlayOneShot(clipGolpe, 2f);
+                myAudioSource.PlayOneShot(clipGolpe, 3f);
                 Debug.Log("Impacto con el auto reproducido correctamente.");
             }
         }

@@ -10,6 +10,7 @@ public class Package : MonoBehaviour
     bool countdown = false;
 
     [Header("Audio del Paquete (Bloque C)")]
+    [SerializeField] private AudioSource audioSource;
     [SerializeField] private AudioClip[] pickupClips;
     [SerializeField] private AudioClip[] throwClips; 
 
@@ -36,16 +37,15 @@ public class Package : MonoBehaviour
     public bool AttachToPlayer(Transform newPos)
     {
         if (!pickupable) return false;
-        PlayerGeneral player = FindAnyObjectByType<PlayerGeneral>();
 
-    
-        if (player != null && pickupClips != null && pickupClips.Length > 0)
+        if (audioSource != null && pickupClips != null && pickupClips.Length > 0)
         {
-            player.PlayerAudioManager.PlaySFX(pickupClips);
+            AudioClip clipToPlay = pickupClips[Random.Range(0, pickupClips.Length)];
+            audioSource.PlayOneShot(clipToPlay);
         }
-        else if (player == null)
+        else
         {
-            Debug.LogError("Package: No se encontr� ning�n objeto con el script PlayerGeneral en la escena.");
+            Debug.LogWarning("Package: Falta asignar el AudioSource o los pickupClips en el Inspector.");
         }
 
         meshCollider.enabled = false;
@@ -65,7 +65,7 @@ public class Package : MonoBehaviour
         {
             player.PlayerAudioManager.PlaySFX(throwClips);
         }
-        // ---------------------------------------
+ 
         pickupable = false;
         countdown = true;
         pickupTimer = maxTimer;
