@@ -1,15 +1,24 @@
 using UnityEngine;
 
-public class MusicTrigger : MonoBehaviour
+public class MusicZone : MonoBehaviour
 {
+    float guitarLowVolume = 0f;
+    float guitarHighVolume = 1f;
+    [SerializeField] float fadeDuration;
+    [SerializeField] MusicManager manager;
+    [SerializeField] bool inside = true;
+
     void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.CompareTag("Player"))
+        if(other.gameObject.CompareTag("Player") && !inside)
         {
-            MusicManager manager = other.GetComponent<MusicManager>();
-            if (manager.musicState == MusicManager.MusicState.pack) return;
-            else if(manager.musicState == MusicManager.MusicState.interior) manager.musicState = MusicManager.MusicState.exterior;
-            else manager.musicState = MusicManager.MusicState.interior;
+            manager.FadeGuitar(guitarLowVolume, fadeDuration);
+            inside = true;
+        }
+        else if(other.gameObject.CompareTag("Player") && inside)
+        {
+            manager.FadeGuitar(guitarHighVolume, fadeDuration);
+            inside = false;
         }
     }
 }
