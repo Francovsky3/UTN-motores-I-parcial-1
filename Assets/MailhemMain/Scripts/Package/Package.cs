@@ -9,9 +9,11 @@ public class Package : MonoBehaviour
     bool pickupable = true;
     bool countdown = false;
 
-    [Header("Audio del Paquete (Bloque C)")]
-    [SerializeField] private AudioClip[] pickupClips;
-    [SerializeField] private AudioClip[] throwClips; 
+    [Header("Package SFX")]
+    [SerializeField] AudioClip[] pickupClips;
+    [SerializeField] AudioClip[] throwClips; 
+    [Header("Voice Clips")]
+    [SerializeField] AudioClip pickupVoice;
 
     void Awake()
     {
@@ -42,6 +44,7 @@ public class Package : MonoBehaviour
         if (player != null && pickupClips != null && pickupClips.Length > 0)
         {
             player.PlayerAudioManager.PlaySFX(pickupClips);
+            player.PlayerAudioManager.PlayVoice(pickupVoice);
         }
         else if (player == null)
         {

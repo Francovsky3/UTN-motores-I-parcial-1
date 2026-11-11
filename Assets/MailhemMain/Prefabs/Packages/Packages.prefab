@@ -398,11 +398,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 438d2179708cade02aca41fd684137ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Package
+  maxTimer: 2
   pickupClips:
   - {fileID: 8300000, guid: eefbec30cde6de54780eaf99c64d4c9b, type: 3}
   throwClips:
   - {fileID: 8300000, guid: 2d9a400bf16a6884cb1ae34f2a328100, type: 3}
   - {fileID: 8300000, guid: a1ea70284e284e045acb25f231d27793, type: 3}
+  pickupVoice: {fileID: 8300000, guid: 5f5674e3b31dae342a219b098bf309a3, type: 3}
 --- !u!82 &-2621838521233614173
 AudioSource:
   m_ObjectHideFlags: 0

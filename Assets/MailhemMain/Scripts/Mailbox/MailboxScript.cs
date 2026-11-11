@@ -2,8 +2,10 @@ using UnityEngine;
 
 public class MailboxScript : MonoBehaviour
 {
-    [SerializeField] private AudioClip sonidoEntrega;
-    [SerializeField] private AudioSource audioSource;
+    [SerializeField] AudioClip sonidoEntrega;
+    [SerializeField] AudioSource audioSource;
+    [SerializeField] AudioManager manager;
+    [SerializeField] AudioClip playerVoice;
 
     private void Start()
     {
@@ -19,12 +21,12 @@ public class MailboxScript : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Packages"))
         {
-            Debug.Log("�Paquete entregado con �xito!");
-
             if (sonidoEntrega != null && audioSource != null)
             {
                 audioSource.PlayOneShot(sonidoEntrega);
             }
+
+            manager.PlayVoice(playerVoice);
 
             Destroy(other.gameObject);
         }
