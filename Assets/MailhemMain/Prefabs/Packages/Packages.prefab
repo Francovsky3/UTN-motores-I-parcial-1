@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 2223752143618740728}
   - component: {fileID: 3666738470302912147}
   - component: {fileID: -2621838521233614173}
+  - component: {fileID: 314262747174600832}
   m_Layer: 7
   m_Name: Packages
   m_TagString: Packages
@@ -398,6 +399,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 438d2179708cade02aca41fd684137ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Package
+  maxTimer: 2
   pickupClips:
   - {fileID: 8300000, guid: eefbec30cde6de54780eaf99c64d4c9b, type: 3}
   throwClips:
@@ -572,3 +574,25 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!195 &314262747174600832
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4327232425581297267}
+  m_Enabled: 1
+  m_AgentTypeID: -1372625422
+  m_Radius: 0.5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
