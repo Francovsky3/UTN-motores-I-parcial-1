@@ -34,7 +34,16 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "ThrowPack",
+                    "name": "Release Hook",
+                    "type": "Button",
+                    "id": "8ec26b8f-950f-4d8d-bcfb-2dfdeb808c45",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Throw Pack",
                     "type": "Button",
                     "id": "767f8539-4e64-40ab-9c77-2f0b7e0a3c88",
                     "expectedControlType": "",
@@ -133,11 +142,11 @@
                 {
                     "name": "",
                     "id": "c02e3496-4607-4b26-8f3a-1fd9cda614f4",
-                    "path": "<Mouse>/rightButton",
+                    "path": "<Keyboard>/q",
                     "interactions": "",
                     "processors": "",
                     "groups": ";Keyboard",
-                    "action": "ThrowPack",
+                    "action": "Throw Pack",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -149,6 +158,17 @@
                     "processors": "",
                     "groups": ";Keyboard",
                     "action": "Open Menu",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "2e5735f0-41ee-4b97-9249-60df97858bd5",
+                    "path": "<Mouse>/rightButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard",
+                    "action": "Release Hook",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

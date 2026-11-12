@@ -12,6 +12,7 @@ public class InputProcessor
     public float InputJump {get; private set;}
 
     public float InputFireHook {get; private set;}
+    public float InputReleaseHook {get; private set;}
     public float InputThrow {get; private set;}
 
     public void ProcessInputVector(Vector2 value)
@@ -27,6 +28,11 @@ public class InputProcessor
     public void ProcessInputFireHook(float value)
     {
         InputFireHook = value;
+    }
+
+    public void ProcessInputReleaseHook(float value)
+    {
+        InputReleaseHook = value;
     }
 
     public void ProcessInputThrow(float value)

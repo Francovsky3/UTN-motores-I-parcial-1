@@ -7,6 +7,7 @@ public class HookController : MonoBehaviour
     [SerializeField] Transform hookPoint;
     public Transform HookPoint => hookPoint;
 
+    [Header("Hook Configuration")]
     [Tooltip("The maximum distance the hook can extend to")]
     [SerializeField] float hookDistance;
     [SerializeField] float grappleCooldown;

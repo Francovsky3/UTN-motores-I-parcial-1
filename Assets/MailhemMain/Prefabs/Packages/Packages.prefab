@@ -400,6 +400,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Package
   maxTimer: 2
+  audioSource: {fileID: -2621838521233614173}
   pickupClips:
   - {fileID: 8300000, guid: eefbec30cde6de54780eaf99c64d4c9b, type: 3}
   throwClips:

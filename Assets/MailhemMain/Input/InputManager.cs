@@ -30,6 +30,15 @@ public class InputManager : MonoBehaviour
         }
     }
 
+    public void InputReleaseHook(InputAction.CallbackContext context)
+    {
+        if(context.started)
+        {
+            float time = (float)context.time;
+            player.InputProcessor.ProcessInputReleaseHook(time);
+        }
+    }
+
     public void InputThrow(InputAction.CallbackContext context)
     {
         if(context.started)
