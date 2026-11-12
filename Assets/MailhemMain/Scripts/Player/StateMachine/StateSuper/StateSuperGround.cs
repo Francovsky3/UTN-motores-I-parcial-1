@@ -16,5 +16,9 @@ public class StateSuperGround : StateManager
         {
             StateMachine.Change(Player.States.InAirState);
         }
+        if(Player.InputProcessor.InputFireHook > Time.time)
+        {
+            Player.Hook.FireHook();
+        }
     }
 }

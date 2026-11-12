@@ -13,7 +13,7 @@ public class StateSuperAir : StateManager
         base.Update();
         if(Player.InputProcessor.InputFireHook > Time.time)
         {
-            
+            Player.Hook.FireHook();
         }
     }
 }

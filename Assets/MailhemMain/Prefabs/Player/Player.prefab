@@ -153,6 +153,7 @@ MonoBehaviour:
   - {fileID: 0}
   hookClips:
   - {fileID: 0}
+  pickupClips: []
   throwClips:
   - {fileID: 0}
   - {fileID: 0}
@@ -472,8 +473,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::HookController
   player: {fileID: 4429775729817532379}
   hookPoint: {fileID: 8221171500049835261}
-  hookDistance: 40
+  hookRange: 100
   grappleCooldown: 0.2
+  sphereRadius: 3
 --- !u!1 &5489151621307415971
 GameObject:
   m_ObjectHideFlags: 0
@@ -744,7 +746,7 @@ MonoBehaviour:
   playerTrans: {fileID: 4417848991876609923}
   meshAnimator: {fileID: 8838268067194991011}
   collision: {fileID: 4740524969212244034}
-  hook: {fileID: 0}
+  hook: {fileID: 1696971456912718743}
   packageStorage: {fileID: 4363112916494165480}
   handPosition: {fileID: 3982612144182285633}
   audioManager: {fileID: 439688347647987554}

@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 3
   tags:
   - Packages
+  - Hook Point
   layers:
   - Default
   - TransparentFX
