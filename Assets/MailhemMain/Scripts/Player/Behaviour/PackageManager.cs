@@ -7,7 +7,7 @@ public class PackageManager
     Transform packageStorage;
     PlayerConfiguration config;
     Transform handPosition;
-    public bool HasPackage {get; private set;}
+    public bool HasPackage {get; private set;} = false;
     Package storedPack;
     public PackageManager(PlayerConfiguration configuration, Transform storage, Transform handPos)
     {
