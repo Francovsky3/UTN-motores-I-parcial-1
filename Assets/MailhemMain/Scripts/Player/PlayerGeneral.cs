@@ -44,6 +44,7 @@ public class PlayerGeneral : MonoBehaviour
         InputProcessor = new InputProcessor();
         Movement = new PlayerMovement(characterController, playerConfig, playerCamera, playerTrans);
         Packages = new PackageManager(playerConfig, packageStorage, handPosition);
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     //Initialize the state machine

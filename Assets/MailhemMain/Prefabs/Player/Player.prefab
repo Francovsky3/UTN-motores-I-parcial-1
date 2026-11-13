@@ -277,7 +277,19 @@ MonoBehaviour:
     m_ActionId: b937b994-dc9e-4e80-9151-6bccd135e39c
     m_ActionName: 'Movement/Jump[/Keyboard/space]'
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4311644537607322771}
+        m_TargetAssemblyTypeName: InputManager, Assembly-CSharp
+        m_MethodName: InputFireHook
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 83cd3088-0358-4452-97c3-a7b4c2c72e11
     m_ActionName: 'Movement/Fire Hook[/Mouse/leftButton]'
   - m_PersistentCalls:
@@ -296,6 +308,38 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 767f8539-4e64-40ab-9c77-2f0b7e0a3c88
     m_ActionName: 'Movement/ThrowPack[/Mouse/rightButton]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4311644537607322771}
+        m_TargetAssemblyTypeName: InputManager, Assembly-CSharp
+        m_MethodName: InputReleaseHook
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 8ec26b8f-950f-4d8d-bcfb-2dfdeb808c45
+    m_ActionName: 'Movement/Release Hook[/Mouse/rightButton]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 7d1ec041-7bc9-4a9e-9b3c-b9dab8834328
+    m_ActionName: 'Movement/Open Menu[/Keyboard/p]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: Keyboard
   m_DefaultActionMap: Movement

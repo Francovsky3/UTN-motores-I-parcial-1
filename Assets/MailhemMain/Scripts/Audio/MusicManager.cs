@@ -30,7 +30,6 @@ public class MusicManager : MonoBehaviour
     {
         float startVolume = source.volume;
         float currentTime = 0f;
-        Debug.Log(startVolume);
 
         while (currentTime < duration)
         {

@@ -19,6 +19,7 @@ public class StateSuperGround : StateManager
         if(Player.InputProcessor.InputFireHook > Time.time)
         {
             Player.Hook.FireHook();
+            Player.InputProcessor.ProcessInputFireHook(0);
         }
     }
 }
