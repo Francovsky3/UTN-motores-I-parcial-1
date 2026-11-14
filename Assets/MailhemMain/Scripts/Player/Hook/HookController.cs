@@ -55,10 +55,10 @@ public class HookController : MonoBehaviour
                 isReelingPack = true;
                 return false;
             }
-            else if(hit.collider != null)
+            else if(hit.collider.gameObject.CompareTag("Player"))
             {
-                Debug.Log("Le pegaste a algo");
-                Debug.DrawRay(ray.origin, ray.direction * hookRange, Color.red, 2f);
+                Debug.Log("El player esta en el medio xd");
+                Debug.DrawRay(ray.origin, ray.direction * hookRange, Color.yellow, 2f);
             }
         }
         else
