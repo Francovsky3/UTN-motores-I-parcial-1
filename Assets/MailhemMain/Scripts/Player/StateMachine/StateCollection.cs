@@ -8,6 +8,7 @@ public class StateCollection
     public StateSubMovement MoveState {get; private set;}
     public StateSubInAir InAirState {get; private set;}
     public StateSubJump JumpState {get; private set;}
+    public StateSpecialHooked HookedState {get; private set;}
 
     public StateCollection(PlayerGeneral player, StateMachine stateMachine, Animator animator)
     {
@@ -15,5 +16,6 @@ public class StateCollection
         MoveState = new StateSubMovement(player, stateMachine, animator);
         InAirState = new StateSubInAir(player, stateMachine, animator);
         JumpState = new StateSubJump(player, stateMachine, animator);
+        HookedState = new StateSpecialHooked(player, stateMachine, animator);
     }
 }

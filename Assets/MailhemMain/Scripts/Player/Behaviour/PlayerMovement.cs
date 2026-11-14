@@ -67,6 +67,7 @@ public class PlayerMovement
 
     public void HookedMovement(Vector3 targetPos)
     {
-        
+        Vector3 direction = targetPos - transform.position;
+        controller.Move(config.HookForce * Time.deltaTime * direction);
     }
 }

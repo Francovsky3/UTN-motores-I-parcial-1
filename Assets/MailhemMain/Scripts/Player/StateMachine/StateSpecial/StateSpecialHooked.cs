@@ -17,5 +17,11 @@ public class StateSpecialHooked : StateManager
     {
         base.Update();
         Player.Movement.HookedMovement(Player.Hook.HookPoint.position);
+        if(Player.InputProcessor.InputReleaseHook > Time.time)
+        {
+            animator.SetBool("isHooked", false);
+            Player.InputProcessor.ProcessInputReleaseHook(0);
+            StateMachine.Change(Player.States.IdleState);
+        }
     }
 }

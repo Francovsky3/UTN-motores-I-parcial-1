@@ -22,4 +22,8 @@ public class PlayerConfiguration : MonoBehaviour
     [Header("Packages")]
     [SerializeField] float throwForce;
     public float ThrowForce => throwForce;
+
+    [Header("Hook movement")]
+    [SerializeField] float hookForce;
+    public float HookForce => hookForce;
 }

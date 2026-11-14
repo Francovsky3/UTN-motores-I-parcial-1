@@ -13,8 +13,14 @@ public class StateSuperAir : StateManager
         base.Update();
         if(Player.InputProcessor.InputFireHook > Time.time)
         {
-            Player.Hook.FireHook();
+            bool hit = Player.Hook.FireHook();
             Player.InputProcessor.ProcessInputFireHook(0);
+            if (hit)
+            {
+                StateMachine.Change(Player.States.HookedState);
+                animator.SetBool("isInAir", false);
+                animator.SetTrigger("isJumping");
+            }
         }
     }
 }
