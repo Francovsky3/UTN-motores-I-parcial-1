@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4539758963100228975}
   - component: {fileID: 5260883232861782179}
   - component: {fileID: 8610885603508022831}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: PuntoDeGancho
   m_TagString: Hook Point
   m_Icon: {fileID: 0}

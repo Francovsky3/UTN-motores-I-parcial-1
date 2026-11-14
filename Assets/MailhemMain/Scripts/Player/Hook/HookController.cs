@@ -44,7 +44,7 @@ public class HookController : MonoBehaviour
             {
                 Debug.Log("Punto de gancho detectado");
                 Debug.DrawRay(ray.origin, ray.direction * hookRange, Color.green, 2f);
-                HookPoint.position = hit.collider.transform.position;
+                HookPoint.position = hit.collider.gameObject.transform.position;
                 return true;
             }
             else if(hit.collider.gameObject.CompareTag("Packages"))
