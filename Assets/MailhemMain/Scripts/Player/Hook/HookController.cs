@@ -38,17 +38,17 @@ public class HookController : MonoBehaviour
         if(isReelingPack) return false;
         Ray ray = player.Camera.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0f));
 
-        Debug.DrawRay(ray.origin, ray.direction * hookRange, Color.red, 2f);
-
         if (Physics.SphereCast(ray, sphereRadius, out RaycastHit hit))
         {
             if(hit.collider.gameObject.CompareTag("Hook Point"))
             {
                 Debug.Log("Punto de gancho detectado");
+                Debug.DrawRay(ray.origin, ray.direction * hookRange, Color.green, 2f);
                 return true;
             }
-            else if(hit.collider.gameObject.CompareTag("Packages") && !player.Packages.HasPackage)
+            else if(hit.collider.gameObject.CompareTag("Packages"))
             {
+                Debug.DrawRay(ray.origin, ray.direction * hookRange, Color.blue, 2f);
                 Debug.Log("Paquete detectado");
                 reeledPack = hit.collider.gameObject.GetComponent<Rigidbody>();
                 isReelingPack = true;
@@ -57,11 +57,13 @@ public class HookController : MonoBehaviour
             else if(hit.collider != null)
             {
                 Debug.Log("Le pegaste a algo");
+                Debug.DrawRay(ray.origin, ray.direction * hookRange, Color.red, 2f);
             }
         }
         else
         {
             Debug.Log("I swing again, and I missed");
+            Debug.DrawRay(ray.origin, ray.direction * hookRange, Color.red, 2f);
         }
         return false;
     }

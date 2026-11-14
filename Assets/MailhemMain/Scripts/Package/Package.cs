@@ -4,7 +4,7 @@ using UnityEngine.Audio;
 public class Package : MonoBehaviour
 {
     Rigidbody rb;
-    MeshCollider meshCollider;
+    BoxCollider boxCollider;
     float pickupTimer;
     [SerializeField] float maxTimer = 2f;
     bool pickupable = true;
@@ -20,7 +20,7 @@ public class Package : MonoBehaviour
     void Awake()
     {
         rb = GetComponent<Rigidbody>();
-        meshCollider = GetComponent<MeshCollider>();
+        boxCollider = GetComponent<BoxCollider>();
     }
 
     void Update()
@@ -60,7 +60,7 @@ public class Package : MonoBehaviour
             player.PlayerAudioManager.PlayVoice(pickupVoice);
         }
 
-        meshCollider.enabled = false;
+        boxCollider.enabled = false;
         rb.isKinematic = true;
         transform.parent = newPos;
         transform.position = newPos.position;
@@ -81,7 +81,7 @@ public class Package : MonoBehaviour
         pickupable = false;
         countdown = true;
         pickupTimer = maxTimer;
-        meshCollider.enabled = true;
+        boxCollider.enabled = true;
         rb.isKinematic = false;
         transform.parent = null;
         transform.position = newPos.position;
