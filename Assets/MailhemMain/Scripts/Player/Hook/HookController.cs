@@ -6,14 +6,13 @@ public class HookController : MonoBehaviour
     [Header("Hook Configuration")]
     [Tooltip("The maximum distance the hook can extend to")]
     [SerializeField] float hookRange;
-    [SerializeField] float grappleCooldown;
 
     [Tooltip("The radius of the hook detection sphere")]
     [SerializeField] float sphereRadius;
     [Tooltip("Force with which the packages are reeled back")]
     [SerializeField] float reelingForce;
     
-    int rayMask = ~(1 << 6);
+    [SerializeField] LayerMask hookableLayers;
 
     Rigidbody reeledPack;
     bool isReelingPack = false;
@@ -40,7 +39,7 @@ public class HookController : MonoBehaviour
         if(isReelingPack) return false;
         Ray ray = player.Camera.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0f));
 
-        if (Physics.SphereCast(ray, sphereRadius, out RaycastHit hit, hookRange, rayMask))
+        if (Physics.SphereCast(ray, sphereRadius, out RaycastHit hit, hookRange, hookableLayers))
         {
             if(hit.collider.gameObject.CompareTag("Hook Point"))
             {

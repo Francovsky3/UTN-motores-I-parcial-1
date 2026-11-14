@@ -82,7 +82,7 @@ MonoBehaviour:
   gravityMultiplier: 0.5
   jumpForce: 30
   throwForce: 15
-  hookForce: 0
+  hookForce: 40
 --- !u!1 &3265220281676085086
 GameObject:
   m_ObjectHideFlags: 0
@@ -517,9 +517,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::HookController
   player: {fileID: 4429775729817532379}
   hookRange: 100
-  grappleCooldown: 0.2
-  sphereRadius: 3
-  reelingForce: 0
+  sphereRadius: 4
+  reelingForce: 20
+  hookableLayers:
+    serializedVersion: 2
+    m_Bits: 384
 --- !u!1 &5489151621307415971
 GameObject:
   m_ObjectHideFlags: 0
