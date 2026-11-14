@@ -214,6 +214,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 203097655}
+        m_TargetAssemblyTypeName: AudioMenu, Assembly-CSharp
+        m_MethodName: PlayClickSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2379749
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -368,11 +380,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 203097650}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 450e2576f99551d43851b8c7edcd1dfd, type: 3}
+  m_Script: {fileID: 11500000, guid: 7e299f6d0225a26899c06b902ab4d99b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MenuButtons
-  menuAudioSource: {fileID: 203097656}
-  buttonClickClip: {fileID: 8300000, guid: 5a7be7a8ee84ee841abdb72c71c11821, type: 3}
+  mixer: {fileID: 24100000, guid: fd672077ef80dd045807fa125b3c3c78, type: 2}
+  pauseMenu: {fileID: 0}
+  audioSource: {fileID: 203097656}
+  clickSound: {fileID: 8300000, guid: 5a7be7a8ee84ee841abdb72c71c11821, type: 3}
 --- !u!82 &203097656
 AudioSource:
   m_ObjectHideFlags: 0
@@ -385,7 +399,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: -5711686273978660892, guid: fd672077ef80dd045807fa125b3c3c78, type: 2}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -397,7 +411,7 @@ AudioSource:
   MinDistance: 1
   MaxDistance: 500
   Pan2D: 0
-  rolloffMode: 0
+  rolloffMode: 1
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
