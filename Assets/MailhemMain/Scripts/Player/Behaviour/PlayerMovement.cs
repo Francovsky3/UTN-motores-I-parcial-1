@@ -48,7 +48,8 @@ public class PlayerMovement
 
     public void VelocityJump()
     {
-        controller.Move(config.JumpForce * Time.deltaTime * Vector3.up);
+        Vector3 velocity = new (Velocity.x, config.JumpForce, Velocity.z);
+        controller.Move(velocity * Time.deltaTime);
     }
 
     public void ApplyGravity()
@@ -60,8 +61,9 @@ public class PlayerMovement
     public void JumpMovement(Vector2 inputVec)
     {
         float velocityY = Velocity.y + (config.Gravity * config.GravityMultiplier);
+        Vector3 velocity = new Vector3(Velocity.x, velocityY, Velocity.z);
 
-        controller.Move(new Vector3(Velocity.x, velocityY, Velocity.z)* Time.deltaTime);
+        controller.Move(velocity * Time.deltaTime);
     }
 
     public void HookedMovement(Vector3 targetPos)
