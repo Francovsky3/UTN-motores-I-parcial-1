@@ -12,7 +12,7 @@ public class PlayerMovement
     Transform transform;
 
     float currentVelocity;
-    public float VelocityY => controller.velocity.y;
+    public Vector3 Velocity => controller.velocity;
 
     public PlayerMovement(CharacterController playerController, PlayerConfiguration configuration, Camera cam, Transform trans)
     {
@@ -59,10 +59,10 @@ public class PlayerMovement
     //Apply gravity to the current y velocity and allow movement
     public void JumpMovement(Vector2 inputVec)
     {
-        float velocity = VelocityY + (config.Gravity * config.GravityMultiplier);
+        float velocityY = Velocity.y + (config.Gravity * config.GravityMultiplier);
 
-        Vector3 movement = Time.deltaTime * new Vector3(inputVec.x * config.MoveSpeed, velocity, inputVec.y* config.MoveSpeed);
-        controller.Move(velocity * Time.deltaTime * Vector3.up);
+        //Vector3 movement = Time.deltaTime * new Vector3(inputVec.x * config.MoveSpeed, velocity, inputVec.y* config.MoveSpeed);
+        controller.Move(new Vector3(Velocity.x, velocityY, Velocity.z)* Time.deltaTime);
     }
 
     public void HookedMovement(Vector3 targetPos)
