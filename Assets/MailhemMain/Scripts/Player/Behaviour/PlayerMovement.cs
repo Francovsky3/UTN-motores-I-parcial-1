@@ -53,7 +53,7 @@ public class PlayerMovement
 
     public void ApplyGravity()
     {
-        controller.Move(new Vector3(0, config.Gravity * Time.deltaTime, 0));
+        controller.Move(new Vector3(Velocity.x, config.Gravity, Velocity.z) * Time.deltaTime);
     }
 
     //Apply gravity to the current y velocity and allow movement
@@ -61,7 +61,6 @@ public class PlayerMovement
     {
         float velocityY = Velocity.y + (config.Gravity * config.GravityMultiplier);
 
-        //Vector3 movement = Time.deltaTime * new Vector3(inputVec.x * config.MoveSpeed, velocity, inputVec.y* config.MoveSpeed);
         controller.Move(new Vector3(Velocity.x, velocityY, Velocity.z)* Time.deltaTime);
     }
 
