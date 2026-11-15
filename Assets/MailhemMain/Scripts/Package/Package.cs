@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.Audio;
 
 public class Package : MonoBehaviour
 {
@@ -14,6 +13,7 @@ public class Package : MonoBehaviour
     [SerializeField] private AudioSource audioSource;
     [SerializeField] AudioClip[] pickupClips;
     [SerializeField] AudioClip[] throwClips; 
+    
     [Header("Voice Clips")]
     [SerializeField] AudioClip pickupVoice;
 
@@ -21,6 +21,11 @@ public class Package : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         boxCollider = GetComponent<BoxCollider>();
+    }
+
+    void Start()
+    {
+        Debug.Log("Spawnee");
     }
 
     void Update()
