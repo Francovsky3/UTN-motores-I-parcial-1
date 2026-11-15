@@ -17,8 +17,7 @@ public class HookController : MonoBehaviour
     Rigidbody reeledPack;
     bool isReelingPack = false;
 
-    Transform hookPoint;
-    public Transform HookPoint => hookPoint;
+    public Vector3 HookPoint {get; private set;}
 
     void Update()
     {
@@ -43,15 +42,17 @@ public class HookController : MonoBehaviour
         {
             if(hit.collider.gameObject.CompareTag("Hook Point"))
             {
-                Debug.Log("Punto de gancho detectado");
                 Debug.DrawRay(ray.origin, ray.direction * hookRange, Color.green, 2f);
-                HookPoint.position = hit.collider.gameObject.transform.position;
-                return true;
+                if(hit.collider.transform.position != null)
+                {
+                    HookPoint = hit.collider.transform.position;
+                    return true;
+                }
+                
             }
             else if(hit.collider.gameObject.CompareTag("Packages"))
             {
                 Debug.DrawRay(ray.origin, ray.direction * hookRange, Color.blue, 2f);
-                Debug.Log("Paquete detectado");
                 reeledPack = hit.collider.gameObject.GetComponent<Rigidbody>();
                 isReelingPack = true;
                 return false;

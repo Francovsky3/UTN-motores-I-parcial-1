@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 /// <summary>
 /// Base class for all air states
 /// </summary>
@@ -11,10 +12,9 @@ public class StateSuperAir : StateManager
     public override void Update()
     {
         base.Update();
-        if(Player.InputProcessor.InputFireHook > Time.time)
+        if(Mouse.current.leftButton.wasPressedThisFrame)
         {
             bool hit = Player.Hook.FireHook();
-            Player.InputProcessor.ProcessInputFireHook(0);
             if (hit)
             {
                 StateMachine.Change(Player.States.HookedState);

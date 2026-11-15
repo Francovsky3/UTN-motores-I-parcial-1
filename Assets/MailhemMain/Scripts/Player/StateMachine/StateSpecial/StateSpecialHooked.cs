@@ -16,7 +16,7 @@ public class StateSpecialHooked : StateManager
     public override void Update()
     {
         base.Update();
-        Player.Movement.HookedMovement(Player.Hook.HookPoint.position);
+        Player.Movement.HookedMovement(Player.Hook.HookPoint);
         if(Player.InputProcessor.InputReleaseHook > Time.time)
         {
             animator.SetBool("isHooked", false);

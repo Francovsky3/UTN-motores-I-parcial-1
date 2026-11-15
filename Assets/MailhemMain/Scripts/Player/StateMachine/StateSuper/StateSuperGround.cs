@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 /// <summary>
 /// BAse class for all grounded states
 /// </summary>
@@ -16,10 +17,9 @@ public class StateSuperGround : StateManager
         {
             StateMachine.Change(Player.States.InAirState);
         }
-        if(Player.InputProcessor.InputFireHook > Time.time)
+        if(Mouse.current.leftButton.wasPressedThisFrame)
         {
             bool hit = Player.Hook.FireHook();
-            Player.InputProcessor.ProcessInputFireHook(0);
             if(hit)
             {
                 StateMachine.Change(Player.States.HookedState);
