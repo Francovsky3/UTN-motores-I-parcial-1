@@ -4,9 +4,10 @@ public class LevelManager : MonoBehaviour
 {
     [Header("Components")]
     [SerializeField] PackageSpawner spawner;
+    [SerializeField] Mailbox[] mailboxes;
 
     void Start()
     {
-        spawner.SpawnPackages();
+        spawner.SpawnPackages(mailboxes);
     }
 }

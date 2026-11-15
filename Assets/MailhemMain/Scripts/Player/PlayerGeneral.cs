@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 
 /// <summary>
@@ -37,6 +38,10 @@ public class PlayerGeneral : MonoBehaviour
     [SerializeField] PlayerSFX playerSFX;
     [SerializeField] MusicManager musicManager;
 
+    [Header("UI")]
+    [SerializeField] TextMeshProUGUI currentState;
+    
+
     private void Awake()
     {
         StateMachine = new StateMachine();
@@ -56,18 +61,19 @@ public class PlayerGeneral : MonoBehaviour
     //Execute current state's Fixed Update
     void FixedUpdate()
     {
-        StateMachine.state.FixedUpdate();
+        StateMachine.State.FixedUpdate();
     }
 
     //Execute current state's Update
     void Update()
     {
-        StateMachine.state.Update();
+        StateMachine.State.Update();
+        currentState.text = StateMachine.State.ToString();
     }
 
     //Execute current state's Late Update
     void LateUpdate()
     {
-        StateMachine.state.LateUpdate();
+        StateMachine.State.LateUpdate();
     }
 }
