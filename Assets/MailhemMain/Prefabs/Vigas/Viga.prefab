@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 4923599433233646679}
   - component: {fileID: 2894025257152883354}
   - component: {fileID: -1078693308057433917}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Viga
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -316,7 +316,7 @@ MeshRenderer:
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
   m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
+  m_SelectedEditorRenderState: 2
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
