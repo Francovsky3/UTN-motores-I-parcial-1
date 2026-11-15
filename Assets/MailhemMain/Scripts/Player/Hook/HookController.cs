@@ -24,7 +24,7 @@ public class HookController : MonoBehaviour
     {
         if(isReelingPack)
         {
-            Vector3 direction = reeledPack.transform.position - player.transform.position;
+            Vector3 direction = (reeledPack.transform.position - player.transform.position).normalized;
             reeledPack.linearVelocity = reelingForce * Time.deltaTime * direction;
         }
         if(player.Packages.HasPackage)
@@ -55,11 +55,6 @@ public class HookController : MonoBehaviour
                 reeledPack = hit.collider.gameObject.GetComponent<Rigidbody>();
                 isReelingPack = true;
                 return false;
-            }
-            else if(hit.collider.gameObject.CompareTag("Player"))
-            {
-                Debug.Log("El player esta en el medio xd");
-                Debug.DrawRay(ray.origin, ray.direction * hookRange, Color.yellow, 2f);
             }
         }
         else

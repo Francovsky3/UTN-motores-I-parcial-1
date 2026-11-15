@@ -1,11 +1,12 @@
 using UnityEngine;
 
-public class MailboxScript : MonoBehaviour
+public class Mailbox : MonoBehaviour
 {
     [SerializeField] AudioClip sonidoEntrega;
     [SerializeField] AudioSource audioSource;
     [SerializeField] AudioManager manager;
     [SerializeField] AudioClip playerVoice;
+    GameObject package;
 
     private void Start()
     {
@@ -17,9 +18,14 @@ public class MailboxScript : MonoBehaviour
         }
     }
 
+    public void SetPackage(GameObject pack)
+    {
+        package = pack;
+    }
+
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Packages"))
+        if (other.gameObject == package)
         {
             if (sonidoEntrega != null && audioSource != null)
             {
@@ -29,6 +35,7 @@ public class MailboxScript : MonoBehaviour
             manager.PlayVoice(playerVoice);
 
             Destroy(other.gameObject);
+            package = null;
         }
     }
 }
