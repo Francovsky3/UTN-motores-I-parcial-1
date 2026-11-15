@@ -29,7 +29,7 @@ public class StateSubJump : StateSuperAir
         base.Update();
         Player.Movement.JumpMovement(Player.InputProcessor.InputVectorNormal);
         jumpTimer += Time.deltaTime;
-        if(jumpTimer >= minJumpDuration && Player.Movement.VelocityY <= 0)
+        if(jumpTimer >= minJumpDuration && Player.Movement.Velocity.y <= 0)
         {
             StateMachine.Change(Player.States.InAirState);
         }
