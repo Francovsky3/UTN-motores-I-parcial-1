@@ -3,8 +3,27 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
-    public void OnLevelButtonPressed()
+    [SerializeField] GameObject config;
+    [SerializeField] AudioSource audioSource;
+    [SerializeField] AudioClip clickSound;
+
+    public void PlayClickSound()
     {
-        SceneManager.LoadScene("Level 1");
+        if (audioSource != null && clickSound != null)
+        {
+            audioSource.PlayOneShot(clickSound);
+        }
+    }
+
+    public void OnButtonPressed(string sceneName)
+    {
+        PlayClickSound();
+        SceneManager.LoadScene(sceneName);
+    }
+
+    public void OnCOnfigButtonPressed()
+    {
+        PlayClickSound();
+        config.SetActive(true);
     }
 }

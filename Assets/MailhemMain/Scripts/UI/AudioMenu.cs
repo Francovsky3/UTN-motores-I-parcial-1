@@ -7,6 +7,7 @@ public class AudioMenu : MonoBehaviour
     [SerializeField] GameObject pauseMenu;
     [SerializeField] AudioSource audioSource;
     [SerializeField] AudioClip clickSound;
+    [SerializeField] bool isInGame;
 
     public void OnMasterSliderChange(float value)
     {
@@ -31,7 +32,8 @@ public class AudioMenu : MonoBehaviour
 
     public void OnCloseMenuButton()
     {
-        pauseMenu.SetActive(true);
+        PlayClickSound();
+        if(isInGame) pauseMenu.SetActive(true);
         gameObject.SetActive(false);
     }
 
