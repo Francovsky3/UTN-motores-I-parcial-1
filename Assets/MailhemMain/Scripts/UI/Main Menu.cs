@@ -21,7 +21,7 @@ public class MainMenu : MonoBehaviour
         SceneManager.LoadScene(sceneName);
     }
 
-    public void OnCOnfigButtonPressed()
+    public void OnConfigButtonPressed()
     {
         PlayClickSound();
         config.SetActive(true);

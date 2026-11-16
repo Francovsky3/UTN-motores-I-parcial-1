@@ -23,11 +23,6 @@ public class Package : MonoBehaviour
         boxCollider = GetComponent<BoxCollider>();
     }
 
-    void Start()
-    {
-        Debug.Log("Spawnee");
-    }
-
     void Update()
     {
         if(pickupTimer > 0)

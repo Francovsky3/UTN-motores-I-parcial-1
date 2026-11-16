@@ -23,8 +23,9 @@ public class HookController : MonoBehaviour
     {
         if(isReelingPack)
         {
-            Vector3 direction = (reeledPack.transform.position - player.transform.position).normalized;
+            Vector3 direction = (player.transform.position - reeledPack.transform.position ).normalized;
             reeledPack.linearVelocity = reelingForce * Time.deltaTime * direction;
+            Debug.Log(reeledPack.linearVelocity);
         }
         if(player.Packages.HasPackage)
         {
@@ -64,10 +65,5 @@ public class HookController : MonoBehaviour
             Debug.DrawRay(ray.origin, ray.direction * hookRange, Color.red, 2f);
         }
         return false;
-    }
-
-    public void ReleaseHook()
-    {
-        
     }
 }

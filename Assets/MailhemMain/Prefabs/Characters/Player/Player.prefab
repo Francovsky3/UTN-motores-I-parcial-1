@@ -516,9 +516,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HookController
   player: {fileID: 4429775729817532379}
-  hookRange: 100
-  sphereRadius: 4
-  reelingForce: 20
+  hookRange: 20
+  sphereRadius: 8
+  reelingForce: 500
   hookableLayers:
     serializedVersion: 2
     m_Bits: 384
