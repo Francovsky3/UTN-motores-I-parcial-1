@@ -52609,7 +52609,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1696971456912718743, guid: d7839af0dcfc6a647a6bd94e19bcf1c0, type: 3}
       propertyPath: reelingForce
-      value: 20
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 1696971456912718743, guid: d7839af0dcfc6a647a6bd94e19bcf1c0, type: 3}
       propertyPath: sphereRadius
