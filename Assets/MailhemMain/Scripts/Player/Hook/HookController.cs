@@ -40,6 +40,7 @@ public class HookController : MonoBehaviour
 
         if (Physics.SphereCast(ray, sphereRadius, out RaycastHit hit, hookRange, hookableLayers))
         {
+            player.PlayerAudioManager.PlaySFX(player.PlayerSFX.HookClips);
             if(hit.collider.gameObject.CompareTag("Hook Point"))
             {
                 Debug.DrawRay(ray.origin, ray.direction * hookRange, Color.green, 2f);
