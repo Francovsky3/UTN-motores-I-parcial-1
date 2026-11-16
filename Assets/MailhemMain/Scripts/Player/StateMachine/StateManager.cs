@@ -33,7 +33,7 @@ public class StateManager
         {
             if (Player.Packages.StorePack(Player.Collision.Package[0].GetComponent<Package>()))
             {
-                Debug.Log("Agarrado");
+                Player.MusicManager.FadeGuitar(1, 2);
             }
             
         }
@@ -41,6 +41,7 @@ public class StateManager
         {
             Player.InputProcessor.ProcessInputThrow(0);
             Player.Packages.ThrowPack();
+            Player.MusicManager.FadeGuitar(0, 2);
         }
     }
 
