@@ -25,7 +25,6 @@ public class HookController : MonoBehaviour
         {
             Vector3 direction = (player.transform.position - reeledPack.transform.position ).normalized;
             reeledPack.linearVelocity = reelingForce * Time.deltaTime * direction;
-            Debug.Log(reeledPack.linearVelocity);
         }
         if(player.Packages.HasPackage)
         {

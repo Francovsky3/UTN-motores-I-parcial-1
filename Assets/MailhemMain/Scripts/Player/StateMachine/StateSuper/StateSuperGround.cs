@@ -24,7 +24,7 @@ public class StateSuperGround : StateManager
             {
                 StateMachine.Change(Player.States.HookedState);
                 animator.SetBool("isIdle", false);
-                animator.SetBool("isMoving", false);
+                animator.SetBool("isWalking", false);
             }
         }
     }

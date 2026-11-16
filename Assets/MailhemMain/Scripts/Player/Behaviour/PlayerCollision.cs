@@ -5,7 +5,7 @@ public class PlayerCollision : MonoBehaviour
     [Header("Ground")]
     [SerializeField] Transform groundCheck;
     [SerializeField] LayerMask groundLayer;
-    [SerializeField] float groundDistance;
+    [SerializeField] float groundRadius;
     [SerializeField] bool groundGizmos;
 
     [Header("Packages")]
@@ -15,7 +15,7 @@ public class PlayerCollision : MonoBehaviour
     [SerializeField] bool packageGizmos;
 
     public Collider[] Package => Physics.OverlapSphere(packageCheck.position, packageRadius, packageLayer);
-    public bool Ground => Physics.Raycast(groundCheck.position, -transform.up, -groundDistance, groundLayer);
+    public bool Ground => Physics.CheckSphere(groundCheck.position, groundRadius, groundLayer);
 
     private void OnDrawGizmos()
     {
@@ -24,7 +24,7 @@ public class PlayerCollision : MonoBehaviour
             if(Ground) Gizmos.color = Color.green;
             else Gizmos.color = Color.red;
 
-            Gizmos.DrawRay(groundCheck.position, -transform.up * -groundDistance);
+            Gizmos.DrawWireSphere(groundCheck.position, groundRadius);
         }
         if(packageGizmos)
         {
