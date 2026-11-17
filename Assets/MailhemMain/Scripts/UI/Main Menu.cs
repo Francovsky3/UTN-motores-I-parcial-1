@@ -17,10 +17,18 @@ public class MainMenu : MonoBehaviour
         }
     }
 
+    void OnEnable()
+    {
+        musicSource.Play();
+        float musicVol = 1;
+        StartCoroutine(FadeOut(musicVol));
+    }
+
     public void OnButtonPressed(string sceneName)
     {
         PlayClickSound();
-        StartCoroutine(FadeOut());
+        float musicVol = 0;
+        StartCoroutine(FadeOut(musicVol));
         SceneManager.LoadScene(sceneName);
     }
 
@@ -30,7 +38,7 @@ public class MainMenu : MonoBehaviour
         config.SetActive(true);
     }
 
-    IEnumerator FadeOut()
+    IEnumerator FadeOut(float value)
     {
         float startVolume = musicSource.volume;
         float currentTime = 0f;
@@ -38,7 +46,7 @@ public class MainMenu : MonoBehaviour
         while (currentTime < 1)
         {
             currentTime += Time.deltaTime;
-            musicSource.volume = Mathf.Lerp(startVolume, 0, currentTime/1);
+            musicSource.volume = Mathf.Lerp(startVolume, value, currentTime/1);
             yield return null;
         }
     }

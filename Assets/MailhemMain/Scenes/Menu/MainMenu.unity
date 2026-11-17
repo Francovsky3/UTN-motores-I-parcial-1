@@ -471,7 +471,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MainMenu
   config: {fileID: 1177906421}
-  audioSource: {fileID: 266703290}
+  sfxSource: {fileID: 203097656}
+  musicSource: {fileID: 266703290}
   clickSound: {fileID: 8300000, guid: 5a7be7a8ee84ee841abdb72c71c11821, type: 3}
 --- !u!1 &266703289
 GameObject:
@@ -502,7 +503,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: -5711686273978660892, guid: fd672077ef80dd045807fa125b3c3c78, type: 2}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: e24f38bc51e030616bb72f2ec44354f0, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 0.7
   m_Pitch: 1
   Loop: 0
