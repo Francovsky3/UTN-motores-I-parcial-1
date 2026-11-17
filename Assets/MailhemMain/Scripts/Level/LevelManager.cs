@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour
 {
@@ -14,6 +15,7 @@ public class LevelManager : MonoBehaviour
     {
         LevelTimer.TimeOut += Lose;
         EventTrigger.Triggered += EventStarted;
+        EventTrigger.End += EventEnded;
     }
 
     void Start()
@@ -23,7 +25,7 @@ public class LevelManager : MonoBehaviour
 
     void Lose()
     {
-        
+        SceneManager.LoadScene("Lose Screen");
     }
 
     void EventStarted()
