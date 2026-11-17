@@ -1,23 +1,26 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
     [SerializeField] GameObject config;
-    [SerializeField] AudioSource audioSource;
+    [SerializeField] AudioSource sfxSource;
+    [SerializeField] AudioSource musicSource;
     [SerializeField] AudioClip clickSound;
 
     public void PlayClickSound()
     {
-        if (audioSource != null && clickSound != null)
+        if (sfxSource != null && clickSound != null)
         {
-            audioSource.PlayOneShot(clickSound);
+            sfxSource.PlayOneShot(clickSound);
         }
     }
 
     public void OnButtonPressed(string sceneName)
     {
         PlayClickSound();
+        StartCoroutine(FadeOut());
         SceneManager.LoadScene(sceneName);
     }
 
@@ -25,5 +28,18 @@ public class MainMenu : MonoBehaviour
     {
         PlayClickSound();
         config.SetActive(true);
+    }
+
+    IEnumerator FadeOut()
+    {
+        float startVolume = musicSource.volume;
+        float currentTime = 0f;
+
+        while (currentTime < 1)
+        {
+            currentTime += Time.deltaTime;
+            musicSource.volume = Mathf.Lerp(startVolume, 0, currentTime/1);
+            yield return null;
+        }
     }
 }
