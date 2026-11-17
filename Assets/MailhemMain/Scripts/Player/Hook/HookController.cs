@@ -61,7 +61,6 @@ public class HookController : MonoBehaviour
         }
         else
         {
-            Debug.Log("I swing again, and I missed");
             Debug.DrawRay(ray.origin, ray.direction * hookRange, Color.red, 2f);
         }
         return false;

@@ -5126,6 +5126,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1775764004}
     - target: {fileID: 1377818939211150130, guid: dc8918f9bfffcbb48aa00070fba84704, type: 3}
+      propertyPath: audioManager
+      value: 
+      objectReference: {fileID: 1775637513}
+    - target: {fileID: 1377818939211150130, guid: dc8918f9bfffcbb48aa00070fba84704, type: 3}
       propertyPath: sonidoEntrega
       value: 
       objectReference: {fileID: 8300000, guid: 4e474a0475a7d1b4383f0658ccc8c1e0, type: 3}
@@ -11223,6 +11227,10 @@ PrefabInstance:
       propertyPath: mapCamera
       value: 
       objectReference: {fileID: 1365983830}
+    - target: {fileID: 1377818939211150130, guid: dc8918f9bfffcbb48aa00070fba84704, type: 3}
+      propertyPath: audioManager
+      value: 
+      objectReference: {fileID: 1775637513}
     - target: {fileID: 5800218997144118878, guid: dc8918f9bfffcbb48aa00070fba84704, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -23417,7 +23425,7 @@ GameObject:
   - component: {fileID: 853564687}
   - component: {fileID: 853564689}
   m_Layer: 5
-  m_Name: Image
+  m_Name: MinimapMask
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -24238,6 +24246,10 @@ PrefabInstance:
       propertyPath: mapCamera
       value: 
       objectReference: {fileID: 1365983830}
+    - target: {fileID: 1377818939211150130, guid: dc8918f9bfffcbb48aa00070fba84704, type: 3}
+      propertyPath: audioManager
+      value: 
+      objectReference: {fileID: 1775637513}
     - target: {fileID: 5800218997144118878, guid: dc8918f9bfffcbb48aa00070fba84704, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -28236,6 +28248,10 @@ PrefabInstance:
       propertyPath: audioSource
       value: 
       objectReference: {fileID: 401867266}
+    - target: {fileID: 1377818939211150130, guid: dc8918f9bfffcbb48aa00070fba84704, type: 3}
+      propertyPath: audioManager
+      value: 
+      objectReference: {fileID: 1775637513}
     - target: {fileID: 1377818939211150130, guid: dc8918f9bfffcbb48aa00070fba84704, type: 3}
       propertyPath: sonidoEntrega
       value: 
@@ -32878,6 +32894,10 @@ PrefabInstance:
       propertyPath: mapCamera
       value: 
       objectReference: {fileID: 1365983830}
+    - target: {fileID: 1377818939211150130, guid: dc8918f9bfffcbb48aa00070fba84704, type: 3}
+      propertyPath: audioManager
+      value: 
+      objectReference: {fileID: 1775637513}
     - target: {fileID: 5800218997144118878, guid: dc8918f9bfffcbb48aa00070fba84704, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -46738,7 +46758,7 @@ GameObject:
   - component: {fileID: 1671657039}
   - component: {fileID: 1671657038}
   m_Layer: 5
-  m_Name: Minimap
+  m_Name: MinimapRaw
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -49124,6 +49144,10 @@ PrefabInstance:
       propertyPath: audioSource
       value: 
       objectReference: {fileID: 2131725766}
+    - target: {fileID: 1377818939211150130, guid: dc8918f9bfffcbb48aa00070fba84704, type: 3}
+      propertyPath: audioManager
+      value: 
+      objectReference: {fileID: 1775637513}
     - target: {fileID: 1377818939211150130, guid: dc8918f9bfffcbb48aa00070fba84704, type: 3}
       propertyPath: sonidoEntrega
       value: 
@@ -51897,6 +51921,10 @@ PrefabInstance:
       propertyPath: mapCamera
       value: 
       objectReference: {fileID: 1365983830}
+    - target: {fileID: 1377818939211150130, guid: dc8918f9bfffcbb48aa00070fba84704, type: 3}
+      propertyPath: audioManager
+      value: 
+      objectReference: {fileID: 1775637513}
     - target: {fileID: 5800218997144118878, guid: dc8918f9bfffcbb48aa00070fba84704, type: 3}
       propertyPath: m_Mesh
       value: 

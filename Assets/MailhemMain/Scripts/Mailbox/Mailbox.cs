@@ -28,6 +28,12 @@ public class Mailbox : MonoBehaviour
             {
                 waypoint.transform.position = waypointOriginalPos;
             }
+            else
+            {
+                float offset = 15;
+                Vector2 direction = (new Vector2(waypointOriginalPos.x, waypointOriginalPos.z) - new Vector2(mapCamera.transform.position.x, mapCamera.transform.position.z)).normalized;
+                waypoint.transform.position = new Vector3(mapCamera.transform.position.x +(direction.x * offset), waypoint.transform.position.y, mapCamera.transform.position.z + (direction.y * offset));
+            }
         }
     }
 
@@ -69,8 +75,8 @@ public class Mailbox : MonoBehaviour
 
     bool CheckIfVisibleInMap()
     {
-        Vector3 viewportPos = Camera.main.WorldToViewportPoint(waypointOriginalPos);
-        bool isVisible = viewportPos.x >= 0f && viewportPos.x <= 1f && viewportPos.y >= 0f && viewportPos.y <= 1f && viewportPos.z > 0f;
+        Vector3 viewportPos = mapCamera.WorldToViewportPoint(waypointOriginalPos);
+        bool isVisible = viewportPos.x >= 0f && viewportPos.x <= 1f && viewportPos.y >= 0f && viewportPos.y <= 1f && viewportPos.z < 0f;
         return isVisible;
     }
 }

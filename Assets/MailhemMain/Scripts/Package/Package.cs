@@ -44,16 +44,10 @@ public class Package : MonoBehaviour
     {
         if (!pickupable) return false;
 
-        // Comprobación y reproducción con depuración
         if (audioSource != null && pickupClips != null && pickupClips.Length > 0)
         {
             AudioClip clipToPlay = pickupClips[Random.Range(0, pickupClips.Length)];
             audioSource.PlayOneShot(clipToPlay);
-            Debug.Log("Éxito: Reproduciendo audio de la caja -> " + clipToPlay.name);
-        }
-        else
-        {
-            Debug.LogWarning("Fallo de audio: El AudioSource es nulo o 'pickupClips' está vacío en el Inspector.");
         }
 
         // Reproducir voz del jugador
