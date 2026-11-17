@@ -516,6 +516,7 @@ MonoBehaviour:
   audioSource: {fileID: -3649404172299572762}
   manager: {fileID: 0}
   playerVoice: {fileID: 8300000, guid: bef24eb5e1f562c4b877898f73f8e7b8, type: 3}
+  waypoint: {fileID: 4695075941505073281}
 --- !u!82 &-3649404172299572762
 AudioSource:
   m_ObjectHideFlags: 0

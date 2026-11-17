@@ -16,6 +16,9 @@ public class Package : MonoBehaviour
     
     [Header("Voice Clips")]
     [SerializeField] AudioClip pickupVoice;
+    public delegate void Packs();
+    public event Packs PickedUp;
+    public event Packs Dropped;
 
     void Awake()
     {
@@ -65,6 +68,7 @@ public class Package : MonoBehaviour
         transform.parent = newPos;
         transform.position = newPos.position;
         transform.Rotate(Vector3.forward * 90f);
+        PickedUp();
         return true;
     }
 
@@ -86,5 +90,6 @@ public class Package : MonoBehaviour
         transform.parent = null;
         transform.position = newPos.position;
         rb.linearVelocity = force * Vector3.forward;
+        Dropped();
     }
 }
