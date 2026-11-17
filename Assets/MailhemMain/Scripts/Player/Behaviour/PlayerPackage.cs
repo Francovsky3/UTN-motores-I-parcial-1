@@ -2,14 +2,14 @@ using UnityEngine;
 /// <summary>
 /// Holds the logic for player interaction with packages
 /// </summary>
-public class PackageManager
+public class PlayerPackage
 {
     Transform packageStorage;
     PlayerConfiguration config;
     Transform handPosition;
     public bool HasPackage {get; private set;} = false;
     Package storedPack;
-    public PackageManager(PlayerConfiguration configuration, Transform storage, Transform handPos)
+    public PlayerPackage(PlayerConfiguration configuration, Transform storage, Transform handPos)
     {
         config = configuration;
         packageStorage = storage;

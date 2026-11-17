@@ -10,7 +10,7 @@ public class PlayerGeneral : MonoBehaviour
     public StateCollection States {get; private set;}
     public InputProcessor InputProcessor {get; private set;}
     public PlayerMovement Movement {get; private set;}
-    public PackageManager Packages {get; private set;}
+    public PlayerPackage Packages {get; private set;}
     public PlayerCollision Collision => collision;
     public HookController Hook => hook;
     public Camera Camera => playerCamera;
@@ -48,7 +48,7 @@ public class PlayerGeneral : MonoBehaviour
         States = new StateCollection(this, StateMachine, meshAnimator);
         InputProcessor = new InputProcessor();
         Movement = new PlayerMovement(characterController, playerConfig, playerCamera, playerTrans);
-        Packages = new PackageManager(playerConfig, packageStorage, handPosition);
+        Packages = new PlayerPackage(playerConfig, packageStorage, handPosition);
         Cursor.lockState = CursorLockMode.Locked;
     }
 

@@ -14,6 +14,8 @@ public class Mailbox : MonoBehaviour
 
     GameObject package;
 
+    public delegate void Mail();
+    public event Mail Delivered; 
     private void Start()
     {
         waypointOriginalPos = waypoint.transform.position;
@@ -60,6 +62,7 @@ public class Mailbox : MonoBehaviour
 
             Destroy(other.gameObject);
             package = null;
+            Delivered();
         }
     }
 

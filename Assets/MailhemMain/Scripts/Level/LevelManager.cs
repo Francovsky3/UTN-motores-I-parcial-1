@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 public class LevelManager : MonoBehaviour
 {
     [Header("Components")]
-    [SerializeField] PackageSpawner spawner;
+    [SerializeField] PackageManager spawner;
     [SerializeField] Mailbox[] mailboxes;
 
     public delegate void GameEvent();
@@ -16,6 +16,7 @@ public class LevelManager : MonoBehaviour
         LevelTimer.TimeOut += Lose;
         EventTrigger.Triggered += EventStarted;
         EventTrigger.End += EventEnded;
+        PackageManager.AllDelivered += Win;
     }
 
     void Start()
@@ -26,6 +27,11 @@ public class LevelManager : MonoBehaviour
     void Lose()
     {
         SceneManager.LoadScene("Lose Screen");
+    }
+
+    void Win()
+    {
+        
     }
 
     void EventStarted()
