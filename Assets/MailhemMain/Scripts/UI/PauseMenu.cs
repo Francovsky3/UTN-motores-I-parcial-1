@@ -3,6 +3,8 @@ using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
+    public delegate void Pause();
+
     [SerializeField] GameObject optionsMenu;
 
     public void OnOptionsButtonPressed()
