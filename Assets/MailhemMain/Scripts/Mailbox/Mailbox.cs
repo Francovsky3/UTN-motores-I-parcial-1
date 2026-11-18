@@ -34,7 +34,7 @@ public class Mailbox : MonoBehaviour
             }
             else
             {
-                float offset = 15;
+                float offset = 12;
                 Vector2 direction = (new Vector2(waypointOriginalPos.x, waypointOriginalPos.z) - new Vector2(mapCamera.transform.position.x, mapCamera.transform.position.z)).normalized;
                 waypoint.transform.position = new Vector3(mapCamera.transform.position.x +(direction.x * offset), waypoint.transform.position.y, mapCamera.transform.position.z + (direction.y * offset));
             }
