@@ -1,4 +1,3 @@
-using System.Collections;
 using UnityEngine;
 
 public class Package : MonoBehaviour
@@ -69,35 +68,14 @@ public class Package : MonoBehaviour
 
     public void GetThrown(Transform newPos, float force)
     {
-
-        PlayerGeneral player = FindAnyObjectByType<PlayerGeneral>();
-
-        if (player != null && throwClips != null && throwClips.Length > 0)
-        {
-            player.PlayerAudioManager.PlaySFX(throwClips);
-        }
-        // ---------------------------------------
         pickupable = false;
         countdown = true;
         pickupTimer = maxTimer;
         rb.isKinematic = false;
         transform.parent = null;
         transform.position = newPos.position;
-        StartCoroutine(ColliderDelay());
+        boxCollider.enabled = true;
         rb.linearVelocity = force * Camera.main.transform.forward;
         Dropped();
-    }
-
-    IEnumerator ColliderDelay()
-    {
-        float time = 0.5f;
-        float timer = 0;
-
-        while(time < timer)
-        {
-            timer += Time.deltaTime;
-            yield return null;
-        }
-        boxCollider.enabled = true;
     }
 }

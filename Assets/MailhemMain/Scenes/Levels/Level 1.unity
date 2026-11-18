@@ -74981,6 +74981,10 @@ PrefabInstance:
       propertyPath: 'walkingClips.Array.data[1]'
       value: 
       objectReference: {fileID: 8300000, guid: 8367dd870bb7171479a1b7475d2c05f5, type: 3}
+    - target: {fileID: 4646868196819556839, guid: d7839af0dcfc6a647a6bd94e19bcf1c0, type: 3}
+      propertyPath: m_ExcludeLayers.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
     - target: {fileID: 4740524969212244034, guid: d7839af0dcfc6a647a6bd94e19bcf1c0, type: 3}
       propertyPath: groundRadius
       value: 0.5
