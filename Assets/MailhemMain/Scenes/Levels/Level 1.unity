@@ -6951,7 +6951,7 @@ PrefabInstance:
       objectReference: {fileID: 651591953}
     - target: {fileID: 806532756401299429, guid: dc8918f9bfffcbb48aa00070fba84704, type: 3}
       propertyPath: m_VersionIndex
-      value: 2212
+      value: 2224
       objectReference: {fileID: 0}
     - target: {fileID: 857117465463702386, guid: dc8918f9bfffcbb48aa00070fba84704, type: 3}
       propertyPath: m_Mesh
@@ -14213,7 +14213,7 @@ PrefabInstance:
       objectReference: {fileID: 75960169}
     - target: {fileID: 806532756401299429, guid: dc8918f9bfffcbb48aa00070fba84704, type: 3}
       propertyPath: m_VersionIndex
-      value: 2212
+      value: 2224
       objectReference: {fileID: 0}
     - target: {fileID: 857117465463702386, guid: dc8918f9bfffcbb48aa00070fba84704, type: 3}
       propertyPath: m_Mesh
@@ -32501,7 +32501,7 @@ PrefabInstance:
       objectReference: {fileID: 64746011}
     - target: {fileID: 806532756401299429, guid: dc8918f9bfffcbb48aa00070fba84704, type: 3}
       propertyPath: m_VersionIndex
-      value: 2212
+      value: 2224
       objectReference: {fileID: 0}
     - target: {fileID: 857117465463702386, guid: dc8918f9bfffcbb48aa00070fba84704, type: 3}
       propertyPath: m_Mesh
@@ -38019,7 +38019,7 @@ PrefabInstance:
       objectReference: {fileID: 1888095943}
     - target: {fileID: 806532756401299429, guid: dc8918f9bfffcbb48aa00070fba84704, type: 3}
       propertyPath: m_VersionIndex
-      value: 2212
+      value: 2224
       objectReference: {fileID: 0}
     - target: {fileID: 857117465463702386, guid: dc8918f9bfffcbb48aa00070fba84704, type: 3}
       propertyPath: m_Mesh
@@ -43971,7 +43971,7 @@ PrefabInstance:
       objectReference: {fileID: 1137784484}
     - target: {fileID: 806532756401299429, guid: dc8918f9bfffcbb48aa00070fba84704, type: 3}
       propertyPath: m_VersionIndex
-      value: 2212
+      value: 2224
       objectReference: {fileID: 0}
     - target: {fileID: 857117465463702386, guid: dc8918f9bfffcbb48aa00070fba84704, type: 3}
       propertyPath: m_Mesh
@@ -65033,7 +65033,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1762894623
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -66861,7 +66861,7 @@ PrefabInstance:
       objectReference: {fileID: 156554375}
     - target: {fileID: 806532756401299429, guid: dc8918f9bfffcbb48aa00070fba84704, type: 3}
       propertyPath: m_VersionIndex
-      value: 2212
+      value: 2224
       objectReference: {fileID: 0}
     - target: {fileID: 857117465463702386, guid: dc8918f9bfffcbb48aa00070fba84704, type: 3}
       propertyPath: m_Mesh
@@ -66887,6 +66887,10 @@ PrefabInstance:
       propertyPath: audioManager
       value: 
       objectReference: {fileID: 1775637513}
+    - target: {fileID: 1377818939211150130, guid: dc8918f9bfffcbb48aa00070fba84704, type: 3}
+      propertyPath: lampPostLight
+      value: 
+      objectReference: {fileID: 1928357221}
     - target: {fileID: 1377818939211150130, guid: dc8918f9bfffcbb48aa00070fba84704, type: 3}
       propertyPath: sonidoEntrega
       value: 
@@ -70708,6 +70712,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 90af2b18bbdcb8449bc012d995d1d0e7, type: 3}
+--- !u!108 &1928357221 stripped
+Light:
+  m_CorrespondingSourceObject: {fileID: 2326545021731024678, guid: 9ff1f77ccec9c79dfa269618e0ca425b, type: 3}
+  m_PrefabInstance: {fileID: 5782823116100426940}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1937573142
 GameObject:
   m_ObjectHideFlags: 0
@@ -71554,7 +71563,7 @@ PrefabInstance:
       objectReference: {fileID: 822038698}
     - target: {fileID: 806532756401299429, guid: dc8918f9bfffcbb48aa00070fba84704, type: 3}
       propertyPath: m_VersionIndex
-      value: 2212
+      value: 2224
       objectReference: {fileID: 0}
     - target: {fileID: 857117465463702386, guid: dc8918f9bfffcbb48aa00070fba84704, type: 3}
       propertyPath: m_Mesh
@@ -75714,6 +75723,10 @@ PrefabInstance:
     - target: {fileID: 1648530592555575236, guid: 9ff1f77ccec9c79dfa269618e0ca425b, type: 3}
       propertyPath: m_Name
       value: Lightpost
+      objectReference: {fileID: 0}
+    - target: {fileID: 2326545021731024678, guid: 9ff1f77ccec9c79dfa269618e0ca425b, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2326545021731024678, guid: 9ff1f77ccec9c79dfa269618e0ca425b, type: 3}
       propertyPath: m_Intensity
