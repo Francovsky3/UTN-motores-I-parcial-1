@@ -18,7 +18,7 @@ public class StateSpecialHooked : StateManager
     {
         base.Update();
         Player.Movement.HookedMovement(Player.Hook.HookPoint);
-        if(Mouse.current.rightButton.wasPressedThisFrame)
+        if(Mouse.current.leftButton.wasPressedThisFrame)
         {
             animator.SetBool("isHooked", false);
             if(Player.Collision.Ground)

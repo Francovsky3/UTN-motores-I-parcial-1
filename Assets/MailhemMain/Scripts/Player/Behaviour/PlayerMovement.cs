@@ -80,10 +80,9 @@ public class PlayerMovement
     {
         float xRotation = 0;
         Vector2 mouseDelta = Mouse.current.delta.ReadValue();
-        target.Rotate(Vector3.up * mouseDelta.x);
 
         xRotation -= Mathf.Clamp(mouseDelta.y, -90, 90);
-        target.localRotation = Quaternion.Euler(xRotation, target.eulerAngles.y, 0);
+        target.Rotate(xRotation, mouseDelta.x, 0);
 
         controller.Move(Velocity * Time.deltaTime);
     }

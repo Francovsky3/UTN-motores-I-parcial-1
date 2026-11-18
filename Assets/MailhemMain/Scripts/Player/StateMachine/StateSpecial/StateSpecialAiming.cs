@@ -21,6 +21,13 @@ public class StateSpecialAiming : StateManager
     {
         base.Update();
         Player.Movement.AimMovement();
+        if(Mouse.current.leftButton.wasPressedThisFrame)
+        {
+            if(Player.Hook.FireHook())
+            {
+                StateMachine.Change(Player.States.HookedState);
+            }
+        }
         if(Mouse.current.rightButton.wasReleasedThisFrame)
         {
             if(Player.Collision.Ground)
