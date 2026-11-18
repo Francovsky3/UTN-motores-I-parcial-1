@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class Package : MonoBehaviour
@@ -79,11 +80,24 @@ public class Package : MonoBehaviour
         pickupable = false;
         countdown = true;
         pickupTimer = maxTimer;
-        boxCollider.enabled = true;
         rb.isKinematic = false;
         transform.parent = null;
         transform.position = newPos.position;
-        rb.linearVelocity = force * Vector3.forward;
+        StartCoroutine(ColliderDelay());
+        rb.linearVelocity = force * Camera.main.transform.forward;
         Dropped();
+    }
+
+    IEnumerator ColliderDelay()
+    {
+        float time = 0.5f;
+        float timer = 0;
+
+        while(time < timer)
+        {
+            timer += Time.deltaTime;
+            yield return null;
+        }
+        boxCollider.enabled = true;
     }
 }
