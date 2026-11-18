@@ -10,6 +10,8 @@ public class Mailbox : MonoBehaviour
     [Header("Minimap")]
     [SerializeField] GameObject waypoint;
     [SerializeField] Camera mapCamera;
+    [Header("Iluminacion")]
+    [SerializeField] Light lampPostLight;
     Vector3 waypointOriginalPos;
 
     GameObject package;
@@ -42,8 +44,8 @@ public class Mailbox : MonoBehaviour
     public void SetPackage(GameObject pack)
     {
         package = pack;
-        package.GetComponent<Package>().PickedUp += ShowWaypoint;
-        package.GetComponent<Package>().Dropped += HideWaypoint;
+        package.GetComponent<Package>().PickedUp += ActivateComponents;
+        package.GetComponent<Package>().Dropped += DeactivateComponents;
     }
 
     private void OnTriggerEnter(Collider other)
@@ -57,8 +59,8 @@ public class Mailbox : MonoBehaviour
 
             audioManager.PlayVoice(playerVoice);
 
-            package.GetComponent<Package>().PickedUp -= ShowWaypoint;
-            package.GetComponent<Package>().Dropped -= HideWaypoint;
+            package.GetComponent<Package>().PickedUp -= ActivateComponents;
+            package.GetComponent<Package>().Dropped -= DeactivateComponents;
 
             Destroy(other.gameObject);
             package = null;
@@ -66,13 +68,15 @@ public class Mailbox : MonoBehaviour
         }
     }
 
-    void ShowWaypoint()
+    void ActivateComponents()
     {
+        lampPostLight.enabled = true;
         waypoint.SetActive(true);
     }
 
-    void HideWaypoint()
+    void DeactivateComponents()
     {
+        lampPostLight.enabled = false;
         waypoint.SetActive(false);
     }
 
