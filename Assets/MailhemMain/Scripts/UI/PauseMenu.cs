@@ -6,6 +6,7 @@ public class PauseMenu : MonoBehaviour
     public delegate void Pause();
 
     [SerializeField] GameObject optionsMenu;
+    [SerializeField] GameObject HUD;
 
     public void OnOptionsButtonPressed()
     {
@@ -15,6 +16,7 @@ public class PauseMenu : MonoBehaviour
 
     public void OnCloseMenuButtonPressed()
     {
+        HUD.SetActive(true);
         Time.timeScale = 1;
         gameObject.SetActive(false);
         Cursor.lockState = CursorLockMode.Locked;
@@ -28,6 +30,7 @@ public class PauseMenu : MonoBehaviour
 
     public void OpenMenu()
     {
+        HUD.SetActive(false);
         Time.timeScale = 0;
         gameObject.SetActive(true);
         Cursor.lockState = CursorLockMode.Confined;
