@@ -27,7 +27,7 @@ public class StateSubJump : StateSuperAir
     public override void Update()
     {
         base.Update();
-        Player.Movement.JumpMovement(Player.InputProcessor.InputVectorNormal);
+        Player.Movement.JumpMovement();
         jumpTimer += Time.deltaTime;
         if(jumpTimer >= minJumpDuration && Player.Movement.Velocity.y <= 0)
         {

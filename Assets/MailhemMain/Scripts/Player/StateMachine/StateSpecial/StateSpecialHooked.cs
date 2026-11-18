@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class StateSpecialHooked : StateManager
 {
@@ -17,11 +18,17 @@ public class StateSpecialHooked : StateManager
     {
         base.Update();
         Player.Movement.HookedMovement(Player.Hook.HookPoint);
-        if(Player.InputProcessor.InputReleaseHook > Time.time)
+        if(Mouse.current.rightButton.wasPressedThisFrame)
         {
             animator.SetBool("isHooked", false);
-            Player.InputProcessor.ProcessInputReleaseHook(0);
-            StateMachine.Change(Player.States.IdleState);
+            if(Player.Collision.Ground)
+            {
+                StateMachine.Change(Player.States.IdleState);
+            }
+            else
+            {
+                StateMachine.Change(Player.States.InAirState);
+            }
         }
     }
 }

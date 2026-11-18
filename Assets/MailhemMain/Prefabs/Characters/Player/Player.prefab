@@ -604,7 +604,7 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 8
-  groundDistance: -0.1
+  groundRadius: 0
   groundGizmos: 1
   packageCheck: {fileID: 4417848991876609923}
   packageLayer:
@@ -612,6 +612,37 @@ MonoBehaviour:
     m_Bits: 128
   packageRadius: 1
   packageGizmos: 1
+--- !u!1 &6810890479451518444
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3905691591666384254}
+  m_Layer: 6
+  m_Name: Aim Target
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3905691591666384254
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6810890479451518444}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.814, y: 0.419, z: 0.738}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3616092962908689591}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7025692416967301863
 GameObject:
   m_ObjectHideFlags: 0
@@ -772,6 +803,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 9060988883090390114}
+  - {fileID: 3905691591666384254}
   m_Father: {fileID: 4417848991876609923}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &4429775729817532379
@@ -791,10 +823,12 @@ MonoBehaviour:
   playerCamera: {fileID: 0}
   playerTrans: {fileID: 4417848991876609923}
   meshAnimator: {fileID: 8838268067194991011}
+  aimCamera: {fileID: 0}
   collision: {fileID: 4740524969212244034}
   hook: {fileID: 1696971456912718743}
   packageStorage: {fileID: 4363112916494165480}
   handPosition: {fileID: 3982612144182285633}
+  aimTarget: {fileID: 0}
   audioManager: {fileID: 439688347647987554}
   playerSFX: {fileID: 4544580093200452571}
   musicManager: {fileID: 4987320756567121324}

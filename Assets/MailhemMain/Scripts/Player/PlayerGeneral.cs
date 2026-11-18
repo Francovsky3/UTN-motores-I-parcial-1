@@ -1,4 +1,5 @@
 using TMPro;
+using Unity.Cinemachine;
 using UnityEngine;
 
 /// <summary>
@@ -24,6 +25,7 @@ public class PlayerGeneral : MonoBehaviour
     [SerializeField] Camera playerCamera;
     [SerializeField] Transform playerTrans;
     [SerializeField] Animator meshAnimator;
+    [SerializeField] CinemachineCamera aimCamera;
 
     [Header("Collision Components")]
     [SerializeField] PlayerCollision collision;
@@ -32,6 +34,7 @@ public class PlayerGeneral : MonoBehaviour
     [SerializeField] HookController hook;
     [SerializeField] Transform packageStorage;
     [SerializeField] Transform handPosition;
+    [SerializeField] Transform aimTarget;
 
     [Header("Audio")]
     [SerializeField] AudioManager audioManager;
@@ -45,9 +48,9 @@ public class PlayerGeneral : MonoBehaviour
     private void Awake()
     {
         StateMachine = new StateMachine();
-        States = new StateCollection(this, StateMachine, meshAnimator);
+        States = new StateCollection(this, StateMachine, meshAnimator, aimCamera);
         InputProcessor = new InputProcessor();
-        Movement = new PlayerMovement(characterController, playerConfig, playerCamera, playerTrans);
+        Movement = new PlayerMovement(characterController, playerConfig, playerCamera, playerTrans, aimTarget);
         Packages = new PlayerPackage(playerConfig, packageStorage, handPosition);
         Cursor.lockState = CursorLockMode.Locked;
     }

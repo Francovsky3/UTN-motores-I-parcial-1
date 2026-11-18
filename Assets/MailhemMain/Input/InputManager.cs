@@ -21,24 +21,6 @@ public class InputManager : MonoBehaviour
         }
     }
 
-    public void InputFireHook(InputAction.CallbackContext context)
-    {
-        if(context.started)
-        {
-            float time = (float)context.time;
-            player.InputProcessor.ProcessInputFireHook(time);
-        }
-    }
-
-    public void InputReleaseHook(InputAction.CallbackContext context)
-    {
-        if(context.started)
-        {
-            float time = (float)context.time;
-            player.InputProcessor.ProcessInputReleaseHook(time);
-        }
-    }
-
     public void InputThrow(InputAction.CallbackContext context)
     {
         if(context.started)

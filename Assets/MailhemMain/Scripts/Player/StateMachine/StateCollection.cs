@@ -1,3 +1,4 @@
+using Unity.Cinemachine;
 using UnityEngine;
 /// <summary>
 /// Instances and contains all of the state machine's states for easy reference
@@ -9,13 +10,15 @@ public class StateCollection
     public StateSubInAir InAirState {get; private set;}
     public StateSubJump JumpState {get; private set;}
     public StateSpecialHooked HookedState {get; private set;}
+    public StateSpecialAiming AimState {get; private set;}
 
-    public StateCollection(PlayerGeneral player, StateMachine stateMachine, Animator animator)
+    public StateCollection(PlayerGeneral player, StateMachine stateMachine, Animator animator, CinemachineCamera aimCam)
     {
         IdleState = new StateSubIdle(player, stateMachine, animator);
         MoveState = new StateSubMovement(player, stateMachine, animator);
         InAirState = new StateSubInAir(player, stateMachine, animator);
         JumpState = new StateSubJump(player, stateMachine, animator);
         HookedState = new StateSpecialHooked(player, stateMachine, animator);
+        AimState = new StateSpecialAiming(player, stateMachine, animator, aimCam);
     }
 }

@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 
 /// <summary>
@@ -10,29 +11,30 @@ public class PlayerMovement
     CharacterController controller;
     Camera camera;
     Transform transform;
+    Transform target;
 
     float currentVelocity;
     public Vector3 Velocity => controller.velocity;
 
-    public PlayerMovement(CharacterController playerController, PlayerConfiguration configuration, Camera cam, Transform trans)
+    public PlayerMovement(CharacterController playerController, PlayerConfiguration configuration, Camera cam, Transform trans, Transform tag)
     {
         config = configuration;
         controller = playerController;
         camera = cam;
         transform = trans;
+        target = tag;
     }
 
-    //Base grounded movement
-    public void VelocityMovement(Vector2 inputVec)
-    {
-        Vector3 dir = ApplyRotation(inputVec);
-        controller.Move(config.MoveSpeed * Time.deltaTime * dir);
-    }
-
-    //Idle
     public void VelocityIdle()
     {
         controller.Move(Vector3.zero);
+    }
+
+    public void VelocityMovement(Vector2 inputVec)
+    {
+        Vector3 dir = ApplyRotation(inputVec);
+        Vector3 velocity = config.MoveSpeed * Time.deltaTime * dir;
+        controller.Move(velocity);
     }
 
     //Rotation
@@ -48,27 +50,41 @@ public class PlayerMovement
 
     public void VelocityJump()
     {
-        Vector3 velocity = new (Velocity.x, config.JumpForce, Velocity.z);
-        controller.Move(velocity * Time.deltaTime);
+        Vector3 velocity = new Vector3(Velocity.x, config.JumpForce, Velocity.z) * Time.deltaTime;
+        controller.Move(velocity);
     }
 
     public void ApplyGravity()
     {
-        controller.Move(new Vector3(Velocity.x, config.Gravity, Velocity.z) * Time.deltaTime);
+        float fallSpeed = Mathf.Clamp(Velocity.y + config.Gravity, config.Gravity, Velocity.y);
+        Vector3 velocity = new Vector3(Velocity.x, fallSpeed, Velocity.z) * Time.deltaTime;
+
+        controller.Move(velocity);
     }
 
-    //Apply gravity to the current y velocity and allow movement
-    public void JumpMovement(Vector2 inputVec)
+    public void JumpMovement()
     {
         float velocityY = Velocity.y + (config.Gravity * config.GravityMultiplier);
-        Vector3 velocity = new Vector3(Velocity.x, velocityY, Velocity.z);
+        Vector3 velocity = new Vector3(Velocity.x, velocityY, Velocity.z)* Time.deltaTime;
 
-        controller.Move(velocity * Time.deltaTime);
+        controller.Move(velocity);
     }
 
     public void HookedMovement(Vector3 targetPos)
     {
-        Vector3 direction = (targetPos - transform.position).normalized;
-        controller.Move(config.HookForce * Time.deltaTime * direction);
+        Vector3 dir = (targetPos - transform.position).normalized;
+        Vector3 velocity = config.HookForce * Time.deltaTime * dir;
+        controller.Move(velocity);
+    }
+    public void AimMovement()
+    {
+        float xRotation = 0;
+        Vector2 mouseDelta = Mouse.current.delta.ReadValue();
+        target.Rotate(Vector3.up * mouseDelta.x);
+
+        xRotation -= Mathf.Clamp(mouseDelta.y, -90, 90);
+        target.localRotation = Quaternion.Euler(xRotation, target.eulerAngles.y, 0);
+
+        controller.Move(Velocity * Time.deltaTime);
     }
 }

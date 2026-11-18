@@ -22,5 +22,9 @@ public class StateSuperAir : StateManager
                 animator.SetTrigger("isJumping");
             }
         }
+        if(Mouse.current.rightButton.wasPressedThisFrame)
+        {
+            StateMachine.Change(Player.States.AimState);
+        }
     }
 }

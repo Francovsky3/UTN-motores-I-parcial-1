@@ -27,5 +27,9 @@ public class StateSuperGround : StateManager
                 animator.SetBool("isWalking", false);
             }
         }
+        if(Mouse.current.rightButton.wasPressedThisFrame)
+        {
+            StateMachine.Change(Player.States.AimState);
+        }
     }
 }
