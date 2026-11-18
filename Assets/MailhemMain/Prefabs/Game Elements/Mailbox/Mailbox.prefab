@@ -29,8 +29,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 16.93, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.4667076, y: 0.4667076, z: 0.4667076}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 8047374874115206194}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -514,9 +514,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   sonidoEntrega: {fileID: 8300000, guid: 4e474a0475a7d1b4383f0658ccc8c1e0, type: 3}
   audioSource: {fileID: -3649404172299572762}
-  manager: {fileID: 0}
+  audioManager: {fileID: 0}
   playerVoice: {fileID: 8300000, guid: bef24eb5e1f562c4b877898f73f8e7b8, type: 3}
   waypoint: {fileID: 4695075941505073281}
+  mapCamera: {fileID: 0}
 --- !u!82 &-3649404172299572762
 AudioSource:
   m_ObjectHideFlags: 0

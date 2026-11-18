@@ -39,6 +39,7 @@ public class StateManager
         }
         if(Player.InputProcessor.InputThrow > Time.time && Player.Packages.HasPackage == true)
         {
+            Player.PlayerAudioManager.PlaySFX(Player.PlayerSFX.ThrowClips);
             Player.InputProcessor.ProcessInputThrow(0);
             Player.Packages.ThrowPack();
             Player.MusicManager.FadeGuitar(0, 2);
