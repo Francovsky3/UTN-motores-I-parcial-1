@@ -1,13 +1,16 @@
 using UnityEngine;
 using UnityEngine.Audio;
 
-public class AudioMenu : MonoBehaviour
+public class SettingsMenu : MonoBehaviour
 {
+    [Header("Audio")]
     [SerializeField] AudioMixer mixer;
     [SerializeField] GameObject pauseMenu;
     [SerializeField] AudioSource audioSource;
     [SerializeField] AudioClip clickSound;
     [SerializeField] bool isInGame;
+    [Header("Controlls")]
+    [SerializeField] PlayerConfiguration config;
 
     public void OnMasterSliderChange(float value)
     {
@@ -28,6 +31,11 @@ public class AudioMenu : MonoBehaviour
     public void OnAmbianceSliderChange(float value)
     {
         mixer.SetFloat("AmbienteVol", Mathf.Log10(value) * 20);
+    }
+
+    public void OnSensitivitySliderChange(float value)
+    {
+        config.SetSensitivity(value);
     }
 
     public void OnCloseMenuButton()

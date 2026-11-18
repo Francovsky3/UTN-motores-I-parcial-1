@@ -26,4 +26,12 @@ public class PlayerConfiguration : MonoBehaviour
     [Header("Hook movement")]
     [SerializeField] float hookForce;
     public float HookForce => hookForce;
+    [Header("Aiming")]
+    [SerializeField] float aimSensitivity;
+    public float AimSensitivity => aimSensitivity;
+
+    public void SetSensitivity(float value)
+    {
+        aimSensitivity = value;
+    }
 }

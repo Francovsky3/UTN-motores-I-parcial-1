@@ -21,14 +21,9 @@ public class StateSpecialHooked : StateManager
         if(Mouse.current.leftButton.wasPressedThisFrame)
         {
             animator.SetBool("isHooked", false);
-            if(Player.Collision.Ground)
-            {
-                StateMachine.Change(Player.States.IdleState);
-            }
-            else
-            {
-                StateMachine.Change(Player.States.InAirState);
-            }
+            
+            StateMachine.Change(Player.States.IdleState);
+            
         }
     }
 }

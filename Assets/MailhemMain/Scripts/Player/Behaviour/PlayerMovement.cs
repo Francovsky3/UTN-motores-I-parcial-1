@@ -82,7 +82,7 @@ public class PlayerMovement
         Vector2 mouseDelta = Mouse.current.delta.ReadValue();
 
         xRotation -= Mathf.Clamp(mouseDelta.y, -90, 90);
-        target.Rotate(xRotation, mouseDelta.x, 0);
+        target.Rotate(new Vector3(xRotation, mouseDelta.x, 0f) * config.AimSensitivity);
 
         controller.Move(Velocity * Time.deltaTime);
     }
