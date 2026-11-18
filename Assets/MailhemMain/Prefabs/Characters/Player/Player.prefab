@@ -83,6 +83,7 @@ MonoBehaviour:
   jumpForce: 30
   throwForce: 15
   hookForce: 40
+  aimSensitivity: 0
 --- !u!1 &3265220281676085086
 GameObject:
   m_ObjectHideFlags: 0
@@ -459,7 +460,7 @@ CharacterController:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 128
   m_LayerOverridePriority: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
