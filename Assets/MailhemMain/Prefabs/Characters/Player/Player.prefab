@@ -80,7 +80,7 @@ MonoBehaviour:
   smoothTime: 0.05
   gravity: -6
   gravityMultiplier: 0.3
-  jumpForce: 30
+  jumpForce: 35
   maxFallSpeed: -20
   airResistance: 0.03
   throwForce: 15
@@ -149,18 +149,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerSFX
   walkingClips:
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 8300000, guid: 477b7a64c6f0de84d9c6e1616e655e4e, type: 3}
+  - {fileID: 8300000, guid: 8367dd870bb7171479a1b7475d2c05f5, type: 3}
   jumpingClips:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 8300000, guid: 3b05d285437b5b9468ea045871c408f4, type: 3}
+  - {fileID: 8300000, guid: 61bbc1644065a544abadb269689026df, type: 3}
+  - {fileID: 8300000, guid: c10bc202b95ba4343a18e563177e36e0, type: 3}
   hookClips:
-  - {fileID: 0}
-  pickupClips: []
+  - {fileID: 8300000, guid: acdea58a8725ca6489021e6570b082bb, type: 3}
+  pickupClips:
+  - {fileID: 8300000, guid: eefbec30cde6de54780eaf99c64d4c9b, type: 3}
   throwClips:
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 8300000, guid: 2d9a400bf16a6884cb1ae34f2a328100, type: 3}
+  - {fileID: 8300000, guid: a1ea70284e284e045acb25f231d27793, type: 3}
 --- !u!114 &4987320756567121324
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -314,6 +315,22 @@ MonoBehaviour:
     m_ActionName: 'Movement/ThrowPack[/Mouse/rightButton]'
   - m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
+        m_MethodName: OpenMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 7d1ec041-7bc9-4a9e-9b3c-b9dab8834328
+    m_ActionName: 'Movement/Open Menu[/Keyboard/p]'
+  - m_PersistentCalls:
+      m_Calls:
       - m_Target: {fileID: 4311644537607322771}
         m_TargetAssemblyTypeName: InputManager, Assembly-CSharp
         m_MethodName: InputReleaseHook
@@ -328,22 +345,6 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 8ec26b8f-950f-4d8d-bcfb-2dfdeb808c45
     m_ActionName: 'Movement/Release Hook[/Mouse/rightButton]'
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: InputManager, Assembly-CSharp
-        m_MethodName: 
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: 7d1ec041-7bc9-4a9e-9b3c-b9dab8834328
-    m_ActionName: 'Movement/Open Menu[/Keyboard/p]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: Keyboard
   m_DefaultActionMap: Movement
@@ -374,7 +375,7 @@ Transform:
   m_GameObject: {fileID: 3746781185412807773}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -1, z: 0}
+  m_LocalPosition: {x: 0, y: -0.67, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -421,6 +422,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4417848991876609923}
   - component: {fileID: 4646868196819556839}
+  - component: {fileID: 7186287335550554350}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -438,7 +440,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 63.816, y: 1, z: 11.56}
-  m_LocalScale: {x: 1.1, y: 1.1, z: 1.1}
+  m_LocalScale: {x: 1.2, y: 1.2, z: 1.2}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 9082699596473956206}
@@ -474,6 +476,27 @@ CharacterController:
   m_SkinWidth: 0.0001
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &7186287335550554350
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4410354414022366122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d62fc19617f79a4d90c275c5214ac0b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerHitHandler
+  animator: {fileID: 8838268067194991011}
+  movementScript: {fileID: 4429775729817532379}
+  carTag: Car
+  hitTriggerName: Hit
+  isHitBoolName: isHit
+  recoveryTime: 1.5
+  knockbackSpeed: 10
+  knockbackDrag: 8
+  gravity: -20
 --- !u!1 &4889279542970317749
 GameObject:
   m_ObjectHideFlags: 0
@@ -565,7 +588,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::HookController
   player: {fileID: 4429775729817532379}
   hookRange: 20
-  sphereRadius: 8
+  sphereRadius: 5
   reelingForce: 500
   hookableLayers:
     serializedVersion: 2
@@ -653,7 +676,7 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 8
-  groundRadius: 0
+  groundRadius: 0.6
   groundGizmos: 1
   packageCheck: {fileID: 4417848991876609923}
   packageLayer:
@@ -743,7 +766,7 @@ AudioSource:
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 200
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 20
@@ -940,7 +963,7 @@ Transform:
   m_GameObject: {fileID: 8838201374855879402}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0.087, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -992,18 +1015,18 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 0.8
+  m_Volume: 1
   m_Pitch: 1.2
   Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 199
   DopplerLevel: 1
-  MinDistance: 1
+  MinDistance: 2
   MaxDistance: 500
   Pan2D: 0
-  rolloffMode: 0
+  rolloffMode: 1
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
@@ -1036,7 +1059,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
