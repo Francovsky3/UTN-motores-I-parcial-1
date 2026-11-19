@@ -3230,6 +3230,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4109643194724799072, guid: e0fe82a628740e143afbd2c7847d601a, type: 3}
       insertIndex: -1
       addedObject: {fileID: 83061984}
+    - targetCorrespondingSourceObject: {fileID: 4109643194724799072, guid: e0fe82a628740e143afbd2c7847d601a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 83061985}
   m_SourcePrefab: {fileID: 100100000, guid: e0fe82a628740e143afbd2c7847d601a, type: 3}
 --- !u!4 &83061979 stripped
 Transform:
@@ -3291,6 +3294,11 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
+--- !u!95 &83061983 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 7251814433282970272, guid: e0fe82a628740e143afbd2c7847d601a, type: 3}
+  m_PrefabInstance: {fileID: 83061978}
+  m_PrefabAsset: {fileID: 0}
 --- !u!195 &83061984
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -3313,6 +3321,28 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &83061985
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 83061980}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87e5d6b7643637541b818e3ae1e43cf9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NPC_Controller
+  targetPoint: {fileID: 0}
+  wanderRadius: 25
+  arrivalThreshold: 0.8
+  walkSpeed: 1.6
+  pauseChance: 0.25
+  minPauseTime: 1.5
+  maxPauseTime: 4
+  animator: {fileID: 83061983}
+  speedParameter: Speed
+  animationDampTime: 0.1
 --- !u!1 &84066593
 GameObject:
   m_ObjectHideFlags: 0
@@ -6735,7 +6765,7 @@ MeshCollider:
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: 931073344}
+  m_Mesh: {fileID: 1645008104}
 --- !u!33 &183962523
 MeshFilter:
   m_ObjectHideFlags: 10
@@ -9000,7 +9030,7 @@ MeshCollider:
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: 2129856722}
+  m_Mesh: {fileID: 562988720}
 --- !u!33 &220000505
 MeshFilter:
   m_ObjectHideFlags: 10
@@ -10154,6 +10184,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1440364903369761866, guid: c658019a41ec0844eb772de0b5b2d31d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2129267043}
+    - targetCorrespondingSourceObject: {fileID: 1440364903369761866, guid: c658019a41ec0844eb772de0b5b2d31d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2129267047}
+    - targetCorrespondingSourceObject: {fileID: 1440364903369761866, guid: c658019a41ec0844eb772de0b5b2d31d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2129267046}
   m_SourcePrefab: {fileID: 100100000, guid: c658019a41ec0844eb772de0b5b2d31d, type: 3}
 --- !u!4 &248261329 stripped
 Transform:
@@ -13055,7 +13091,7 @@ MeshCollider:
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: 666998338}
+  m_Mesh: {fileID: 586218746}
 --- !u!33 &322184116
 MeshFilter:
   m_ObjectHideFlags: 10
@@ -19826,7 +19862,7 @@ MeshCollider:
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: 1794625984}
+  m_Mesh: {fileID: 1951238581}
 --- !u!33 &436823574
 MeshFilter:
   m_ObjectHideFlags: 10
@@ -30457,7 +30493,7 @@ MeshCollider:
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: 212988457}
+  m_Mesh: {fileID: 676720875}
 --- !u!33 &746248731
 MeshFilter:
   m_ObjectHideFlags: 10
@@ -38655,7 +38691,7 @@ MeshCollider:
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: 739128737}
+  m_Mesh: {fileID: 972099733}
 --- !u!33 &987609419
 MeshFilter:
   m_ObjectHideFlags: 10
@@ -39367,7 +39403,7 @@ MeshCollider:
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: 183232263}
+  m_Mesh: {fileID: 431080658}
 --- !u!33 &1006893191
 MeshFilter:
   m_ObjectHideFlags: 10
@@ -40882,7 +40918,7 @@ MeshCollider:
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: 941018619}
+  m_Mesh: {fileID: 925364488}
 --- !u!33 &1028191433
 MeshFilter:
   m_ObjectHideFlags: 10
@@ -41956,7 +41992,7 @@ MeshCollider:
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: 1207122743}
+  m_Mesh: {fileID: 817763150}
 --- !u!33 &1048510769
 MeshFilter:
   m_ObjectHideFlags: 10
@@ -44954,7 +44990,7 @@ MeshCollider:
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: 1614834323}
+  m_Mesh: {fileID: 1148507534}
 --- !u!33 &1126279084
 MeshFilter:
   m_ObjectHideFlags: 10
@@ -51259,7 +51295,7 @@ MeshCollider:
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: 1013322654}
+  m_Mesh: {fileID: 1128301141}
 --- !u!33 &1265079683
 MeshFilter:
   m_ObjectHideFlags: 10
@@ -62213,7 +62249,7 @@ MeshCollider:
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: 1200796139}
+  m_Mesh: {fileID: 296201773}
 --- !u!33 &1446173847
 MeshFilter:
   m_ObjectHideFlags: 10
@@ -75265,7 +75301,7 @@ MeshCollider:
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: 298999895}
+  m_Mesh: {fileID: 1934911399}
 --- !u!33 &1761670361
 MeshFilter:
   m_ObjectHideFlags: 10
@@ -75580,7 +75616,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1762894623
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -78616,7 +78652,7 @@ MeshCollider:
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: 590532293}
+  m_Mesh: {fileID: 236485469}
 --- !u!33 &1822559205
 MeshFilter:
   m_ObjectHideFlags: 10
@@ -80325,7 +80361,7 @@ MeshCollider:
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: 449418111}
+  m_Mesh: {fileID: 1121216370}
 --- !u!33 &1856928335
 MeshFilter:
   m_ObjectHideFlags: 10
@@ -81872,7 +81908,7 @@ MeshCollider:
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: 1757954987}
+  m_Mesh: {fileID: 838056380}
 --- !u!33 &1897390262
 MeshFilter:
   m_ObjectHideFlags: 10
@@ -86257,7 +86293,7 @@ MeshCollider:
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: 649511448}
+  m_Mesh: {fileID: 783861107}
 --- !u!33 &2069260210
 MeshFilter:
   m_ObjectHideFlags: 10
@@ -86821,6 +86857,55 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
+--- !u!95 &2129267045 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5644919392698819722, guid: c658019a41ec0844eb772de0b5b2d31d, type: 3}
+  m_PrefabInstance: {fileID: 248261328}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2129267046
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2129267042}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87e5d6b7643637541b818e3ae1e43cf9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NPC_Controller
+  targetPoint: {fileID: 0}
+  wanderRadius: 25
+  arrivalThreshold: 0.8
+  walkSpeed: 0.6
+  pauseChance: 0.25
+  minPauseTime: 1.8
+  maxPauseTime: 4
+  animator: {fileID: 2129267045}
+  speedParameter: Speed
+  animationDampTime: 0.1
+--- !u!195 &2129267047
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2129267042}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
 --- !u!43 &2129856722
 Mesh:
   m_ObjectHideFlags: 0
@@ -87297,7 +87382,7 @@ MeshCollider:
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: 214373891}
+  m_Mesh: {fileID: 518236567}
 --- !u!33 &2137894658
 MeshFilter:
   m_ObjectHideFlags: 10
