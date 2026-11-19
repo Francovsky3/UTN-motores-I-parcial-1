@@ -17,7 +17,7 @@ public class Mailbox : MonoBehaviour
     GameObject package;
 
     public delegate void Mail();
-    public event Mail Delivered; 
+    public static event Mail Delivered; 
     private void Start()
     {
         waypointOriginalPos = waypoint.transform.position;

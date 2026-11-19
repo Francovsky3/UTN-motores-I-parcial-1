@@ -5,10 +5,17 @@ public class PackageManager : MonoBehaviour
     [SerializeField] GameObject packagePrefab;
     [Tooltip("The position of each package, make sure the number and order of positions coincides with the mailboxes")]
     [SerializeField] Transform[] packagesPosition;
+
+    [SerializeField] UICounter counter;
     public int MaxPackages {get; private set;}
     public int DeliveredPackages {get; private set;}
     public delegate void Packs();
     public static event Packs AllDelivered;
+
+    void OnEnable()
+    {
+        Mailbox.Delivered += CheckPackagesDelivered;
+    }
 
     public void SpawnPackages(Mailbox[] mailboxes)
     {
@@ -17,10 +24,10 @@ public class PackageManager : MonoBehaviour
         {
             GameObject package = Instantiate(packagePrefab, packagesPosition[index].position, Quaternion.identity);
             mailbox.SetPackage(package);
-            mailbox.Delivered += CheckPackagesDelivered;
             MaxPackages++;
             index++;
         }
+        counter.SetTotalPacks(index +1);
     }
 
     void CheckPackagesDelivered()
