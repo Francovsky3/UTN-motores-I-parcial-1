@@ -16,12 +16,15 @@ public class Mailbox : MonoBehaviour
 
     GameObject package;
 
+    ParticleInstatiator instatiator;
+
     public delegate void Mail();
     public static event Mail Delivered; 
     private void Start()
     {
         waypointOriginalPos = waypoint.transform.position;
         audioSource = GetComponent<AudioSource>();
+        instatiator = GetComponentInChildren<ParticleInstatiator>();
     }
 
     void Update()
@@ -56,6 +59,7 @@ public class Mailbox : MonoBehaviour
             {
                 audioSource.PlayOneShot(sonidoEntrega);
             }
+            instatiator.Emit();
 
             audioManager.PlayVoice(playerVoice);
 
