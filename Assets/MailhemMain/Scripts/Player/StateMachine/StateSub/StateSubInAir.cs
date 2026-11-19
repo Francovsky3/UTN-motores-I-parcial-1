@@ -66,4 +66,10 @@ public class StateSubInAir : StateSuperAir
             }
         }
     }
+
+    public override void Exit()
+    {
+        base.Exit();
+        Player.Particles.Emit();
+    }
 }

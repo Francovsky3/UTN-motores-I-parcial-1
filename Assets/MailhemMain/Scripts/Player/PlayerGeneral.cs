@@ -18,6 +18,7 @@ public class PlayerGeneral : MonoBehaviour
     public AudioManager PlayerAudioManager => audioManager;
     public PlayerSFX PlayerSFX => playerSFX;
     public MusicManager MusicManager => musicManager;
+    public ParticleInstatiator Particles => particles;
 
     [Header("Movement Components")]
     [SerializeField] CharacterController characterController;
@@ -35,6 +36,7 @@ public class PlayerGeneral : MonoBehaviour
     [SerializeField] Transform packageStorage;
     [SerializeField] Transform handPosition;
     [SerializeField] Transform aimTarget;
+    [SerializeField] ParticleInstatiator particles;
 
     [Header("Audio")]
     [SerializeField] AudioManager audioManager;

@@ -474,6 +474,51 @@ CharacterController:
   m_SkinWidth: 0.0001
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &4889279542970317749
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 493690187177691635}
+  - component: {fileID: 6613937850058022512}
+  m_Layer: 6
+  m_Name: Particles
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &493690187177691635
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4889279542970317749}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.85, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4763962327085717421}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6613937850058022512
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4889279542970317749}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b66df430c6b3213b7b2817c27cacdcf3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerParticles
+  particlesPrefab: {fileID: 0}
 --- !u!1 &5225477940141547923
 GameObject:
   m_ObjectHideFlags: 0
@@ -556,6 +601,7 @@ Transform:
   m_Children:
   - {fileID: 2335316754552957288}
   - {fileID: 4363112916494165480}
+  - {fileID: 493690187177691635}
   m_Father: {fileID: 4417848991876609923}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5931624161874167795
@@ -831,7 +877,8 @@ MonoBehaviour:
   hook: {fileID: 1696971456912718743}
   packageStorage: {fileID: 4363112916494165480}
   handPosition: {fileID: 3982612144182285633}
-  aimTarget: {fileID: 0}
+  aimTarget: {fileID: 3905691591666384254}
+  particles: {fileID: 6613937850058022512}
   audioManager: {fileID: 439688347647987554}
   playerSFX: {fileID: 4544580093200452571}
   musicManager: {fileID: 4987320756567121324}
