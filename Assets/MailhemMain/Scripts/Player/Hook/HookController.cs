@@ -21,6 +21,10 @@ public class HookController : MonoBehaviour
 
     void Update()
     {
+        if(isReelingPack && reeledPack == null)
+        {
+            isReelingPack = false;
+        }
         if(isReelingPack)
         {
             Vector3 direction = (player.transform.position - reeledPack.transform.position ).normalized;
