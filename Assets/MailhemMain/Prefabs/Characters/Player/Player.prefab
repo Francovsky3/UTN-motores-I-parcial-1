@@ -518,7 +518,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b66df430c6b3213b7b2817c27cacdcf3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerParticles
-  particlesPrefab: {fileID: 0}
+  particlesPrefab: {fileID: 8127183518250341153, guid: e163b5206cd70dc79ab7c6e414a870e6, type: 3}
 --- !u!1 &5225477940141547923
 GameObject:
   m_ObjectHideFlags: 0
