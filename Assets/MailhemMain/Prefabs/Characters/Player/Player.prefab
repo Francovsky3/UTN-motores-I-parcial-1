@@ -78,12 +78,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerConfiguration
   moveSpeed: 10
   smoothTime: 0.05
-  gravity: -9.81
-  gravityMultiplier: 0.5
+  gravity: -6
+  gravityMultiplier: 0.3
   jumpForce: 30
+  maxFallSpeed: -20
+  airResistance: 0.03
   throwForce: 15
   hookForce: 40
-  aimSensitivity: 0
+  aimSensitivity: 0.5
 --- !u!1 &3265220281676085086
 GameObject:
   m_ObjectHideFlags: 0
