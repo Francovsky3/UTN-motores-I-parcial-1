@@ -66,7 +66,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: eb6889f6ef49bcc4789bc213adacd30d, type: 3}
       propertyPath: m_Name
-      value: NightBuilding_v1_1
+      value: Night_Building
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: eb6889f6ef49bcc4789bc213adacd30d, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -75,6 +79,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: eb6889f6ef49bcc4789bc213adacd30d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1126031416585290824}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: eb6889f6ef49bcc4789bc213adacd30d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4060539607473701900}
   m_SourcePrefab: {fileID: 100100000, guid: eb6889f6ef49bcc4789bc213adacd30d, type: 3}
 --- !u!1 &4703695103311048290 stripped
 GameObject:
@@ -103,3 +110,24 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -4207443722817456029, guid: eb6889f6ef49bcc4789bc213adacd30d, type: 3}
+--- !u!65 &4060539607473701900
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4703695103311048290}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 21.959244, y: 60.703617, z: 40.9905}
+  m_Center: {x: -2.7914019, y: -29.351809, z: -14.554237}

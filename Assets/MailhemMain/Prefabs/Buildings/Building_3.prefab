@@ -10,7 +10,23 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -6689036041284674117, guid: 5378f9e49c837b74795d5d9a26cf11d2, type: 3}
       propertyPath: m_Name
-      value: building_05
+      value: Building_3
+      objectReference: {fileID: 0}
+    - target: {fileID: -6689036041284674117, guid: 5378f9e49c837b74795d5d9a26cf11d2, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 459260540741123068, guid: 5378f9e49c837b74795d5d9a26cf11d2, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1902537529447147422, guid: 5378f9e49c837b74795d5d9a26cf11d2, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2484665033948473043, guid: 5378f9e49c837b74795d5d9a26cf11d2, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2774220344278030320, guid: 5378f9e49c837b74795d5d9a26cf11d2, type: 3}
       propertyPath: m_LocalScale.x
@@ -67,6 +83,14 @@ PrefabInstance:
     - target: {fileID: 2774220344278030320, guid: 5378f9e49c837b74795d5d9a26cf11d2, type: 3}
       propertyPath: m_ConstrainProportionsScale
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8978103523514716507, guid: 5378f9e49c837b74795d5d9a26cf11d2, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 9128902142968206941, guid: 5378f9e49c837b74795d5d9a26cf11d2, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
