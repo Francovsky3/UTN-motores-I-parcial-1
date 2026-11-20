@@ -346,6 +346,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6131309277141967130, guid: ac2a678dae510832bab5d32316d0ecb0, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6131309277141967130, guid: ac2a678dae510832bab5d32316d0ecb0, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 328c192785376eaf6bbc2ee9e89c8450, type: 3}
     - target: {fileID: 8100153100067502651, guid: ac2a678dae510832bab5d32316d0ecb0, type: 3}
       propertyPath: m_Name
       value: End Screen
@@ -443,7 +451,8 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 4665904063776810101, guid: ac2a678dae510832bab5d32316d0ecb0, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ac2a678dae510832bab5d32316d0ecb0, type: 3}
