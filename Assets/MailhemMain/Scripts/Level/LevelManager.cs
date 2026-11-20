@@ -26,12 +26,12 @@ public class LevelManager : MonoBehaviour
 
     void Lose()
     {
-        SceneManager.LoadScene("Lose Screen");
+        SceneManager.LoadScene("LoseScreen");
     }
 
     void Win()
     {
-        
+        SceneManager.LoadScene("VictoryScreen");
     }
 
     void EventStarted()
